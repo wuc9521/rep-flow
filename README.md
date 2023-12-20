@@ -3,11 +3,11 @@ A possible implementation of paper "[Towards Effective Bug Reproduction for Mobi
 
 # Run
 
-The whole project is based on pipenv. You should have pipenv installed. 
 ```shell
-pip3 install pipenv 
+pip3 install -r requirements.txt
 ```
 
 ```shell
-pipenv shell
+cd chatbot
+flask run
 ```
