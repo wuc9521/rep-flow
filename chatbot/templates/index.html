@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+<!-- 
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
-    <h1>ChatGPT - 一个简单的聊天机器人</h1>
+    <h1>ChatRMB - 
+        <span class="highlight">R</span>eproduce your 
+        <span class="highlight">M</span>obile application 
+        <span class="highlight">B</span>ug with the help of chatbot.
+    </h1>
     <form action="/ask" method="post">
         <label for="user_input">您可以提出一个问题：</label>
         <input type="text" id="user_input" name="user_input" required>
@@ -18,4 +24,178 @@
     {% endif %}
 </body>
 </html>
+ -->
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>ChatRMB</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .highlight {
+            color: red;
+            font-style: italic;
+        }
+
+        form {
+            display: inline-block;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #18437e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Loading Indicator */
+        .loading-indicator {
+            display: none;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        .loading-indicator .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 4px solid #b69543;
+            border-top: 4px solid #18437e;
+            animation: spin 2s linear infinite;
+        }
+
+        .search-results {
+            width: 80%;
+            padding-left: 10%;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Hide the default radio button appearance */
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 0;
+            height: 0;
+            position: absolute;
+            opacity: 0;
+        }
+
+        /* Customize the custom radio button appearance */
+        input[type="radio"]+label {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #dddddd;
+            color: #333333;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Style the label when the radio button is checked */
+        input[type="radio"]:checked+label {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        function showLoadingIndicator() {
+            document.getElementById('loading-indicator').style.display = 'block';
+        }
+
+        function hideLoadingIndicator() {
+            document.getElementById('loading-indicator').style.display = 'none';
+        }
+        function submitForm(event) {
+            event.preventDefault(); // 阻止默认的表单提交行为
+
+            // 获取输入框的值
+            var query = document.querySelector('#queryForm input[name="query"]').value;
+
+            // 创建隐藏字段并将其添加到要提交的表单中
+            var hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'query';
+            hiddenInput.value = query;
+            document.getElementById('submitForm').appendChild(hiddenInput);
+
+            // 提交表单
+            document.getElementById('submitForm').submit();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ChatRMB -
+            <span class="highlight">R</span>eproduce your
+            <span class="highlight">M</span>obile application
+            <span class="highlight">B</span>ug with the help of chatbot.
+        </h1>
+        <div style="margin-top:80vh;">
+            <div id="loading-indicator" class="loading-indicator">
+                <div class="spinner"></div>
+            </div>
+            <br><br>
+            <div id="search-artifacts">
+                <form id="queryForm" action="/ask" method="post" onsubmit="showLoadingIndicator()">
+                    <input type="text" name="query" placeholder="Simply input whatever you'd like to query in English"
+                        style="width: 500px;">
+                </form>
+                <form id="submitForm" action="/ask" method="post" onsubmit="showLoadingIndicator(); submitForm(event)"
+                    style="margin-right: 20px; width: 200px;">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+        <div class="search-results">
+            {% if answer %}
+            <h2>Search Results</h2>
+            <div style="text-align: left; text-indent: 2em;">{{ answer }}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
