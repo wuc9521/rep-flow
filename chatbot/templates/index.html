@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT</title>
+</head>
+<body>
+    <h1>ChatGPT - 一个简单的聊天机器人</h1>
+    <form action="/ask" method="post">
+        <label for="user_input">您可以提出一个问题：</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <input type="submit" value="提交">
+    </form>
+    {% if user_input %}
+        <p>您的问题: {{ user_input }}</p>
+        <p>回答: {{ response }}</p>
+    {% endif %}
+</body>
+</html>
+

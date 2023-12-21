@@ -9,5 +9,5 @@ pip3 install -r requirements.txt
 
 ```shell
 cd chatbot
-flask run
+python3 app.py
 ```
