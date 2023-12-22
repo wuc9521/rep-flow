@@ -7,7 +7,7 @@ import spacy
 # Load spaCy English model
 nlp = spacy.load("en_core_web_sm")
 
-df = pd.read_csv('./data/qa.csv')
+df = pd.read_csv('../data/qa.csv')
 print(df.columns)
 qa = dict(zip(df['Q'], df['A']))
 
