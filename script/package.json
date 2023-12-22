@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "appium": "^2.3.0"
+  },
+  "devDependencies": {
+    "@appium/images-plugin": "^3.0.0",
+    "@appium/universal-xml-plugin": "^1.0.16",
+    "appium-uiautomator2-driver": "^2.35.0"
+  }
+}

@@ -1,0 +1,35 @@
+2023-12-22 16:09:39:745 [Appium] Welcome to Appium v2.3.0 (REV cf5557e9c28efb64e19135d3f757adbba9de889c)
+2023-12-22 16:09:39:746 [Appium] Non-default server args:
+2023-12-22 16:09:39:747 [Appium] { address: '127.0.0.1', logTimestamp: true, port: 4725 }
+2023-12-22 16:09:39:748 [Appium] The autodetected Appium home path: /Users/wuchentian/.appium
+2023-12-22 16:09:39:748 [Appium] Attempting to load driver uiautomator2...
+2023-12-22 16:09:39:751 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-22 16:09:40:112 [Appium] AndroidUiautomator2Driver has been successfully loaded in 0.364s
+2023-12-22 16:09:40:123 [Appium] Appium REST http interface listener started on http://127.0.0.1:4725
+2023-12-22 16:09:40:124 [Appium] Available drivers:
+2023-12-22 16:09:40:124 [Appium]   - uiautomator2@2.35.0 (automationName 'UiAutomator2')
+2023-12-22 16:09:40:124 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2023-12-22 16:09:40:247 [HTTP] --> HEAD /status
+2023-12-22 16:09:40:247 [HTTP] {}
+2023-12-22 16:09:40:247 [AppiumDriver@6359] Calling AppiumDriver.getStatus() with args: []
+2023-12-22 16:09:40:248 [AppiumDriver@6359] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"cf5557e9c28efb64e19135d3f757adbba9de889c","built":"2023-12-22 02:02:35 +0800"}}
+2023-12-22 16:09:40:251 [HTTP] <-- HEAD /status 200 3 ms - 199
+2023-12-22 16:09:40:251 [HTTP] 
+2023-12-22 16:09:40:252 [HTTP] --> HEAD /status
+2023-12-22 16:09:40:252 [HTTP] {}
+2023-12-22 16:09:40:252 [AppiumDriver@6359] Calling AppiumDriver.getStatus() with args: []
+2023-12-22 16:09:40:253 [AppiumDriver@6359] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"cf5557e9c28efb64e19135d3f757adbba9de889c","built":"2023-12-22 02:02:35 +0800"}}
+2023-12-22 16:09:40:253 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-22 16:09:40:253 [HTTP] 
+2023-12-22 16:11:17:848 [HTTP] --> HEAD /status
+2023-12-22 16:11:17:848 [HTTP] {}
+2023-12-22 16:11:17:848 [AppiumDriver@6359] Calling AppiumDriver.getStatus() with args: []
+2023-12-22 16:11:17:849 [AppiumDriver@6359] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"cf5557e9c28efb64e19135d3f757adbba9de889c","built":"2023-12-22 02:02:35 +0800"}}
+2023-12-22 16:11:17:849 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-22 16:11:17:849 [HTTP] 
+2023-12-22 16:11:17:850 [HTTP] --> HEAD /status
+2023-12-22 16:11:17:850 [HTTP] {}
+2023-12-22 16:11:17:850 [AppiumDriver@6359] Calling AppiumDriver.getStatus() with args: []
+2023-12-22 16:11:17:850 [AppiumDriver@6359] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"cf5557e9c28efb64e19135d3f757adbba9de889c","built":"2023-12-22 02:02:35 +0800"}}
+2023-12-22 16:11:17:851 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-22 16:11:17:851 [HTTP] 
