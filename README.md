@@ -4,15 +4,17 @@ A possible implementation of paper "[Towards Effective Bug Reproduction for Mobi
 
 # Quick Start
 
-install all the dependencies
+1. install all the dependencies
 
 ```shell
 make install
 ```
-run the project
+2. config your appium server in `config.json`
+
+3. run the project
 
 ```shell
 make run
 ```
 
-Then open your browser and visit <http:127.0.0.1:5000>
+4. open your browser and visit <http:127.0.0.1:5000>

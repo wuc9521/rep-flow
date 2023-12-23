@@ -1,26 +1,23 @@
+import os
 import time
+import json
 import subprocess as sp
 from appium import webdriver
-from appium.webdriver.extensions.session import Session
 from datetime import datetime
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
-from appium.webdriver.webdriver import ExtensionBase
 
-class EventListener(ExtensionBase):
-    def method_name(self):
-        return 'custom_method_name'
+curent_dir = os.path.dirname(__file__)
 
-    def test_command(self, argument):
-        return self.execute(argument)['value']
-
-    def add_command(self):
-        return ('post', 'session/$sessionId/path/to/your/custom/url')
+def read_config(file_path):
+    with open(file_path, 'r') as file:
+        config = json.load(file)
+    return config
 
 
-def start_appium_server():
-    ip_address = '127.0.0.1'
-    port = '4725'
+def start_appium_server(config):
+    ip_address = config['appium_server']['ip_address']
+    port = config['appium_server']['port']
     date = datetime.now().strftime("%Y%m%d%H%M")
 
     # Run Appium server, store logfile
@@ -29,62 +26,68 @@ def start_appium_server():
         '--address', ip_address,
         '-p', port,
         '--log-timestamp',
-        '--log', './log/{}.appium.log'.format(date),
+        '--log', os.path.join(curent_dir, f'../log/appium.log'),
         '--use-plugins='.format("images"),
     ], stdout=sp.DEVNULL)
-
     print("appium is running : ", appium_service.is_running)
-    print("appium is listening : ", appium_service.is_listening)
-
-    return ip_address, port
+    return appium_service
 
 
-def initialize_driver(ip_address, port):
+def initialize_driver(config):
     options = UiAutomator2Options()
-    desired_caps = {
-        "platformName": "Android",
-        "platformVersion": "13",
-        "deviceName": "Android Emulator",
-        "appPackage": "com.google.android.calculator",
-        "appActivity": "com.android.calculator2.Calculator"
-    }
+    desired_caps = config['desired_caps']
     options.set_capability('appium:chromeOptions', desired_caps)
 
     # appium 1-->2: no need to add /wd/hub to the end of the url
     # appium 2: no slash at the end of the url
+    appium_server = config['appium_server']
+    ip_address = appium_server['ip_address']
+    port = appium_server['port']
     driver = webdriver.Remote(
         command_executor='http://{}:{}'.format(ip_address, port),
         options=options,
-        extensions=[EventListener]
     ),
-    
-    print("appium is connected to the device")
-    return driver
+
+    print("appium connected to the device")
+    return driver[0]
 
 
 def get_current_page_source(driver):
     xml_string = driver.page_source
-    xml_path = f'./xml/{time.time()}.appium.xml'
-    with open(xml_path, 'w', encoding='utf-8') as xml_file:
-        xml_file.write(xml_string)
-    print(f'Page source saved to: {xml_path}')
+    return xml_string
 
+def capture_screenshot(driver, screenshot_path):
+    driver.save_screenshot(screenshot_path)
+    print(f'Screenshot saved to: {screenshot_path}')
 
-def main():
-    ip_address, port = start_appium_server()
-    driver = initialize_driver(ip_address, port)
+def is_button_pressed(driver):
+    try:
+        buttons = driver.find_elements_by_xpath("//Button")
+        for button in buttons:
+            if button.is_enabled() and button.is_displayed():
+                return True
+        return False
+    except:
+        return False
+    
+def main(config):
+    appium_service = start_appium_server(config)
+    driver = initialize_driver(config)
+    previous_page_source = get_current_page_source(driver)
     try:
         while True:
-            # 获取当前的session
-
-            time.sleep(1)
+            current_page_source = get_current_page_source(driver)
+            if current_page_source != previous_page_source:
+                screenshot_path = os.path.join(curent_dir, "../data/img/", f"{time.time()}.png")
+                capture_screenshot(driver, screenshot_path)
+                previous_page_source = current_page_source
+            time.sleep(0.01)
     except KeyboardInterrupt:
-        # 捕获 Ctrl+C 信号，退出循环
         print("Exiting the loop.")
     finally:
-        # 关闭 Appium 会话
         driver.quit()
 
 
 if __name__ == "__main__":
-    main()
+    config = read_config(os.path.join(curent_dir, 'config.json'))
+    main(config)
