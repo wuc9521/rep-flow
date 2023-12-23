@@ -1,4 +1,6 @@
 import cv2
+from skimage.metrics import structural_similarity as sk_cpt_ssim
+
 
 def calculate(image1, image2):
     # 灰度直方图算法
@@ -33,22 +35,22 @@ def classify_hist_with_split(image1, image2, size=(1000, 2000)):
 
 # 获得一个用户的实时图片，找出最相似图片返回
 def image_process(image_target):
+    gray_user =cv2.cvtColor(image_target, cv2.COLOR_BGR2GRAY)
     scores = []
     max_score = 0
     max_similar = 0
     for i in range(0, 10):
-        score = classify_hist_with_split(image_target, image_list[i])
-        # print(score, end='')
-        if score>max_score :
-            max_score = score
+        score_hist = classify_hist_with_split(image_target, image_list[i])
+        (score_ssim, diff) = sk_cpt_ssim(gray_user, gray_list[i], full=True)
+        # print(score_hist,' ', end='')
+        average_score = (3*score_hist+2*score_ssim)/5
+        if average_score > max_score:
+            max_score = average_score
             max_similar = i
-        scores.append(score)
     # print()
-    if max_score < 0.7:
-        return "missing"
+    if max_score < 0.65:
+         return "missing"
     return max_similar, max_score
-
-
 
 
 def test_hist():
@@ -64,10 +66,34 @@ def test_hist():
             print(classify_hist_with_split(image_list[i],image_list[j]),end='')
         print()
 
+def test_ssim():
+    image_user = cv2.imread('../data/image_test/user1.jpg')
+    gray_user = cv2.cvtColor(image_user, cv2.COLOR_BGR2GRAY)
+    score_list = []
+    for i in range(0, 10):
+        (score, diff) = sk_cpt_ssim(gray_user, gray_list[i], full=True)
+        score_list.append(score)
+    print('SSIM相似度')
+    for i in range(0, 10):
+        print(score_list[i],' ', end='')
+    print()
+    for i in range(0, 10):
+        for j in range(0, 10):
+            (score, diff) = sk_cpt_ssim(gray_list[i], gray_list[j], full=True)
+            print(score," ",end='')
+        print()
+
 
 image_list =[]
 for i in range(1, 11):
     image_list.append(cv2.imread('../data/image_test/test'+str(i)+'.jpg'))
+
+# 使用色彩空间转化函数 cv2.cvtColor( )进行色彩空间的转换
+gray_list = []
+for i in range(0,10):
+    gray_list.append(cv2.cvtColor(image_list[i], cv2.COLOR_BGR2GRAY))
+
+# test_ssim()
 
 for i in range(1, 7):
     image_user = cv2.imread('../data/image_test/user'+str(i)+'.jpg')
