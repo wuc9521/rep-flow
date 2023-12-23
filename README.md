@@ -18,3 +18,9 @@ make run
 ```
 
 4. open your browser and visit <http:127.0.0.1:5000>
+
+5. stop the project
+
+```shell
+make stop
+```

@@ -7,7 +7,10 @@ from datetime import datetime
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
 
-curent_dir = os.path.dirname(__file__)
+CURRENT_DIR = os.path.dirname(__file__)
+STATE_DIR = os.path.join(CURRENT_DIR, "../data/state")
+LOG_DIR = os.path.join(CURRENT_DIR, "../log")
+LOG_FILE_PATH = os.path.join(LOG_DIR, f"appium.log")
 
 def read_config(file_path):
     with open(file_path, 'r') as file:
@@ -26,7 +29,7 @@ def start_appium_server(config):
         '--address', ip_address,
         '-p', port,
         '--log-timestamp',
-        '--log', os.path.join(curent_dir, f'../log/appium.log'),
+        '--log', LOG_DIR,
         '--use-plugins='.format("images"),
     ], stdout=sp.DEVNULL)
     print("appium is running : ", appium_service.is_running)
@@ -78,7 +81,7 @@ def main(config):
         while True:
             current_page_source = get_current_page_source(driver)
             if current_page_source != previous_page_source:
-                screenshot_path = os.path.join(curent_dir, "../data/img/", f"{time.time()}.png")
+                screenshot_path = os.path.join(STATE_DIR, f"{time.time()}.png")
                 capture_screenshot(driver, screenshot_path)
                 previous_page_source = current_page_source
             time.sleep(0.01)
@@ -89,5 +92,5 @@ def main(config):
 
 
 if __name__ == "__main__":
-    config = read_config(os.path.join(curent_dir, 'config.json'))
+    config = read_config(os.path.join(CURRENT_DIR, 'config.json'))
     main(config)

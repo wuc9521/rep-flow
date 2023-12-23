@@ -105,6 +105,18 @@ input[type="submit"] {
     width: 100%; /* Override width to be 100% */
 }
 
+.state-image-box {
+    text-align: left;
+    width: 30%;
+    border-radius: 8px;
+    padding: 10px;
+    border: solid 1px #18437e;
+}
+
+.state-image {
+    width: 100%;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

@@ -12,8 +12,8 @@
         function hideLoadingIndicator() {
             document.getElementById('loading-indicator').style.display = 'none';
         }
-        function updateConversation(query, answer) {
-            conversationHistory.push({ query: query, answer: answer });
+        function updateConversation(query, answer, type, img) {
+            conversationHistory.push({ query: query, answer: answer, type: type, img});
             updateDisplay();
         }
         function updateDisplay() {
@@ -32,11 +32,22 @@
                 answerText.textContent = item.answer;
                 answerText.className = 'answer';
 
+                
+
                 if (queryText.textContent !== "") {
                     resultItem.appendChild(queryText);
                 }
                 resultItem.appendChild(document.createElement('br'));
                 resultItem.appendChild(answerText);
+                if (item.type === "CURRENT-STATE") {
+                    var imageElementBox = document.createElement('div');
+                    imageElementBox.className = 'state-image-box';
+                    var imageElement = document.createElement('img');
+                    imageElement.src = "images/" + item.img; // Set the source of the image
+                    imageElement.className = 'state-image';
+                    imageElementBox.appendChild(imageElement);
+                    resultItem.appendChild(imageElementBox);
+                } 
                 resultsContainer.appendChild(resultItem);
             });
         }
@@ -57,14 +68,12 @@
                 .then(response => response.json())
                 .then(data => {
                     hideLoadingIndicator();
-                    // Update the conversation history with the actual response from the server
-                    updateConversation(query, data.answer);
+                    updateConversation(query, data.answer, data.type, data.img);
                 }).catch(error => {
                     console.error('Error:', error);
                     hideLoadingIndicator();
                 });
-            // Clear the input field
-            queryInput.value = '';
+            queryInput.value = ''; // Clear the input field
 
         }
 
@@ -72,7 +81,8 @@
         function sendInitialQuery() {
             updateConversation(
                 "",
-                "Hello, I am ChatRMB. I can help you reproduce your mobile application bug. Feel free to ask me anything."
+                "Hello, I am ChatRMB. I can help you reproduce your mobile application bug. Feel free to ask me anything.",
+                "HINT"
             );
         }
 
