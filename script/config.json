@@ -1,0 +1,12 @@
+{
+    "desired_caps": {
+      "platformName": "Android",
+      "platformVersion": "13",
+      "deviceName": "Android Emulator"
+    },
+    "appium_server": {
+      "ip_address": "127.0.0.1",
+      "port": "4725"
+    }
+  }
+  

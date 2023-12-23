@@ -45,8 +45,6 @@ def image_process(image_target):
     return max_similar, max_score
 
 
-
-
 def test_hist():
     score_list = []
     for i in range(0, 10):
@@ -69,24 +67,3 @@ image_user = cv2.imread('../data/image_test/user1.jpg')
 
 result = image_process(image_user)
 print("position :", result[0], " score :", result[1])
-
-# sift = cv2.SIFT_create()
-
-# key_list = []
-# des_list = []
-# for i in range(0,10):
-#     key, des= sift.detectAndCompute(image_list[i], None)
-#     key_list.append(key)
-#     des_list.append(des)
-# key_user,des_user=sift.detectAndCompute(image_user, None)
-#
-# index_params = dict(algorithm=1, trees=5)
-# search_params = dict(checks=50)
-# flann = cv2.FlannBasedMatcher(index_params, search_params)
-#
-# matches_list = []
-# for i in range(0, 10):
-#     matches = flann.knnMatch(des_list[i], des_user, k=2)
-#     print(matches.distance)
-#     matches_list.append(matches)
-# print(matches_list)
