@@ -14,15 +14,14 @@ run: clean
 
 clean: stop
 ifeq ($(OS),Linux)
-	@rm -f data/img/*.png
-	@rm -f log/*.log
+	@if [ -d "data/state" ]; then rm -f data/state/*.png; fi
+	@if [ -d "log" ]; then rm -f log/*.log; fi
 else
 ifeq ($(OS),Darwin)
-	@rm -f data/img/*.png
-	@rm -f log/*.log
-	@rm -f .DS_Store
+	@if [ -d "data/state" ]; then rm -f data/state/*.png; fi
+	@if [ -d "log" ]; then rm -f log/*.log; fi
 else
-	@del /Q data\img\*.png
+	@del /Q data\state\*.png
 	@rd /Q log\*.log
 endif
 endif
