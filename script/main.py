@@ -9,9 +9,8 @@ from datetime import datetime
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
 
-class MyListener(MobileEvent):
+class AppiumListener(MobileEvent):
     def on_touch(self, event, driver):
-        # 当触发触摸事件时，截取页面
         get_current_page_source(driver)
 
 def start_appium_server():
@@ -51,7 +50,7 @@ def initialize_driver(ip_address, port):
             command_executor='http://{}:{}'.format(ip_address, port),
             options=options
         ),
-        MyListener()
+        AppiumListener()
     )
 
     print("appium is connected to the device")
