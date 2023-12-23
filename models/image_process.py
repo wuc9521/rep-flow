@@ -15,6 +15,8 @@ def calculate(image1, image2):
             degree = degree + 1
     degree = degree / len(hist1)
     return degree
+
+
 def classify_hist_with_split(image1, image2, size=(1000, 2000)):
     # RGB每个通道的直方图相似度
     # 将图像resize后，分离为RGB三个通道，再计算每个通道的相似值
@@ -36,10 +38,12 @@ def image_process(image_target):
     max_similar = 0
     for i in range(0, 10):
         score = classify_hist_with_split(image_target, image_list[i])
+        # print(score, end='')
         if score>max_score :
             max_score = score
             max_similar = i
         scores.append(score)
+    # print()
     if max_score < 0.7:
         return "missing"
     return max_similar, max_score
@@ -65,10 +69,14 @@ image_list =[]
 for i in range(1, 11):
     image_list.append(cv2.imread('../data/image_test/test'+str(i)+'.jpg'))
 
-image_user = cv2.imread('../data/image_test/user1.jpg')
+for i in range(1, 7):
+    image_user = cv2.imread('../data/image_test/user'+str(i)+'.jpg')
 
-result = image_process(image_user)
-print("position :", result[0], " score :", result[1])
+    result = image_process(image_user)
+    if result == 'missing':
+        print(result)
+    else:
+        print("position :", result[0], " score :", result[1])
 
 # sift = cv2.SIFT_create()
 
