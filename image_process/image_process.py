@@ -38,7 +38,6 @@ def image_process(image1):
     for i in range(0, 10):
         score = classify_hist_with_split(image_user, image_list[i])
         if score>max_score :
-
         scores.append(score)
 
 
