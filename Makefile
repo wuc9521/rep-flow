@@ -52,5 +52,8 @@ endif
 endif
 	@echo "Stopped."
 
+boot:
+	emulator @Pixel-4XL -no-snapshot-load
+
 reload:
 	adb uninstall io.appium.uiautomator2.server.test
