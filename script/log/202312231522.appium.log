@@ -1,8 +1,0 @@
-2023-12-23 07:22:58:917 [Appium] Welcome to Appium v2.3.0 (REV 1e0cde338cecbbd786f0cee23b8d600ba2c09bbe)
-2023-12-23 07:22:58:918 [Appium] Non-default server args:
-2023-12-23 07:22:58:919 [Appium] { address: '127.0.0.1', logTimestamp: true, port: 4725 }
-2023-12-23 07:22:58:919 [Appium] The autodetected Appium home path: /Users/wuchentian/.appium
-2023-12-23 07:22:58:920 [Appium] Attempting to load driver uiautomator2...
-2023-12-23 07:22:58:921 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
-2023-12-23 07:22:59:254 [Appium] AndroidUiautomator2Driver has been successfully loaded in 0.334s
-2023-12-23 07:22:59:262 [HTTP] Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
