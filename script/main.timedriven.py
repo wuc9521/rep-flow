@@ -17,6 +17,7 @@ def start_appium_server():
         '-p', port,
         '--log-timestamp',
         '--log', './log/{}.appium.log'.format(date),
+        '--use-plugins='.format("images"),
     ], stdout=sp.DEVNULL)
 
     print("appium is running : ", appium_service.is_running)
@@ -60,6 +61,7 @@ def main():
 
     try:
         while True:
+            # 如果用户对页面进行了任何的操作,就会触发
             get_current_page_source(driver) # 获取当前页面的 XML 结构
             time.sleep(5)
 

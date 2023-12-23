@@ -1,18 +1,22 @@
 import time
 import subprocess as sp
 from appium import webdriver
-from appium.webdriver.common.touch_action import TouchAction
-from appium.webdriver.common.multi_action import MultiAction
-from appium.webdriver.common.appiumby import AppiumBy
-from appium.webdriver.common import MobileEvent, EventFiringWebDriver
+from appium.webdriver.extensions.session import Session
 from datetime import datetime
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
+from appium.webdriver.webdriver import ExtensionBase
 
-class MyListener(MobileEvent):
-    def on_touch(self, event, driver):
-        # 当触发触摸事件时，截取页面
-        get_current_page_source(driver)
+class EventListener(ExtensionBase):
+    def method_name(self):
+        return 'custom_method_name'
+
+    def test_command(self, argument):
+        return self.execute(argument)['value']
+
+    def add_command(self):
+        return ('post', 'session/$sessionId/path/to/your/custom/url')
+
 
 def start_appium_server():
     ip_address = '127.0.0.1'
@@ -25,13 +29,15 @@ def start_appium_server():
         '--address', ip_address,
         '-p', port,
         '--log-timestamp',
-        '--log', './logs/{}.appium.log'.format(date),
+        '--log', './log/{}.appium.log'.format(date),
+        '--use-plugins='.format("images"),
     ], stdout=sp.DEVNULL)
 
     print("appium is running : ", appium_service.is_running)
     print("appium is listening : ", appium_service.is_listening)
 
     return ip_address, port
+
 
 def initialize_driver(ip_address, port):
     options = UiAutomator2Options()
@@ -46,16 +52,15 @@ def initialize_driver(ip_address, port):
 
     # appium 1-->2: no need to add /wd/hub to the end of the url
     # appium 2: no slash at the end of the url
-    driver = EventFiringWebDriver(
-        webdriver.Remote(
-            command_executor='http://{}:{}'.format(ip_address, port),
-            options=options
-        ),
-        MyListener()
-    )
-
+    driver = webdriver.Remote(
+        command_executor='http://{}:{}'.format(ip_address, port),
+        options=options,
+        extensions=[EventListener]
+    ),
+    
     print("appium is connected to the device")
     return driver
+
 
 def get_current_page_source(driver):
     xml_string = driver.page_source
@@ -64,13 +69,14 @@ def get_current_page_source(driver):
         xml_file.write(xml_string)
     print(f'Page source saved to: {xml_path}')
 
+
 def main():
     ip_address, port = start_appium_server()
     driver = initialize_driver(ip_address, port)
-
     try:
         while True:
-            # 添加适当的延迟，等待用户操作触发事件
+            # 获取当前的session
+
             time.sleep(1)
     except KeyboardInterrupt:
         # 捕获 Ctrl+C 信号，退出循环
@@ -78,6 +84,7 @@ def main():
     finally:
         # 关闭 Appium 会话
         driver.quit()
+
 
 if __name__ == "__main__":
     main()

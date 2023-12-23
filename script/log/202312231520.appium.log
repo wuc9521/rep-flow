@@ -1,0 +1,969 @@
+2023-12-23 07:20:02:520 [Appium] Welcome to Appium v2.3.0 (REV 1e0cde338cecbbd786f0cee23b8d600ba2c09bbe)
+2023-12-23 07:20:02:521 [Appium] Non-default server args:
+2023-12-23 07:20:02:522 [Appium] { address: '127.0.0.1', logTimestamp: true, port: 4725 }
+2023-12-23 07:20:02:523 [Appium] The autodetected Appium home path: /Users/wuchentian/.appium
+2023-12-23 07:20:02:523 [Appium] Attempting to load driver uiautomator2...
+2023-12-23 07:20:02:527 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:20:02:865 [Appium] AndroidUiautomator2Driver has been successfully loaded in 0.342s
+2023-12-23 07:20:02:876 [Appium] Appium REST http interface listener started on http://127.0.0.1:4725
+2023-12-23 07:20:02:876 [Appium] Available drivers:
+2023-12-23 07:20:02:877 [Appium]   - uiautomator2@2.35.0 (automationName 'UiAutomator2')
+2023-12-23 07:20:02:877 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2023-12-23 07:20:02:964 [HTTP] --> HEAD /status
+2023-12-23 07:20:02:964 [HTTP] {}
+2023-12-23 07:20:02:964 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:20:02:965 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:20:02:968 [HTTP] <-- HEAD /status 200 3 ms - 199
+2023-12-23 07:20:02:968 [HTTP] 
+2023-12-23 07:20:02:970 [HTTP] --> HEAD /status
+2023-12-23 07:20:02:970 [HTTP] {}
+2023-12-23 07:20:02:970 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:20:02:970 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:20:02:970 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-23 07:20:02:970 [HTTP] 
+2023-12-23 07:20:02:971 [HTTP] Request idempotency key: e1869724-8d2b-48f2-af6a-078712439261
+2023-12-23 07:20:02:977 [HTTP] --> POST /session
+2023-12-23 07:20:02:977 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}}
+2023-12-23 07:20:02:978 [AppiumDriver@2916] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}]
+2023-12-23 07:20:02:978 [AppiumDriver@2916] Event 'newSessionRequested' logged at 1703316002978 (15:20:02 GMT+0800 (Central Standard Time))
+2023-12-23 07:20:02:980 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'Android'
+2023-12-23 07:20:02:980 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-12-23 07:20:02:980 [Appium] Will require it at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver
+2023-12-23 07:20:02:980 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:20:02:980 [AppiumDriver@2916] Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.35.0) session
+2023-12-23 07:20:02:980 [AppiumDriver@2916] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-12-23 07:20:02:980 [AppiumDriver@2916] Appium's BaseDriver version is 9.4.4
+2023-12-23 07:20:02:980 [AppiumDriver@2916] AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709] Creating session with W3C capabilities: {
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]   "alwaysMatch": {
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]     "platformName": "Android",
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]     "appium:automationName": "UIAutomator2",
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]     "appium:chromeOptions": {
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]       "platformName": "Android",
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]       "platformVersion": "13",
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]       "deviceName": "Android Emulator",
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]       "appPackage": "com.google.android.calculator",
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]       "appActivity": "com.android.calculator2.Calculator"
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]     }
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]   },
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]   "firstMatch": [
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]     {}
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709]   ]
+2023-12-23 07:20:02:982 [AndroidUiautomator2Driver@d709] }
+2023-12-23 07:20:02:985 [AndroidUiautomator2Driver@d709 (25af122e)] Session created with session id: 25af122e-ea04-4e1f-880c-28191a16ee41
+2023-12-23 07:20:02:985 [AndroidUiautomator2Driver@d709 (25af122e)] Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+2023-12-23 07:20:02:990 [ADB] Found 3 'build-tools' folders under '/Users/wuchentian/Library/Android/sdk' (newest first):
+2023-12-23 07:20:02:990 [ADB]     /Users/wuchentian/Library/Android/sdk/build-tools/33.0.0
+2023-12-23 07:20:02:990 [ADB]     /Users/wuchentian/Library/Android/sdk/build-tools/30.0.3
+2023-12-23 07:20:02:990 [ADB]     /Users/wuchentian/Library/Android/sdk/build-tools/30.0.2
+2023-12-23 07:20:02:991 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:20:02:991 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:20:03:002 [AndroidDriver] Retrieving device list
+2023-12-23 07:20:03:002 [ADB] Trying to find connected Android devices
+2023-12-23 07:20:03:002 [ADB] Getting connected devices
+2023-12-23 07:20:03:011 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-12-23 07:20:03:011 [AndroidDriver] Using device: emulator-5554
+2023-12-23 07:20:03:012 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:20:03:012 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:20:03:021 [ADB] Setting device id to emulator-5554
+2023-12-23 07:20:03:021 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-12-23 07:20:03:047 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-12-23 07:20:03:048 [ADB] Getting device platform version
+2023-12-23 07:20:03:048 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-12-23 07:20:03:063 [ADB] Current device property 'ro.build.version.release': 13
+2023-12-23 07:20:03:063 [ADB] Device API level: 33
+2023-12-23 07:20:03:063 [AndroidUiautomator2Driver@d709 (25af122e)] Relaxing hidden api policy
+2023-12-23 07:20:03:063 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-12-23 07:20:03:103 [AndroidDriver] No app sent in, not parsing package/activity
+2023-12-23 07:20:03:104 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-12-23 07:20:03:113 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-12-23 07:20:03:127 [AndroidDriver] Pushing settings apk to device...
+2023-12-23 07:20:03:128 [ADB] Getting package info for 'io.appium.settings'
+2023-12-23 07:20:03:128 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-12-23 07:20:03:183 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+2023-12-23 07:20:03:183 [ADB] There is no need to install/upgrade '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-12-23 07:20:03:183 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-12-23 07:20:03:183 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-12-23 07:20:03:203 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-12-23 07:20:03:226 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-12-23 07:20:03:226 [Logcat] Starting logs capture with command: /Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-12-23 07:20:03:246 [AndroidUiautomator2Driver@d709 (25af122e)] Forwarding UiAutomator2 Server port 6790 to local port 8200
+2023-12-23 07:20:03:247 [ADB] Forwarding system: 8200 to device: 6790
+2023-12-23 07:20:03:247 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8200 tcp:6790'
+2023-12-23 07:20:03:257 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:20:03:257 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:20:03:260 [ADB] Using 'apksigner.jar' from '/Users/wuchentian/Library/Android/sdk/build-tools/33.0.0/lib/apksigner.jar'
+2023-12-23 07:20:03:261 [ADB] Starting apksigner: /Users/wuchentian/.jenv/shims/java -Xmx1024M -Xss1m -jar /Users/wuchentian/Library/Android/sdk/build-tools/33.0.0/lib/apksigner.jar verify --print-certs /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:20:03:278 [ADB] Starting apksigner: /Users/wuchentian/.jenv/shims/java -Xmx1024M -Xss1m -jar /Users/wuchentian/Library/Android/sdk/build-tools/33.0.0/lib/apksigner.jar verify --print-certs /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:20:03:643 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-12-23 07:20:03:644 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-12-23 07:20:03:644 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-12-23 07:20:03:644 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-12-23 07:20:03:644 [ADB] 
+2023-12-23 07:20:03:644 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:20:03:644 [ADB] '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
+2023-12-23 07:20:03:644 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-12-23 07:20:03:644 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+2023-12-23 07:20:03:666 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-12-23 07:20:04:130 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-12-23 07:20:04:130 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-12-23 07:20:04:130 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-12-23 07:20:04:130 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-12-23 07:20:04:130 [ADB] 
+2023-12-23 07:20:04:130 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:20:04:131 [ADB] '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' is signed with the default certificate
+2023-12-23 07:20:04:131 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-12-23 07:20:04:131 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-12-23 07:20:04:210 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.12.17' >= '5.12.17')
+2023-12-23 07:20:04:210 [AndroidUiautomator2Driver@d709 (25af122e)] Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+2023-12-23 07:20:04:210 [AndroidUiautomator2Driver@d709 (25af122e)] Server packages are not going to be (re)installed
+2023-12-23 07:20:04:211 [AndroidUiautomator2Driver@d709 (25af122e)] Waiting up to 30000ms for services to be available
+2023-12-23 07:20:04:211 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-12-23 07:20:04:232 [AndroidUiautomator2Driver@d709 (25af122e)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-12-23 07:20:04:233 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-12-23 07:20:04:234 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-12-23 07:20:04:234 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-12-23 07:20:04:266 [AndroidUiautomator2Driver@d709 (25af122e)] No app capability. Assuming it is already on the device
+2023-12-23 07:20:04:266 [AndroidUiautomator2Driver@d709 (25af122e)] Performing shallow cleanup of automation leftovers
+2023-12-23 07:20:04:272 [AndroidUiautomator2Driver@d709 (25af122e)] No obsolete sessions have been detected (socket hang up)
+2023-12-23 07:20:04:272 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-12-23 07:20:04:305 [AndroidUiautomator2Driver@d709 (25af122e)] Starting UIAutomator2 server 5.12.17
+2023-12-23 07:20:04:305 [AndroidUiautomator2Driver@d709 (25af122e)] Using UIAutomator2 server from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' and test from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:20:04:305 [AndroidUiautomator2Driver@d709 (25af122e)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-12-23 07:20:04:305 [ADB] Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-12-23 07:20:04:308 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:20:04:308 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:20:04:312 [AndroidUiautomator2Driver@d709 (25af122e)] socket hang up
+2023-12-23 07:20:04:893 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-12-23 07:20:05:314 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:20:05:315 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:20:05:321 [AndroidUiautomator2Driver@d709 (25af122e)] socket hang up
+2023-12-23 07:20:06:323 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:20:06:323 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:20:06:351 [AndroidUiautomator2Driver@d709 (25af122e)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-12-23 07:20:06:351 [AndroidUiautomator2Driver@d709 (25af122e)] The initialization of the instrumentation process took 2047ms
+2023-12-23 07:20:06:352 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/session' to command name 'createSession'
+2023-12-23 07:20:06:352 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [POST /session] to [POST http://127.0.0.1:8200/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-12-23 07:20:06:374 [AndroidUiautomator2Driver@d709 (25af122e)] Got response with status 200: {"sessionId":"99245a76-9561-47af-94bd-47ae27b8a834","value":{"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"99245a76-9561-47af-94bd-47ae27b8a834"}}
+2023-12-23 07:20:06:374 [AndroidUiautomator2Driver@d709 (25af122e)] Determined the downstream protocol as 'W3C'
+2023-12-23 07:20:06:378 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8200/session/99245a76-9561-47af-94bd-47ae27b8a834/appium/device/pixel_ratio] with no body
+2023-12-23 07:20:06:379 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-12-23 07:20:06:379 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8200/session/99245a76-9561-47af-94bd-47ae27b8a834/appium/device/system_bars] with no body
+2023-12-23 07:20:06:380 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-12-23 07:20:06:380 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8200/session/99245a76-9561-47af-94bd-47ae27b8a834/window/current/size] with no body
+2023-12-23 07:20:06:380 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8200/session/99245a76-9561-47af-94bd-47ae27b8a834/appium/device/info] with no body
+2023-12-23 07:20:06:381 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-12-23 07:20:06:385 [AndroidUiautomator2Driver@d709 (25af122e)] Got response with status 200: {"sessionId":"99245a76-9561-47af-94bd-47ae27b8a834","value":3.5}
+2023-12-23 07:20:06:389 [AndroidUiautomator2Driver@d709 (25af122e)] Got response with status 200: {"sessionId":"99245a76-9561-47af-94bd-47ae27b8a834","value":{"height":2956,"width":1440}}
+2023-12-23 07:20:06:393 [AndroidUiautomator2Driver@d709 (25af122e)] Got response with status 200: {"sessionId":"99245a76-9561-47af-94bd-47ae27b8a834","value":{"statusBar":84}}
+2023-12-23 07:20:06:406 [AndroidUiautomator2Driver@d709 (25af122e)] Got response with status 200: {"sessionId":"99245a76-9561-47af-94bd-47ae27b8a834","value":{"androidId":"e4f9d15383ecf720","apiVersion":"33","bluetooth":{"state":"ON"},"brand":"google","carrierName":"T-Mobile","displayDensity":560,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":15000,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"}],"platform...
+2023-12-23 07:20:06:421 [AndroidDriver] Screen already unlocked, doing nothing
+2023-12-23 07:20:06:421 [AppiumDriver@2916] New AndroidUiautomator2Driver session created successfully, session 25af122e-ea04-4e1f-880c-28191a16ee41 added to master session list
+2023-12-23 07:20:06:422 [AppiumDriver@2916] Event 'newSessionStarted' logged at 1703316006422 (15:20:06 GMT+0800 (Central Standard Time))
+2023-12-23 07:20:06:422 [AndroidUiautomator2Driver@d709 (25af122e)] Cached the protocol value 'W3C' for the new session 25af122e-ea04-4e1f-880c-28191a16ee41
+2023-12-23 07:20:06:422 [AndroidUiautomator2Driver@d709 (25af122e)] Responding to client with driver.createSession() result: {"capabilities":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554","pixelRatio":"3.5","statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2872},"deviceApiLevel":33,"platformVersion":"13","deviceManufacturer":"Google","deviceModel":"sdk_gphone64_arm64","deviceScreenSize":"1440x3040"...
+2023-12-23 07:20:06:422 [HTTP] <-- POST /session 200 3445 ms - 1110
+2023-12-23 07:20:06:422 [HTTP] 
+2023-12-23 07:21:06:428 [AndroidUiautomator2Driver@d709 (25af122e)] Shutting down because we waited 60 seconds for a command
+2023-12-23 07:21:06:437 [AppiumDriver@2916] Ending session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+2023-12-23 07:21:06:437 [AppiumDriver@2916] Removing session '25af122e-ea04-4e1f-880c-28191a16ee41' from our master session list
+2023-12-23 07:21:06:437 [AndroidUiautomator2Driver@d709 (25af122e)] Deleting UiAutomator2 session
+2023-12-23 07:21:06:438 [AndroidUiautomator2Driver@d709 (25af122e)] Deleting UiAutomator2 server session
+2023-12-23 07:21:06:439 [AndroidUiautomator2Driver@d709 (25af122e)] Matched '/' to command name 'deleteSession'
+2023-12-23 07:21:06:439 [AndroidUiautomator2Driver@d709 (25af122e)] Proxying [DELETE /] to [DELETE http://127.0.0.1:8200/session/99245a76-9561-47af-94bd-47ae27b8a834] with no body
+2023-12-23 07:21:06:441 [AndroidUiautomator2Driver@d709 (25af122e)] socket hang up
+2023-12-23 07:21:06:441 [AndroidUiautomator2Driver@d709 (25af122e)] Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+2023-12-23 07:21:06:441 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-12-23 07:21:06:442 [Logcat] Stopping logcat capture
+2023-12-23 07:21:06:444 [ADB] Removing forwarded port socket connection: 8200 
+2023-12-23 07:21:06:444 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8200'
+2023-12-23 07:21:06:462 [AndroidUiautomator2Driver@d709 (25af122e)] Restoring hidden api policy to the device default configuration
+2023-12-23 07:21:06:462 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-12-23 07:21:50:921 [HTTP] --> HEAD /status
+2023-12-23 07:21:50:921 [HTTP] {}
+2023-12-23 07:21:50:921 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:21:50:921 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:21:50:922 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-23 07:21:50:922 [HTTP] 
+2023-12-23 07:21:50:923 [HTTP] --> HEAD /status
+2023-12-23 07:21:50:923 [HTTP] {}
+2023-12-23 07:21:50:923 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:21:50:923 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:21:50:923 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-23 07:21:50:923 [HTTP] 
+2023-12-23 07:21:50:925 [HTTP] Request idempotency key: c8fed4a5-2d42-4d15-888a-a17f7ba6cc7f
+2023-12-23 07:21:50:925 [HTTP] --> POST /session
+2023-12-23 07:21:50:925 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}}
+2023-12-23 07:21:50:925 [AppiumDriver@2916] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}]
+2023-12-23 07:21:50:925 [AppiumDriver@2916] Event 'newSessionRequested' logged at 1703316110925 (15:21:50 GMT+0800 (Central Standard Time))
+2023-12-23 07:21:50:926 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'Android'
+2023-12-23 07:21:50:926 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-12-23 07:21:50:926 [Appium] Will require it at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver
+2023-12-23 07:21:50:927 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:21:50:927 [AppiumDriver@2916] Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.35.0) session
+2023-12-23 07:21:50:927 [AppiumDriver@2916] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-12-23 07:21:50:927 [AppiumDriver@2916] Appium's BaseDriver version is 9.4.4
+2023-12-23 07:21:50:927 [AppiumDriver@2916] AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766] Creating session with W3C capabilities: {
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]   "alwaysMatch": {
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]     "platformName": "Android",
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]     "appium:automationName": "UIAutomator2",
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]     "appium:chromeOptions": {
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]       "platformName": "Android",
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]       "platformVersion": "13",
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]       "deviceName": "Android Emulator",
+2023-12-23 07:21:50:927 [AndroidUiautomator2Driver@1766]       "appPackage": "com.google.android.calculator",
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766]       "appActivity": "com.android.calculator2.Calculator"
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766]     }
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766]   },
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766]   "firstMatch": [
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766]     {}
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766]   ]
+2023-12-23 07:21:50:928 [AndroidUiautomator2Driver@1766] }
+2023-12-23 07:21:50:930 [AndroidUiautomator2Driver@1766 (5c950529)] Session created with session id: 5c950529-478d-48f0-9fbc-4b846b803cc0
+2023-12-23 07:21:50:930 [AndroidUiautomator2Driver@1766 (5c950529)] Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+2023-12-23 07:21:50:930 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:21:50:930 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:21:50:939 [AndroidDriver] Retrieving device list
+2023-12-23 07:21:50:939 [ADB] Trying to find connected Android devices
+2023-12-23 07:21:50:939 [ADB] Getting connected devices
+2023-12-23 07:21:50:948 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-12-23 07:21:50:948 [AndroidDriver] Using device: emulator-5554
+2023-12-23 07:21:50:949 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:21:50:949 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:21:50:958 [ADB] Setting device id to emulator-5554
+2023-12-23 07:21:50:958 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-12-23 07:21:50:974 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-12-23 07:21:50:974 [ADB] Getting device platform version
+2023-12-23 07:21:50:974 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-12-23 07:21:50:998 [ADB] Current device property 'ro.build.version.release': 13
+2023-12-23 07:21:50:998 [ADB] Device API level: 33
+2023-12-23 07:21:50:998 [AndroidUiautomator2Driver@1766 (5c950529)] Relaxing hidden api policy
+2023-12-23 07:21:50:998 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-12-23 07:21:51:036 [AndroidDriver] No app sent in, not parsing package/activity
+2023-12-23 07:21:51:037 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-12-23 07:21:51:046 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-12-23 07:21:51:059 [AndroidDriver] Pushing settings apk to device...
+2023-12-23 07:21:51:059 [ADB] Getting package info for 'io.appium.settings'
+2023-12-23 07:21:51:059 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-12-23 07:21:51:102 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+2023-12-23 07:21:51:102 [ADB] There is no need to install/upgrade '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-12-23 07:21:51:102 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-12-23 07:21:51:102 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-12-23 07:21:51:123 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-12-23 07:21:51:145 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-12-23 07:21:51:145 [Logcat] Starting logs capture with command: /Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-12-23 07:21:51:164 [AndroidUiautomator2Driver@1766 (5c950529)] Forwarding UiAutomator2 Server port 6790 to local port 8200
+2023-12-23 07:21:51:164 [ADB] Forwarding system: 8200 to device: 6790
+2023-12-23 07:21:51:164 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8200 tcp:6790'
+2023-12-23 07:21:51:175 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:21:51:175 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:21:51:176 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:21:51:176 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:21:51:176 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-12-23 07:21:51:176 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+2023-12-23 07:21:51:197 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:21:51:198 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:21:51:198 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-12-23 07:21:51:198 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-12-23 07:21:51:201 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-12-23 07:21:51:324 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.12.17' >= '5.12.17')
+2023-12-23 07:21:51:324 [AndroidUiautomator2Driver@1766 (5c950529)] Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+2023-12-23 07:21:51:324 [AndroidUiautomator2Driver@1766 (5c950529)] Server packages are not going to be (re)installed
+2023-12-23 07:21:51:324 [AndroidUiautomator2Driver@1766 (5c950529)] Waiting up to 30000ms for services to be available
+2023-12-23 07:21:51:324 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-12-23 07:21:51:347 [AndroidUiautomator2Driver@1766 (5c950529)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-12-23 07:21:51:348 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-12-23 07:21:51:348 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-12-23 07:21:51:348 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-12-23 07:21:51:377 [AndroidUiautomator2Driver@1766 (5c950529)] No app capability. Assuming it is already on the device
+2023-12-23 07:21:51:377 [AndroidUiautomator2Driver@1766 (5c950529)] Performing shallow cleanup of automation leftovers
+2023-12-23 07:21:51:389 [AndroidUiautomator2Driver@1766 (5c950529)] The following obsolete sessions are still running: ["99245a76-9561-47af-94bd-47ae27b8a834"]
+2023-12-23 07:21:51:389 [AndroidUiautomator2Driver@1766 (5c950529)] Cleaning up 1 obsolete session
+2023-12-23 07:21:52:253 [Instrumentation] .
+2023-12-23 07:21:52:280 [Instrumentation] Time: 107.314
+2023-12-23 07:21:52:280 [Instrumentation] 
+2023-12-23 07:21:52:280 [Instrumentation] OK (1 test)
+2023-12-23 07:21:52:288 [Instrumentation] The process has exited with code 0
+2023-12-23 07:21:52:395 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-12-23 07:21:52:424 [AndroidUiautomator2Driver@1766 (5c950529)] Starting UIAutomator2 server 5.12.17
+2023-12-23 07:21:52:424 [AndroidUiautomator2Driver@1766 (5c950529)] Using UIAutomator2 server from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' and test from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:21:52:425 [AndroidUiautomator2Driver@1766 (5c950529)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-12-23 07:21:52:425 [ADB] Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-12-23 07:21:52:425 [AndroidUiautomator2Driver@1766 (5c950529)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:21:52:426 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:21:52:429 [AndroidUiautomator2Driver@1766 (5c950529)] socket hang up
+2023-12-23 07:21:53:046 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-12-23 07:21:53:429 [AndroidUiautomator2Driver@1766 (5c950529)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:21:53:430 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:21:53:434 [AndroidUiautomator2Driver@1766 (5c950529)] socket hang up
+2023-12-23 07:21:54:437 [AndroidUiautomator2Driver@1766 (5c950529)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:21:54:439 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:21:54:471 [AndroidUiautomator2Driver@1766 (5c950529)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-12-23 07:21:54:471 [AndroidUiautomator2Driver@1766 (5c950529)] The initialization of the instrumentation process took 2046ms
+2023-12-23 07:21:54:471 [AndroidUiautomator2Driver@1766 (5c950529)] Matched '/session' to command name 'createSession'
+2023-12-23 07:21:54:471 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [POST /session] to [POST http://127.0.0.1:8200/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-12-23 07:21:54:480 [AndroidUiautomator2Driver@1766 (5c950529)] Got response with status 200: {"sessionId":"dc924bcf-6682-4752-abbb-a14a276400b9","value":{"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"dc924bcf-6682-4752-abbb-a14a276400b9"}}
+2023-12-23 07:21:54:480 [AndroidUiautomator2Driver@1766 (5c950529)] Determined the downstream protocol as 'W3C'
+2023-12-23 07:21:54:485 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8200/session/dc924bcf-6682-4752-abbb-a14a276400b9/appium/device/pixel_ratio] with no body
+2023-12-23 07:21:54:485 [AndroidUiautomator2Driver@1766 (5c950529)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-12-23 07:21:54:485 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8200/session/dc924bcf-6682-4752-abbb-a14a276400b9/appium/device/system_bars] with no body
+2023-12-23 07:21:54:485 [AndroidUiautomator2Driver@1766 (5c950529)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-12-23 07:21:54:485 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8200/session/dc924bcf-6682-4752-abbb-a14a276400b9/window/current/size] with no body
+2023-12-23 07:21:54:486 [AndroidUiautomator2Driver@1766 (5c950529)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8200/session/dc924bcf-6682-4752-abbb-a14a276400b9/appium/device/info] with no body
+2023-12-23 07:21:54:486 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-12-23 07:21:54:490 [AndroidUiautomator2Driver@1766 (5c950529)] Got response with status 200: {"sessionId":"dc924bcf-6682-4752-abbb-a14a276400b9","value":3.5}
+2023-12-23 07:21:54:493 [AndroidUiautomator2Driver@1766 (5c950529)] Got response with status 200: {"sessionId":"dc924bcf-6682-4752-abbb-a14a276400b9","value":{"height":2956,"width":1440}}
+2023-12-23 07:21:54:496 [AndroidUiautomator2Driver@1766 (5c950529)] Got response with status 200: {"sessionId":"dc924bcf-6682-4752-abbb-a14a276400b9","value":{"statusBar":84}}
+2023-12-23 07:21:54:502 [AndroidUiautomator2Driver@1766 (5c950529)] Got response with status 200: {"sessionId":"dc924bcf-6682-4752-abbb-a14a276400b9","value":{"androidId":"e4f9d15383ecf720","apiVersion":"33","bluetooth":{"state":"ON"},"brand":"google","carrierName":"T-Mobile","displayDensity":560,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":15000,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"}],"platform...
+2023-12-23 07:21:54:516 [AndroidDriver] Screen already unlocked, doing nothing
+2023-12-23 07:21:54:517 [AppiumDriver@2916] New AndroidUiautomator2Driver session created successfully, session 5c950529-478d-48f0-9fbc-4b846b803cc0 added to master session list
+2023-12-23 07:21:54:517 [AppiumDriver@2916] Event 'newSessionStarted' logged at 1703316114517 (15:21:54 GMT+0800 (Central Standard Time))
+2023-12-23 07:21:54:517 [AndroidUiautomator2Driver@1766 (5c950529)] Cached the protocol value 'W3C' for the new session 5c950529-478d-48f0-9fbc-4b846b803cc0
+2023-12-23 07:21:54:517 [AndroidUiautomator2Driver@1766 (5c950529)] Responding to client with driver.createSession() result: {"capabilities":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554","pixelRatio":"3.5","statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2872},"deviceApiLevel":33,"platformVersion":"13","deviceManufacturer":"Google","deviceModel":"sdk_gphone64_arm64","deviceScreenSize":"1440x3040"...
+2023-12-23 07:21:54:517 [HTTP] <-- POST /session 200 3592 ms - 1110
+2023-12-23 07:21:54:517 [HTTP] 
+2023-12-23 07:22:44:470 [HTTP] --> HEAD /status
+2023-12-23 07:22:44:470 [HTTP] {}
+2023-12-23 07:22:44:470 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:22:44:470 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:22:44:470 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-23 07:22:44:470 [HTTP] 
+2023-12-23 07:22:44:471 [HTTP] --> HEAD /status
+2023-12-23 07:22:44:471 [HTTP] {}
+2023-12-23 07:22:44:471 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:22:44:471 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:22:44:472 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-23 07:22:44:472 [HTTP] 
+2023-12-23 07:22:44:473 [HTTP] Request idempotency key: bae6d907-3c37-454d-9636-346c1da21757
+2023-12-23 07:22:44:473 [HTTP] --> POST /session
+2023-12-23 07:22:44:473 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}}
+2023-12-23 07:22:44:473 [AppiumDriver@2916] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}]
+2023-12-23 07:22:44:473 [AppiumDriver@2916] Event 'newSessionRequested' logged at 1703316164473 (15:22:44 GMT+0800 (Central Standard Time))
+2023-12-23 07:22:44:474 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'Android'
+2023-12-23 07:22:44:474 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-12-23 07:22:44:474 [Appium] Will require it at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver
+2023-12-23 07:22:44:474 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:22:44:474 [AppiumDriver@2916] Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.35.0) session
+2023-12-23 07:22:44:474 [AppiumDriver@2916] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-12-23 07:22:44:474 [AppiumDriver@2916] Appium's BaseDriver version is 9.4.4
+2023-12-23 07:22:44:474 [AppiumDriver@2916] AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23] Creating session with W3C capabilities: {
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]   "alwaysMatch": {
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]     "platformName": "Android",
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]     "appium:automationName": "UIAutomator2",
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]     "appium:chromeOptions": {
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]       "platformName": "Android",
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]       "platformVersion": "13",
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]       "deviceName": "Android Emulator",
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]       "appPackage": "com.google.android.calculator",
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]       "appActivity": "com.android.calculator2.Calculator"
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]     }
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]   },
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]   "firstMatch": [
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]     {}
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23]   ]
+2023-12-23 07:22:44:475 [AndroidUiautomator2Driver@eb23] }
+2023-12-23 07:22:44:477 [AndroidUiautomator2Driver@eb23 (8e42e555)] Session created with session id: 8e42e555-ce6b-4466-9e34-abf8104d17a4
+2023-12-23 07:22:44:477 [AndroidUiautomator2Driver@eb23 (8e42e555)] Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+2023-12-23 07:22:44:478 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:22:44:478 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:22:44:486 [AndroidDriver] Retrieving device list
+2023-12-23 07:22:44:487 [ADB] Trying to find connected Android devices
+2023-12-23 07:22:44:487 [ADB] Getting connected devices
+2023-12-23 07:22:44:496 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-12-23 07:22:44:496 [AndroidDriver] Using device: emulator-5554
+2023-12-23 07:22:44:496 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:22:44:496 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:22:44:505 [ADB] Setting device id to emulator-5554
+2023-12-23 07:22:44:505 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-12-23 07:22:44:525 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-12-23 07:22:44:525 [ADB] Getting device platform version
+2023-12-23 07:22:44:525 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-12-23 07:22:44:541 [ADB] Current device property 'ro.build.version.release': 13
+2023-12-23 07:22:44:541 [ADB] Device API level: 33
+2023-12-23 07:22:44:541 [AndroidUiautomator2Driver@eb23 (8e42e555)] Relaxing hidden api policy
+2023-12-23 07:22:44:541 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-12-23 07:22:44:579 [AndroidDriver] No app sent in, not parsing package/activity
+2023-12-23 07:22:44:579 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-12-23 07:22:44:588 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-12-23 07:22:44:600 [AndroidDriver] Pushing settings apk to device...
+2023-12-23 07:22:44:600 [ADB] Getting package info for 'io.appium.settings'
+2023-12-23 07:22:44:600 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-12-23 07:22:44:625 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+2023-12-23 07:22:44:626 [ADB] There is no need to install/upgrade '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-12-23 07:22:44:626 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-12-23 07:22:44:626 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-12-23 07:22:44:644 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-12-23 07:22:44:668 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-12-23 07:22:44:668 [Logcat] Starting logs capture with command: /Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-12-23 07:22:44:687 [AndroidUiautomator2Driver@eb23 (8e42e555)] Forwarding UiAutomator2 Server port 6790 to local port 8201
+2023-12-23 07:22:44:687 [ADB] Forwarding system: 8201 to device: 6790
+2023-12-23 07:22:44:688 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8201 tcp:6790'
+2023-12-23 07:22:44:698 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:22:44:698 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:22:44:699 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:22:44:700 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:22:44:700 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-12-23 07:22:44:700 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+2023-12-23 07:22:44:718 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:22:44:718 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:22:44:718 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-12-23 07:22:44:718 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-12-23 07:22:44:733 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-12-23 07:22:44:834 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.12.17' >= '5.12.17')
+2023-12-23 07:22:44:834 [AndroidUiautomator2Driver@eb23 (8e42e555)] Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+2023-12-23 07:22:44:834 [AndroidUiautomator2Driver@eb23 (8e42e555)] Server packages are not going to be (re)installed
+2023-12-23 07:22:44:835 [AndroidUiautomator2Driver@eb23 (8e42e555)] Waiting up to 30000ms for services to be available
+2023-12-23 07:22:44:835 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-12-23 07:22:44:857 [AndroidUiautomator2Driver@eb23 (8e42e555)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-12-23 07:22:44:857 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-12-23 07:22:44:857 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-12-23 07:22:44:857 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-12-23 07:22:44:888 [AndroidUiautomator2Driver@eb23 (8e42e555)] No app capability. Assuming it is already on the device
+2023-12-23 07:22:44:888 [AndroidUiautomator2Driver@eb23 (8e42e555)] Performing shallow cleanup of automation leftovers
+2023-12-23 07:22:44:901 [AndroidUiautomator2Driver@eb23 (8e42e555)] The following obsolete sessions are still running: ["dc924bcf-6682-4752-abbb-a14a276400b9"]
+2023-12-23 07:22:44:902 [AndroidUiautomator2Driver@eb23 (8e42e555)] Cleaning up 1 obsolete session
+2023-12-23 07:22:45:190 [Instrumentation] .
+2023-12-23 07:22:45:228 [Instrumentation] Time: 52.148
+2023-12-23 07:22:45:228 [Instrumentation] 
+2023-12-23 07:22:45:228 [Instrumentation] OK (1 test)
+2023-12-23 07:22:45:236 [Instrumentation] The process has exited with code 0
+2023-12-23 07:22:45:914 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-12-23 07:22:45:963 [AndroidUiautomator2Driver@eb23 (8e42e555)] Starting UIAutomator2 server 5.12.17
+2023-12-23 07:22:45:963 [AndroidUiautomator2Driver@eb23 (8e42e555)] Using UIAutomator2 server from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' and test from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:22:45:963 [AndroidUiautomator2Driver@eb23 (8e42e555)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-12-23 07:22:45:963 [ADB] Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-12-23 07:22:45:965 [AndroidUiautomator2Driver@eb23 (8e42e555)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:22:45:965 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+2023-12-23 07:22:45:967 [AndroidUiautomator2Driver@eb23 (8e42e555)] socket hang up
+2023-12-23 07:22:46:483 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-12-23 07:22:46:970 [AndroidUiautomator2Driver@eb23 (8e42e555)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:22:46:971 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+2023-12-23 07:22:46:979 [AndroidUiautomator2Driver@eb23 (8e42e555)] socket hang up
+2023-12-23 07:22:47:983 [AndroidUiautomator2Driver@eb23 (8e42e555)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:22:47:984 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+2023-12-23 07:22:48:018 [AndroidUiautomator2Driver@eb23 (8e42e555)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-12-23 07:22:48:018 [AndroidUiautomator2Driver@eb23 (8e42e555)] The initialization of the instrumentation process took 2056ms
+2023-12-23 07:22:48:018 [AndroidUiautomator2Driver@eb23 (8e42e555)] Matched '/session' to command name 'createSession'
+2023-12-23 07:22:48:019 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [POST /session] to [POST http://127.0.0.1:8201/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-12-23 07:22:48:031 [AndroidUiautomator2Driver@eb23 (8e42e555)] Got response with status 200: {"sessionId":"2cf0c09c-5658-42f4-be63-d2f06eb640b3","value":{"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"2cf0c09c-5658-42f4-be63-d2f06eb640b3"}}
+2023-12-23 07:22:48:031 [AndroidUiautomator2Driver@eb23 (8e42e555)] Determined the downstream protocol as 'W3C'
+2023-12-23 07:22:48:032 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8201/session/2cf0c09c-5658-42f4-be63-d2f06eb640b3/appium/device/pixel_ratio] with no body
+2023-12-23 07:22:48:033 [AndroidUiautomator2Driver@eb23 (8e42e555)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-12-23 07:22:48:033 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8201/session/2cf0c09c-5658-42f4-be63-d2f06eb640b3/appium/device/system_bars] with no body
+2023-12-23 07:22:48:033 [AndroidUiautomator2Driver@eb23 (8e42e555)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-12-23 07:22:48:033 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8201/session/2cf0c09c-5658-42f4-be63-d2f06eb640b3/window/current/size] with no body
+2023-12-23 07:22:48:034 [AndroidUiautomator2Driver@eb23 (8e42e555)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8201/session/2cf0c09c-5658-42f4-be63-d2f06eb640b3/appium/device/info] with no body
+2023-12-23 07:22:48:034 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-12-23 07:22:48:041 [AndroidUiautomator2Driver@eb23 (8e42e555)] Got response with status 200: {"sessionId":"2cf0c09c-5658-42f4-be63-d2f06eb640b3","value":{"height":2956,"width":1440}}
+2023-12-23 07:22:48:041 [AndroidUiautomator2Driver@eb23 (8e42e555)] Got response with status 200: {"sessionId":"2cf0c09c-5658-42f4-be63-d2f06eb640b3","value":3.5}
+2023-12-23 07:22:48:047 [AndroidUiautomator2Driver@eb23 (8e42e555)] Got response with status 200: {"sessionId":"2cf0c09c-5658-42f4-be63-d2f06eb640b3","value":{"statusBar":84}}
+2023-12-23 07:22:48:054 [AndroidUiautomator2Driver@eb23 (8e42e555)] Got response with status 200: {"sessionId":"2cf0c09c-5658-42f4-be63-d2f06eb640b3","value":{"androidId":"e4f9d15383ecf720","apiVersion":"33","bluetooth":{"state":"ON"},"brand":"google","carrierName":"T-Mobile","displayDensity":560,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":15000,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"}],"platform...
+2023-12-23 07:22:48:069 [AndroidDriver] Screen already unlocked, doing nothing
+2023-12-23 07:22:48:069 [AppiumDriver@2916] New AndroidUiautomator2Driver session created successfully, session 8e42e555-ce6b-4466-9e34-abf8104d17a4 added to master session list
+2023-12-23 07:22:48:069 [AppiumDriver@2916] Event 'newSessionStarted' logged at 1703316168069 (15:22:48 GMT+0800 (Central Standard Time))
+2023-12-23 07:22:48:069 [AndroidUiautomator2Driver@eb23 (8e42e555)] Cached the protocol value 'W3C' for the new session 8e42e555-ce6b-4466-9e34-abf8104d17a4
+2023-12-23 07:22:48:069 [AndroidUiautomator2Driver@eb23 (8e42e555)] Responding to client with driver.createSession() result: {"capabilities":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554","pixelRatio":"3.5","statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2872},"deviceApiLevel":33,"platformVersion":"13","deviceManufacturer":"Google","deviceModel":"sdk_gphone64_arm64","deviceScreenSize":"1440x3040"...
+2023-12-23 07:22:48:070 [HTTP] <-- POST /session 200 3596 ms - 1110
+2023-12-23 07:22:48:070 [HTTP] 
+2023-12-23 07:22:54:519 [AndroidUiautomator2Driver@1766 (5c950529)] Shutting down because we waited 60 seconds for a command
+2023-12-23 07:22:54:520 [AppiumDriver@2916] Ending session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+2023-12-23 07:22:54:520 [AppiumDriver@2916] Removing session '5c950529-478d-48f0-9fbc-4b846b803cc0' from our master session list
+2023-12-23 07:22:54:520 [AndroidUiautomator2Driver@1766 (5c950529)] Deleting UiAutomator2 session
+2023-12-23 07:22:54:521 [AndroidUiautomator2Driver@1766 (5c950529)] Deleting UiAutomator2 server session
+2023-12-23 07:22:54:522 [AndroidUiautomator2Driver@1766 (5c950529)] Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+2023-12-23 07:22:54:523 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-12-23 07:22:54:527 [Logcat] Stopping logcat capture
+2023-12-23 07:22:54:532 [ADB] Removing forwarded port socket connection: 8200 
+2023-12-23 07:22:54:532 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8200'
+2023-12-23 07:22:54:548 [AndroidUiautomator2Driver@1766 (5c950529)] Restoring hidden api policy to the device default configuration
+2023-12-23 07:22:54:548 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-12-23 07:22:58:319 [HTTP] --> HEAD /status
+2023-12-23 07:22:58:319 [HTTP] {}
+2023-12-23 07:22:58:320 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:22:58:320 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:22:58:320 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-23 07:22:58:320 [HTTP] 
+2023-12-23 07:22:58:321 [HTTP] --> HEAD /status
+2023-12-23 07:22:58:321 [HTTP] {}
+2023-12-23 07:22:58:321 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:22:58:322 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:22:58:322 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-23 07:22:58:322 [HTTP] 
+2023-12-23 07:22:58:323 [HTTP] Request idempotency key: 6f629a43-3c0a-46f7-baf4-0ab79998038c
+2023-12-23 07:22:58:323 [HTTP] --> POST /session
+2023-12-23 07:22:58:323 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}}
+2023-12-23 07:22:58:323 [AppiumDriver@2916] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}]
+2023-12-23 07:22:58:323 [AppiumDriver@2916] Event 'newSessionRequested' logged at 1703316178323 (15:22:58 GMT+0800 (Central Standard Time))
+2023-12-23 07:22:58:324 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'Android'
+2023-12-23 07:22:58:324 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-12-23 07:22:58:324 [Appium] Will require it at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver
+2023-12-23 07:22:58:325 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:22:58:325 [AppiumDriver@2916] Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.35.0) session
+2023-12-23 07:22:58:325 [AppiumDriver@2916] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-12-23 07:22:58:325 [AppiumDriver@2916] Appium's BaseDriver version is 9.4.4
+2023-12-23 07:22:58:325 [AppiumDriver@2916] AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc] Creating session with W3C capabilities: {
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]   "alwaysMatch": {
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]     "platformName": "Android",
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]     "appium:automationName": "UIAutomator2",
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]     "appium:chromeOptions": {
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]       "platformName": "Android",
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]       "platformVersion": "13",
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]       "deviceName": "Android Emulator",
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]       "appPackage": "com.google.android.calculator",
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]       "appActivity": "com.android.calculator2.Calculator"
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]     }
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]   },
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]   "firstMatch": [
+2023-12-23 07:22:58:325 [AndroidUiautomator2Driver@fefc]     {}
+2023-12-23 07:22:58:326 [AndroidUiautomator2Driver@fefc]   ]
+2023-12-23 07:22:58:326 [AndroidUiautomator2Driver@fefc] }
+2023-12-23 07:22:58:328 [AndroidUiautomator2Driver@fefc (e9da928d)] Session created with session id: e9da928d-e3e2-4974-83b3-ce8e7c0786b2
+2023-12-23 07:22:58:328 [AndroidUiautomator2Driver@fefc (e9da928d)] Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+2023-12-23 07:22:58:328 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:22:58:328 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:22:58:337 [AndroidDriver] Retrieving device list
+2023-12-23 07:22:58:337 [ADB] Trying to find connected Android devices
+2023-12-23 07:22:58:337 [ADB] Getting connected devices
+2023-12-23 07:22:58:347 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-12-23 07:22:58:347 [AndroidDriver] Using device: emulator-5554
+2023-12-23 07:22:58:347 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:22:58:347 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:22:58:356 [ADB] Setting device id to emulator-5554
+2023-12-23 07:22:58:356 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-12-23 07:22:58:373 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-12-23 07:22:58:373 [ADB] Getting device platform version
+2023-12-23 07:22:58:373 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-12-23 07:22:58:389 [ADB] Current device property 'ro.build.version.release': 13
+2023-12-23 07:22:58:389 [ADB] Device API level: 33
+2023-12-23 07:22:58:389 [AndroidUiautomator2Driver@fefc (e9da928d)] Relaxing hidden api policy
+2023-12-23 07:22:58:389 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-12-23 07:22:58:425 [AndroidDriver] No app sent in, not parsing package/activity
+2023-12-23 07:22:58:425 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-12-23 07:22:58:434 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-12-23 07:22:58:447 [AndroidDriver] Pushing settings apk to device...
+2023-12-23 07:22:58:447 [ADB] Getting package info for 'io.appium.settings'
+2023-12-23 07:22:58:447 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-12-23 07:22:58:468 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+2023-12-23 07:22:58:468 [ADB] There is no need to install/upgrade '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-12-23 07:22:58:468 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-12-23 07:22:58:468 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-12-23 07:22:58:486 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-12-23 07:22:58:509 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-12-23 07:22:58:509 [Logcat] Starting logs capture with command: /Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-12-23 07:22:58:526 [AndroidUiautomator2Driver@fefc (e9da928d)] Forwarding UiAutomator2 Server port 6790 to local port 8200
+2023-12-23 07:22:58:527 [ADB] Forwarding system: 8200 to device: 6790
+2023-12-23 07:22:58:527 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8200 tcp:6790'
+2023-12-23 07:22:58:538 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:22:58:538 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:22:58:540 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:22:58:540 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:22:58:540 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-12-23 07:22:58:540 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+2023-12-23 07:22:58:571 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-12-23 07:22:58:584 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:22:58:584 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:22:58:584 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-12-23 07:22:58:584 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-12-23 07:22:58:662 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.12.17' >= '5.12.17')
+2023-12-23 07:22:58:662 [AndroidUiautomator2Driver@fefc (e9da928d)] Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+2023-12-23 07:22:58:662 [AndroidUiautomator2Driver@fefc (e9da928d)] Server packages are not going to be (re)installed
+2023-12-23 07:22:58:662 [AndroidUiautomator2Driver@fefc (e9da928d)] Waiting up to 30000ms for services to be available
+2023-12-23 07:22:58:662 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-12-23 07:22:58:685 [AndroidUiautomator2Driver@fefc (e9da928d)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-12-23 07:22:58:685 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-12-23 07:22:58:685 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-12-23 07:22:58:685 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-12-23 07:22:58:713 [AndroidUiautomator2Driver@fefc (e9da928d)] No app capability. Assuming it is already on the device
+2023-12-23 07:22:58:713 [AndroidUiautomator2Driver@fefc (e9da928d)] Performing shallow cleanup of automation leftovers
+2023-12-23 07:22:58:718 [AndroidUiautomator2Driver@fefc (e9da928d)] The following obsolete sessions are still running: ["2cf0c09c-5658-42f4-be63-d2f06eb640b3"]
+2023-12-23 07:22:58:718 [AndroidUiautomator2Driver@fefc (e9da928d)] Cleaning up 1 obsolete session
+2023-12-23 07:22:59:518 [Instrumentation] .
+2023-12-23 07:22:59:524 [Instrumentation] Time: 13.039
+2023-12-23 07:22:59:524 [Instrumentation] 
+2023-12-23 07:22:59:524 [Instrumentation] OK (1 test)
+2023-12-23 07:22:59:532 [Instrumentation] The process has exited with code 0
+2023-12-23 07:22:59:723 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-12-23 07:22:59:774 [AndroidUiautomator2Driver@fefc (e9da928d)] Starting UIAutomator2 server 5.12.17
+2023-12-23 07:22:59:774 [AndroidUiautomator2Driver@fefc (e9da928d)] Using UIAutomator2 server from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' and test from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:22:59:774 [AndroidUiautomator2Driver@fefc (e9da928d)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-12-23 07:22:59:774 [ADB] Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-12-23 07:22:59:776 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:22:59:776 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:22:59:778 [AndroidUiautomator2Driver@fefc (e9da928d)] socket hang up
+2023-12-23 07:23:00:159 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-12-23 07:23:00:780 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:23:00:780 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:23:00:785 [AndroidUiautomator2Driver@fefc (e9da928d)] socket hang up
+2023-12-23 07:23:01:788 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:23:01:789 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:23:01:820 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-12-23 07:23:01:820 [AndroidUiautomator2Driver@fefc (e9da928d)] The initialization of the instrumentation process took 2046ms
+2023-12-23 07:23:01:820 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/session' to command name 'createSession'
+2023-12-23 07:23:01:820 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [POST /session] to [POST http://127.0.0.1:8200/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-12-23 07:23:01:831 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5","value":{"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5"}}
+2023-12-23 07:23:01:831 [AndroidUiautomator2Driver@fefc (e9da928d)] Determined the downstream protocol as 'W3C'
+2023-12-23 07:23:01:836 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8200/session/22ff137d-96e0-489f-87a5-4f30db254bf5/appium/device/pixel_ratio] with no body
+2023-12-23 07:23:01:836 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-12-23 07:23:01:836 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8200/session/22ff137d-96e0-489f-87a5-4f30db254bf5/appium/device/system_bars] with no body
+2023-12-23 07:23:01:836 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-12-23 07:23:01:837 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8200/session/22ff137d-96e0-489f-87a5-4f30db254bf5/window/current/size] with no body
+2023-12-23 07:23:01:837 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8200/session/22ff137d-96e0-489f-87a5-4f30db254bf5/appium/device/info] with no body
+2023-12-23 07:23:01:837 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-12-23 07:23:01:841 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5","value":3.5}
+2023-12-23 07:23:01:844 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5","value":{"height":2956,"width":1440}}
+2023-12-23 07:23:01:849 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5","value":{"statusBar":84}}
+2023-12-23 07:23:01:860 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5","value":{"androidId":"e4f9d15383ecf720","apiVersion":"33","bluetooth":{"state":"ON"},"brand":"google","carrierName":"T-Mobile","displayDensity":560,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":15000,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"}],"platform...
+2023-12-23 07:23:01:870 [AndroidDriver] Screen already unlocked, doing nothing
+2023-12-23 07:23:01:870 [AppiumDriver@2916] New AndroidUiautomator2Driver session created successfully, session e9da928d-e3e2-4974-83b3-ce8e7c0786b2 added to master session list
+2023-12-23 07:23:01:870 [AppiumDriver@2916] Event 'newSessionStarted' logged at 1703316181870 (15:23:01 GMT+0800 (Central Standard Time))
+2023-12-23 07:23:01:870 [AndroidUiautomator2Driver@fefc (e9da928d)] Cached the protocol value 'W3C' for the new session e9da928d-e3e2-4974-83b3-ce8e7c0786b2
+2023-12-23 07:23:01:870 [AndroidUiautomator2Driver@fefc (e9da928d)] Responding to client with driver.createSession() result: {"capabilities":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554","pixelRatio":"3.5","statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2872},"deviceApiLevel":33,"platformVersion":"13","deviceManufacturer":"Google","deviceModel":"sdk_gphone64_arm64","deviceScreenSize":"1440x3040"...
+2023-12-23 07:23:01:870 [HTTP] <-- POST /session 200 3547 ms - 1110
+2023-12-23 07:23:01:870 [HTTP] 
+2023-12-23 07:23:48:069 [AndroidUiautomator2Driver@eb23 (8e42e555)] Shutting down because we waited 60 seconds for a command
+2023-12-23 07:23:48:070 [AppiumDriver@2916] Ending session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+2023-12-23 07:23:48:070 [AppiumDriver@2916] Removing session '8e42e555-ce6b-4466-9e34-abf8104d17a4' from our master session list
+2023-12-23 07:23:48:070 [AndroidUiautomator2Driver@eb23 (8e42e555)] Deleting UiAutomator2 session
+2023-12-23 07:23:48:071 [AndroidUiautomator2Driver@eb23 (8e42e555)] Deleting UiAutomator2 server session
+2023-12-23 07:23:48:071 [AndroidUiautomator2Driver@eb23 (8e42e555)] Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+2023-12-23 07:23:48:072 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-12-23 07:23:48:075 [Logcat] Stopping logcat capture
+2023-12-23 07:23:48:080 [ADB] Removing forwarded port socket connection: 8201 
+2023-12-23 07:23:48:080 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8201'
+2023-12-23 07:23:48:107 [AndroidUiautomator2Driver@eb23 (8e42e555)] Restoring hidden api policy to the device default configuration
+2023-12-23 07:23:48:107 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-12-23 07:24:01:871 [AndroidUiautomator2Driver@fefc (e9da928d)] Shutting down because we waited 60 seconds for a command
+2023-12-23 07:24:01:871 [AppiumDriver@2916] Ending session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+2023-12-23 07:24:01:871 [AppiumDriver@2916] Removing session 'e9da928d-e3e2-4974-83b3-ce8e7c0786b2' from our master session list
+2023-12-23 07:24:01:871 [AndroidUiautomator2Driver@fefc (e9da928d)] Deleting UiAutomator2 session
+2023-12-23 07:24:01:872 [AndroidUiautomator2Driver@fefc (e9da928d)] Deleting UiAutomator2 server session
+2023-12-23 07:24:01:872 [AndroidUiautomator2Driver@fefc (e9da928d)] Matched '/' to command name 'deleteSession'
+2023-12-23 07:24:01:872 [AndroidUiautomator2Driver@fefc (e9da928d)] Proxying [DELETE /] to [DELETE http://127.0.0.1:8200/session/22ff137d-96e0-489f-87a5-4f30db254bf5] with no body
+2023-12-23 07:24:01:886 [AndroidUiautomator2Driver@fefc (e9da928d)] Got response with status 200: {"sessionId":"22ff137d-96e0-489f-87a5-4f30db254bf5","value":null}
+2023-12-23 07:24:01:886 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-12-23 07:24:01:890 [Logcat] Stopping logcat capture
+2023-12-23 07:24:01:894 [ADB] Removing forwarded port socket connection: 8200 
+2023-12-23 07:24:01:894 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8200'
+2023-12-23 07:24:01:910 [AndroidUiautomator2Driver@fefc (e9da928d)] Restoring hidden api policy to the device default configuration
+2023-12-23 07:24:01:910 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-12-23 07:24:02:381 [Instrumentation] .
+2023-12-23 07:24:02:391 [Instrumentation] Time: 62.226
+2023-12-23 07:24:02:391 [Instrumentation] 
+2023-12-23 07:24:02:391 [Instrumentation] OK (1 test)
+2023-12-23 07:24:02:398 [Instrumentation] The process has exited with code 0
+2023-12-23 07:24:21:375 [HTTP] --> HEAD /status
+2023-12-23 07:24:21:375 [HTTP] {}
+2023-12-23 07:24:21:375 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:24:21:375 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:24:21:375 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-23 07:24:21:375 [HTTP] 
+2023-12-23 07:24:21:376 [HTTP] --> HEAD /status
+2023-12-23 07:24:21:376 [HTTP] {}
+2023-12-23 07:24:21:376 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:24:21:376 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:24:21:376 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-23 07:24:21:377 [HTTP] 
+2023-12-23 07:24:21:377 [HTTP] Request idempotency key: 879e3856-f650-4c84-854a-dfee2ec1f701
+2023-12-23 07:24:21:378 [HTTP] --> POST /session
+2023-12-23 07:24:21:378 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}}
+2023-12-23 07:24:21:378 [AppiumDriver@2916] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}]
+2023-12-23 07:24:21:378 [AppiumDriver@2916] Event 'newSessionRequested' logged at 1703316261378 (15:24:21 GMT+0800 (Central Standard Time))
+2023-12-23 07:24:21:378 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'Android'
+2023-12-23 07:24:21:378 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-12-23 07:24:21:378 [Appium] Will require it at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver
+2023-12-23 07:24:21:379 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:24:21:379 [AppiumDriver@2916] Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.35.0) session
+2023-12-23 07:24:21:379 [AppiumDriver@2916] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-12-23 07:24:21:379 [AppiumDriver@2916] Appium's BaseDriver version is 9.4.4
+2023-12-23 07:24:21:379 [AppiumDriver@2916] AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+2023-12-23 07:24:21:379 [AndroidUiautomator2Driver@8245] Creating session with W3C capabilities: {
+2023-12-23 07:24:21:379 [AndroidUiautomator2Driver@8245]   "alwaysMatch": {
+2023-12-23 07:24:21:379 [AndroidUiautomator2Driver@8245]     "platformName": "Android",
+2023-12-23 07:24:21:379 [AndroidUiautomator2Driver@8245]     "appium:automationName": "UIAutomator2",
+2023-12-23 07:24:21:379 [AndroidUiautomator2Driver@8245]     "appium:chromeOptions": {
+2023-12-23 07:24:21:379 [AndroidUiautomator2Driver@8245]       "platformName": "Android",
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]       "platformVersion": "13",
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]       "deviceName": "Android Emulator",
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]       "appPackage": "com.google.android.calculator",
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]       "appActivity": "com.android.calculator2.Calculator"
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]     }
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]   },
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]   "firstMatch": [
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]     {}
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245]   ]
+2023-12-23 07:24:21:380 [AndroidUiautomator2Driver@8245] }
+2023-12-23 07:24:21:381 [AndroidUiautomator2Driver@8245 (64053a5d)] Session created with session id: 64053a5d-632c-47d7-a49c-1b21a1c000c6
+2023-12-23 07:24:21:381 [AndroidUiautomator2Driver@8245 (64053a5d)] Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+2023-12-23 07:24:21:382 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:24:21:382 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:24:21:391 [AndroidDriver] Retrieving device list
+2023-12-23 07:24:21:391 [ADB] Trying to find connected Android devices
+2023-12-23 07:24:21:391 [ADB] Getting connected devices
+2023-12-23 07:24:21:400 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-12-23 07:24:21:400 [AndroidDriver] Using device: emulator-5554
+2023-12-23 07:24:21:401 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:24:21:401 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:24:21:410 [ADB] Setting device id to emulator-5554
+2023-12-23 07:24:21:410 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-12-23 07:24:21:425 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-12-23 07:24:21:425 [ADB] Getting device platform version
+2023-12-23 07:24:21:425 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-12-23 07:24:21:439 [ADB] Current device property 'ro.build.version.release': 13
+2023-12-23 07:24:21:440 [ADB] Device API level: 33
+2023-12-23 07:24:21:440 [AndroidUiautomator2Driver@8245 (64053a5d)] Relaxing hidden api policy
+2023-12-23 07:24:21:440 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-12-23 07:24:21:475 [AndroidDriver] No app sent in, not parsing package/activity
+2023-12-23 07:24:21:475 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-12-23 07:24:21:484 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-12-23 07:24:21:497 [AndroidDriver] Pushing settings apk to device...
+2023-12-23 07:24:21:497 [ADB] Getting package info for 'io.appium.settings'
+2023-12-23 07:24:21:497 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-12-23 07:24:21:518 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+2023-12-23 07:24:21:518 [ADB] There is no need to install/upgrade '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-12-23 07:24:21:518 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-12-23 07:24:21:518 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-12-23 07:24:21:534 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-12-23 07:24:21:555 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-12-23 07:24:21:556 [Logcat] Starting logs capture with command: /Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-12-23 07:24:21:572 [AndroidUiautomator2Driver@8245 (64053a5d)] Forwarding UiAutomator2 Server port 6790 to local port 8200
+2023-12-23 07:24:21:572 [ADB] Forwarding system: 8200 to device: 6790
+2023-12-23 07:24:21:572 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8200 tcp:6790'
+2023-12-23 07:24:21:583 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:24:21:583 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:24:21:584 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:24:21:584 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:24:21:584 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-12-23 07:24:21:584 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+2023-12-23 07:24:21:602 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:24:21:602 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:24:21:602 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-12-23 07:24:21:602 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-12-23 07:24:21:606 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-12-23 07:24:21:729 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.12.17' >= '5.12.17')
+2023-12-23 07:24:21:730 [AndroidUiautomator2Driver@8245 (64053a5d)] Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+2023-12-23 07:24:21:730 [AndroidUiautomator2Driver@8245 (64053a5d)] Server packages are not going to be (re)installed
+2023-12-23 07:24:21:730 [AndroidUiautomator2Driver@8245 (64053a5d)] Waiting up to 30000ms for services to be available
+2023-12-23 07:24:21:730 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-12-23 07:24:21:751 [AndroidUiautomator2Driver@8245 (64053a5d)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-12-23 07:24:21:751 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-12-23 07:24:21:751 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-12-23 07:24:21:751 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-12-23 07:24:21:778 [AndroidUiautomator2Driver@8245 (64053a5d)] No app capability. Assuming it is already on the device
+2023-12-23 07:24:21:778 [AndroidUiautomator2Driver@8245 (64053a5d)] Performing shallow cleanup of automation leftovers
+2023-12-23 07:24:21:781 [AndroidUiautomator2Driver@8245 (64053a5d)] No obsolete sessions have been detected (socket hang up)
+2023-12-23 07:24:21:781 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-12-23 07:24:21:805 [AndroidUiautomator2Driver@8245 (64053a5d)] Starting UIAutomator2 server 5.12.17
+2023-12-23 07:24:21:805 [AndroidUiautomator2Driver@8245 (64053a5d)] Using UIAutomator2 server from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' and test from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:24:21:805 [AndroidUiautomator2Driver@8245 (64053a5d)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-12-23 07:24:21:805 [ADB] Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-12-23 07:24:21:807 [AndroidUiautomator2Driver@8245 (64053a5d)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:24:21:808 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:24:21:809 [AndroidUiautomator2Driver@8245 (64053a5d)] socket hang up
+2023-12-23 07:24:22:154 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-12-23 07:24:22:813 [AndroidUiautomator2Driver@8245 (64053a5d)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:24:22:814 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:24:22:821 [AndroidUiautomator2Driver@8245 (64053a5d)] socket hang up
+2023-12-23 07:24:23:824 [AndroidUiautomator2Driver@8245 (64053a5d)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:24:23:824 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-12-23 07:24:23:859 [AndroidUiautomator2Driver@8245 (64053a5d)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-12-23 07:24:23:859 [AndroidUiautomator2Driver@8245 (64053a5d)] The initialization of the instrumentation process took 2054ms
+2023-12-23 07:24:23:859 [AndroidUiautomator2Driver@8245 (64053a5d)] Matched '/session' to command name 'createSession'
+2023-12-23 07:24:23:859 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [POST /session] to [POST http://127.0.0.1:8200/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-12-23 07:24:23:869 [AndroidUiautomator2Driver@8245 (64053a5d)] Got response with status 200: {"sessionId":"ee6b3c46-39c3-4e96-9732-cb8f97bc0e19","value":{"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"ee6b3c46-39c3-4e96-9732-cb8f97bc0e19"}}
+2023-12-23 07:24:23:870 [AndroidUiautomator2Driver@8245 (64053a5d)] Determined the downstream protocol as 'W3C'
+2023-12-23 07:24:23:870 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8200/session/ee6b3c46-39c3-4e96-9732-cb8f97bc0e19/appium/device/pixel_ratio] with no body
+2023-12-23 07:24:23:871 [AndroidUiautomator2Driver@8245 (64053a5d)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-12-23 07:24:23:871 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8200/session/ee6b3c46-39c3-4e96-9732-cb8f97bc0e19/appium/device/system_bars] with no body
+2023-12-23 07:24:23:871 [AndroidUiautomator2Driver@8245 (64053a5d)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-12-23 07:24:23:871 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8200/session/ee6b3c46-39c3-4e96-9732-cb8f97bc0e19/window/current/size] with no body
+2023-12-23 07:24:23:872 [AndroidUiautomator2Driver@8245 (64053a5d)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8200/session/ee6b3c46-39c3-4e96-9732-cb8f97bc0e19/appium/device/info] with no body
+2023-12-23 07:24:23:872 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-12-23 07:24:23:876 [AndroidUiautomator2Driver@8245 (64053a5d)] Got response with status 200: {"sessionId":"ee6b3c46-39c3-4e96-9732-cb8f97bc0e19","value":3.5}
+2023-12-23 07:24:23:878 [AndroidUiautomator2Driver@8245 (64053a5d)] Got response with status 200: {"sessionId":"ee6b3c46-39c3-4e96-9732-cb8f97bc0e19","value":{"statusBar":84}}
+2023-12-23 07:24:23:880 [AndroidUiautomator2Driver@8245 (64053a5d)] Got response with status 200: {"sessionId":"ee6b3c46-39c3-4e96-9732-cb8f97bc0e19","value":{"height":2956,"width":1440}}
+2023-12-23 07:24:23:887 [AndroidUiautomator2Driver@8245 (64053a5d)] Got response with status 200: {"sessionId":"ee6b3c46-39c3-4e96-9732-cb8f97bc0e19","value":{"androidId":"e4f9d15383ecf720","apiVersion":"33","bluetooth":{"state":"ON"},"brand":"google","carrierName":"T-Mobile","displayDensity":560,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":15000,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"}],"platform...
+2023-12-23 07:24:23:899 [AndroidDriver] Screen already unlocked, doing nothing
+2023-12-23 07:24:23:899 [AppiumDriver@2916] New AndroidUiautomator2Driver session created successfully, session 64053a5d-632c-47d7-a49c-1b21a1c000c6 added to master session list
+2023-12-23 07:24:23:899 [AppiumDriver@2916] Event 'newSessionStarted' logged at 1703316263899 (15:24:23 GMT+0800 (Central Standard Time))
+2023-12-23 07:24:23:899 [AndroidUiautomator2Driver@8245 (64053a5d)] Cached the protocol value 'W3C' for the new session 64053a5d-632c-47d7-a49c-1b21a1c000c6
+2023-12-23 07:24:23:899 [AndroidUiautomator2Driver@8245 (64053a5d)] Responding to client with driver.createSession() result: {"capabilities":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554","pixelRatio":"3.5","statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2872},"deviceApiLevel":33,"platformVersion":"13","deviceManufacturer":"Google","deviceModel":"sdk_gphone64_arm64","deviceScreenSize":"1440x3040"...
+2023-12-23 07:24:23:899 [HTTP] <-- POST /session 200 2522 ms - 1110
+2023-12-23 07:24:23:899 [HTTP] 
+2023-12-23 07:24:49:168 [HTTP] --> HEAD /status
+2023-12-23 07:24:49:168 [HTTP] {}
+2023-12-23 07:24:49:169 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:24:49:169 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:24:49:169 [HTTP] <-- HEAD /status 200 1 ms - 199
+2023-12-23 07:24:49:169 [HTTP] 
+2023-12-23 07:24:49:170 [HTTP] --> HEAD /status
+2023-12-23 07:24:49:170 [HTTP] {}
+2023-12-23 07:24:49:170 [AppiumDriver@2916] Calling AppiumDriver.getStatus() with args: []
+2023-12-23 07:24:49:170 [AppiumDriver@2916] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.3.0","git-sha":"1e0cde338cecbbd786f0cee23b8d600ba2c09bbe","built":"2023-12-23 14:10:49 +0800"}}
+2023-12-23 07:24:49:171 [HTTP] <-- HEAD /status 200 0 ms - 199
+2023-12-23 07:24:49:171 [HTTP] 
+2023-12-23 07:24:49:172 [HTTP] Request idempotency key: a516e214-1988-4bf1-9c5a-dffa93cec88b
+2023-12-23 07:24:49:172 [HTTP] --> POST /session
+2023-12-23 07:24:49:172 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}}
+2023-12-23 07:24:49:172 [AppiumDriver@2916] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"UIAutomator2","platformName":"Android","appium:chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}}}]
+2023-12-23 07:24:49:172 [AppiumDriver@2916] Event 'newSessionRequested' logged at 1703316289172 (15:24:49 GMT+0800 (Central Standard Time))
+2023-12-23 07:24:49:172 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'Android'
+2023-12-23 07:24:49:172 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-12-23 07:24:49:173 [Appium] Will require it at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver
+2023-12-23 07:24:49:173 [Appium] Requiring driver at /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+2023-12-23 07:24:49:173 [AppiumDriver@2916] Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.35.0) session
+2023-12-23 07:24:49:173 [AppiumDriver@2916] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-12-23 07:24:49:173 [AppiumDriver@2916] Appium's BaseDriver version is 9.4.4
+2023-12-23 07:24:49:173 [AppiumDriver@2916] AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de] Creating session with W3C capabilities: {
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]   "alwaysMatch": {
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]     "platformName": "Android",
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]     "appium:automationName": "UIAutomator2",
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]     "appium:chromeOptions": {
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]       "platformName": "Android",
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]       "platformVersion": "13",
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]       "deviceName": "Android Emulator",
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]       "appPackage": "com.google.android.calculator",
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]       "appActivity": "com.android.calculator2.Calculator"
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]     }
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]   },
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]   "firstMatch": [
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]     {}
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de]   ]
+2023-12-23 07:24:49:174 [AndroidUiautomator2Driver@71de] }
+2023-12-23 07:24:49:176 [AndroidUiautomator2Driver@71de (ac0eaa34)] Session created with session id: ac0eaa34-c0bb-4c2d-8b92-876f8ecaeed6
+2023-12-23 07:24:49:176 [AndroidUiautomator2Driver@71de (ac0eaa34)] Neither 'app' nor 'appPackage' was set. Starting UiAutomator2 without the target application
+2023-12-23 07:24:49:176 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:24:49:177 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:24:49:186 [AndroidDriver] Retrieving device list
+2023-12-23 07:24:49:186 [ADB] Trying to find connected Android devices
+2023-12-23 07:24:49:186 [ADB] Getting connected devices
+2023-12-23 07:24:49:195 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-12-23 07:24:49:195 [AndroidDriver] Using device: emulator-5554
+2023-12-23 07:24:49:195 [ADB] Using 'adb' from '/Users/wuchentian/Library/Android/sdk/platform-tools/adb'
+2023-12-23 07:24:49:195 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-12-23 07:24:49:204 [ADB] Setting device id to emulator-5554
+2023-12-23 07:24:49:204 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-12-23 07:24:49:219 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-12-23 07:24:49:220 [ADB] Getting device platform version
+2023-12-23 07:24:49:220 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-12-23 07:24:49:234 [ADB] Current device property 'ro.build.version.release': 13
+2023-12-23 07:24:49:234 [ADB] Device API level: 33
+2023-12-23 07:24:49:234 [AndroidUiautomator2Driver@71de (ac0eaa34)] Relaxing hidden api policy
+2023-12-23 07:24:49:234 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-12-23 07:24:49:270 [AndroidDriver] No app sent in, not parsing package/activity
+2023-12-23 07:24:49:270 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-12-23 07:24:49:279 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-12-23 07:24:49:292 [AndroidDriver] Pushing settings apk to device...
+2023-12-23 07:24:49:292 [ADB] Getting package info for 'io.appium.settings'
+2023-12-23 07:24:49:293 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-12-23 07:24:49:314 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+2023-12-23 07:24:49:314 [ADB] There is no need to install/upgrade '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-12-23 07:24:49:314 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-12-23 07:24:49:314 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-12-23 07:24:49:331 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-12-23 07:24:49:354 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-12-23 07:24:49:354 [Logcat] Starting logs capture with command: /Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-12-23 07:24:49:372 [AndroidUiautomator2Driver@71de (ac0eaa34)] Forwarding UiAutomator2 Server port 6790 to local port 8201
+2023-12-23 07:24:49:372 [ADB] Forwarding system: 8201 to device: 6790
+2023-12-23 07:24:49:372 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8201 tcp:6790'
+2023-12-23 07:24:49:383 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk
+2023-12-23 07:24:49:383 [ADB] Checking app cert for /Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-12-23 07:24:49:384 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:24:49:384 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:24:49:384 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-12-23 07:24:49:384 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+2023-12-23 07:24:49:401 [ADB] Using the previously cached signature entry for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:24:49:401 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.12.17.apk'
+2023-12-23 07:24:49:401 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-12-23 07:24:49:401 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-12-23 07:24:49:408 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-12-23 07:24:49:528 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.12.17' >= '5.12.17')
+2023-12-23 07:24:49:529 [AndroidUiautomator2Driver@71de (ac0eaa34)] Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+2023-12-23 07:24:49:529 [AndroidUiautomator2Driver@71de (ac0eaa34)] Server packages are not going to be (re)installed
+2023-12-23 07:24:49:529 [AndroidUiautomator2Driver@71de (ac0eaa34)] Waiting up to 30000ms for services to be available
+2023-12-23 07:24:49:529 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-12-23 07:24:49:552 [AndroidUiautomator2Driver@71de (ac0eaa34)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-12-23 07:24:49:552 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-12-23 07:24:49:552 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-12-23 07:24:49:552 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-12-23 07:24:49:580 [AndroidUiautomator2Driver@71de (ac0eaa34)] No app capability. Assuming it is already on the device
+2023-12-23 07:24:49:580 [AndroidUiautomator2Driver@71de (ac0eaa34)] Performing shallow cleanup of automation leftovers
+2023-12-23 07:24:49:585 [AndroidUiautomator2Driver@71de (ac0eaa34)] The following obsolete sessions are still running: ["ee6b3c46-39c3-4e96-9732-cb8f97bc0e19"]
+2023-12-23 07:24:49:585 [AndroidUiautomator2Driver@71de (ac0eaa34)] Cleaning up 1 obsolete session
+2023-12-23 07:24:50:245 [Instrumentation] .
+2023-12-23 07:24:50:259 [Instrumentation] Time: 28.093
+2023-12-23 07:24:50:260 [Instrumentation] 
+2023-12-23 07:24:50:260 [Instrumentation] OK (1 test)
+2023-12-23 07:24:50:269 [Instrumentation] The process has exited with code 0
+2023-12-23 07:24:50:591 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-12-23 07:24:50:637 [AndroidUiautomator2Driver@71de (ac0eaa34)] Starting UIAutomator2 server 5.12.17
+2023-12-23 07:24:50:637 [AndroidUiautomator2Driver@71de (ac0eaa34)] Using UIAutomator2 server from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.12.17.apk' and test from '/Users/wuchentian/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-12-23 07:24:50:637 [AndroidUiautomator2Driver@71de (ac0eaa34)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-12-23 07:24:50:637 [ADB] Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-12-23 07:24:50:640 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:24:50:640 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+2023-12-23 07:24:50:642 [AndroidUiautomator2Driver@71de (ac0eaa34)] socket hang up
+2023-12-23 07:24:50:967 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-12-23 07:24:51:647 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:24:51:649 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+2023-12-23 07:24:51:656 [AndroidUiautomator2Driver@71de (ac0eaa34)] socket hang up
+2023-12-23 07:24:52:660 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/status' to command name 'getStatus'
+2023-12-23 07:24:52:660 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+2023-12-23 07:24:52:692 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-12-23 07:24:52:692 [AndroidUiautomator2Driver@71de (ac0eaa34)] The initialization of the instrumentation process took 2055ms
+2023-12-23 07:24:52:693 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/session' to command name 'createSession'
+2023-12-23 07:24:52:693 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [POST /session] to [POST http://127.0.0.1:8201/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-12-23 07:24:52:700 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6","value":{"capabilities":{"firstMatch":[{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6"}}
+2023-12-23 07:24:52:700 [AndroidUiautomator2Driver@71de (ac0eaa34)] Determined the downstream protocol as 'W3C'
+2023-12-23 07:24:52:706 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8201/session/e1fb6e34-04f5-499e-aae2-c1a49a92e3a6/appium/device/pixel_ratio] with no body
+2023-12-23 07:24:52:706 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-12-23 07:24:52:706 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8201/session/e1fb6e34-04f5-499e-aae2-c1a49a92e3a6/appium/device/system_bars] with no body
+2023-12-23 07:24:52:706 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-12-23 07:24:52:707 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8201/session/e1fb6e34-04f5-499e-aae2-c1a49a92e3a6/window/current/size] with no body
+2023-12-23 07:24:52:707 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8201/session/e1fb6e34-04f5-499e-aae2-c1a49a92e3a6/appium/device/info] with no body
+2023-12-23 07:24:52:707 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-12-23 07:24:52:711 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6","value":3.5}
+2023-12-23 07:24:52:715 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6","value":{"statusBar":84}}
+2023-12-23 07:24:52:715 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6","value":{"height":2956,"width":1440}}
+2023-12-23 07:24:52:722 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6","value":{"androidId":"e4f9d15383ecf720","apiVersion":"33","bluetooth":{"state":"ON"},"brand":"google","carrierName":"T-Mobile","displayDensity":560,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":15000,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"}],"platform...
+2023-12-23 07:24:52:739 [AndroidDriver] Screen already unlocked, doing nothing
+2023-12-23 07:24:52:739 [AppiumDriver@2916] New AndroidUiautomator2Driver session created successfully, session ac0eaa34-c0bb-4c2d-8b92-876f8ecaeed6 added to master session list
+2023-12-23 07:24:52:739 [AppiumDriver@2916] Event 'newSessionStarted' logged at 1703316292739 (15:24:52 GMT+0800 (Central Standard Time))
+2023-12-23 07:24:52:739 [AndroidUiautomator2Driver@71de (ac0eaa34)] Cached the protocol value 'W3C' for the new session ac0eaa34-c0bb-4c2d-8b92-876f8ecaeed6
+2023-12-23 07:24:52:740 [AndroidUiautomator2Driver@71de (ac0eaa34)] Responding to client with driver.createSession() result: {"capabilities":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"},"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","automationName":"UIAutomator2","chromeOptions":{"platformName":"Android","platformVersion":"13","deviceName":"Android Emulator","appPackage":"com.google.android.calculator","appActivity":"com.android.calculator2.Calculator"}},"deviceName":"emulator-5554","deviceUDID":"emulator-5554","pixelRatio":"3.5","statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2872},"deviceApiLevel":33,"platformVersion":"13","deviceManufacturer":"Google","deviceModel":"sdk_gphone64_arm64","deviceScreenSize":"1440x3040"...
+2023-12-23 07:24:52:740 [HTTP] <-- POST /session 200 3568 ms - 1110
+2023-12-23 07:24:52:740 [HTTP] 
+2023-12-23 07:25:23:903 [AndroidUiautomator2Driver@8245 (64053a5d)] Shutting down because we waited 60 seconds for a command
+2023-12-23 07:25:23:904 [AppiumDriver@2916] Ending session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+2023-12-23 07:25:23:904 [AppiumDriver@2916] Removing session '64053a5d-632c-47d7-a49c-1b21a1c000c6' from our master session list
+2023-12-23 07:25:23:904 [AndroidUiautomator2Driver@8245 (64053a5d)] Deleting UiAutomator2 session
+2023-12-23 07:25:23:904 [AndroidUiautomator2Driver@8245 (64053a5d)] Deleting UiAutomator2 server session
+2023-12-23 07:25:23:905 [AndroidUiautomator2Driver@8245 (64053a5d)] Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+2023-12-23 07:25:23:906 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-12-23 07:25:23:912 [Logcat] Stopping logcat capture
+2023-12-23 07:25:23:919 [ADB] Removing forwarded port socket connection: 8200 
+2023-12-23 07:25:23:920 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8200'
+2023-12-23 07:25:23:943 [AndroidUiautomator2Driver@8245 (64053a5d)] Restoring hidden api policy to the device default configuration
+2023-12-23 07:25:23:943 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-12-23 07:25:52:741 [AndroidUiautomator2Driver@71de (ac0eaa34)] Shutting down because we waited 60 seconds for a command
+2023-12-23 07:25:52:741 [AppiumDriver@2916] Ending session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+2023-12-23 07:25:52:741 [AppiumDriver@2916] Removing session 'ac0eaa34-c0bb-4c2d-8b92-876f8ecaeed6' from our master session list
+2023-12-23 07:25:52:741 [AndroidUiautomator2Driver@71de (ac0eaa34)] Deleting UiAutomator2 session
+2023-12-23 07:25:52:742 [AndroidUiautomator2Driver@71de (ac0eaa34)] Deleting UiAutomator2 server session
+2023-12-23 07:25:52:742 [AndroidUiautomator2Driver@71de (ac0eaa34)] Matched '/' to command name 'deleteSession'
+2023-12-23 07:25:52:742 [AndroidUiautomator2Driver@71de (ac0eaa34)] Proxying [DELETE /] to [DELETE http://127.0.0.1:8201/session/e1fb6e34-04f5-499e-aae2-c1a49a92e3a6] with no body
+2023-12-23 07:25:52:770 [AndroidUiautomator2Driver@71de (ac0eaa34)] Got response with status 200: {"sessionId":"e1fb6e34-04f5-499e-aae2-c1a49a92e3a6","value":null}
+2023-12-23 07:25:52:770 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-12-23 07:25:52:771 [Logcat] Stopping logcat capture
+2023-12-23 07:25:52:773 [ADB] Removing forwarded port socket connection: 8201 
+2023-12-23 07:25:52:774 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8201'
+2023-12-23 07:25:52:797 [AndroidUiautomator2Driver@71de (ac0eaa34)] Restoring hidden api policy to the device default configuration
+2023-12-23 07:25:52:797 [ADB] Running '/Users/wuchentian/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-12-23 07:25:53:167 [Instrumentation] .
+2023-12-23 07:25:53:193 [Instrumentation] Time: 62.204
+2023-12-23 07:25:53:194 [Instrumentation] 
+2023-12-23 07:25:53:194 [Instrumentation] OK (1 test)
+2023-12-23 07:25:53:216 [Instrumentation] The process has exited with code 0
