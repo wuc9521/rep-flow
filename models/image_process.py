@@ -1,6 +1,5 @@
 import cv2
 
-
 def calculate(image1, image2):
     # 灰度直方图算法
     # 计算单通道的直方图的相似值
@@ -31,33 +30,46 @@ def classify_hist_with_split(image1, image2, size=(1000, 2000)):
 
 
 # 获得一个用户的实时图片，找出最相似图片返回
-def image_process(image1):
+def image_process(image_target):
     scores = []
     max_score = 0
     max_similar = 0
     for i in range(0, 10):
-        score = classify_hist_with_split(image_user, image_list[i])
+        score = classify_hist_with_split(image_target, image_list[i])
         if score>max_score :
+            max_score = score
+            max_similar = i
         scores.append(score)
+    if max_score < 0.7:
+        return "missing"
+    return max_similar, max_score
+
+
+
+
+def test_hist():
+    score_list = []
+    for i in range(0, 10):
+        score_list.append(classify_hist_with_split(image_user,image_list[i]))
+    print('三直方图相似度')
+    for i in range(0, 10):
+        print(score_list[i],end='')
+    print()
+    for i in range (0,10):
+        for j in range (0,10):
+            print(classify_hist_with_split(image_list[i],image_list[j]),end='')
+        print()
 
 
 image_list =[]
 for i in range(1, 11):
-    image_list.append(cv2.imread('../image_test/test'+str(i)+'.jpg'))
+    image_list.append(cv2.imread('../data/image_test/test'+str(i)+'.jpg'))
 
-image_user = cv2.imread('../image_test/user1.jpg')
+image_user = cv2.imread('../data/image_test/user1.jpg')
 
-score_list = []
-for i in range(0, 10):
-    score_list.append(classify_hist_with_split(image_user,image_list[i]))
-print('三直方图相似度')
-for i in range(0, 10):
-    print(score_list[i],end='')
-print()
-for i in range (0,10):
-    for j in range (0,10):
-        print(classify_hist_with_split(image_list[i],image_list[j]),end='')
-    print()
+result = image_process(image_user)
+print("position :", result[0], " score :", result[1])
+
 # sift = cv2.SIFT_create()
 
 # key_list = []
