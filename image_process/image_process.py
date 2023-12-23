@@ -29,6 +29,19 @@ def classify_hist_with_split(image1, image2, size=(1000, 2000)):
     sub_data = sub_data / 3
     return sub_data
 
+
+# 获得一个用户的实时图片，找出最相似图片返回
+def image_process(image1):
+    scores = []
+    max_score = 0
+    max_similar = 0
+    for i in range(0, 10):
+        score = classify_hist_with_split(image_user, image_list[i])
+        if score>max_score :
+
+        scores.append(score)
+
+
 image_list =[]
 for i in range(1, 11):
     image_list.append(cv2.imread('../image_test/test'+str(i)+'.jpg'))
