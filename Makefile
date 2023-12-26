@@ -4,6 +4,21 @@ NPM = npm
 
 OS := $(shell uname)
 
+all:
+	@echo "Running on $(OS)"
+	@echo "Please use 'make <target>' where <target> is one of:"
+	@echo "  install: install dependencies."
+	@echo "  run    : run the app."
+	@echo "  clean  : clean up the logs and figures."
+	@echo "  stop   : stop the app."
+	@echo "  boot   : boot the emulator \033[0;31m!!! modify the emulator name in Makefile.\033[0m"
+	@echo "  reload': reload the appium server."
+	@echo ""
+	@echo ""
+	@echo "Normally, run \033[0;32mmake install\033[0m first, then run \033[0;32mmake run\033[0m to start the app."
+	@echo ""
+	@echo ""
+
 install:
 	$(NPM) install
 	$(PIP) install -r requirements.txt
@@ -34,16 +49,17 @@ ifeq ($(OS),Linux)
 	fi
 else
 ifeq ($(OS),Darwin)
-	@if [ -d "data/state" ] && [ "$(ls -A data/state)" ]; then \
+	@if [[ `ls -A data/state` ]]; then \
 		echo "Cleaning data/state..."; \
 		rm -rf data/state/*; \
-		echo "Cleaned up."; \
+		rm -rf data/state/.DS_Store; \
 	fi
-	@if [ -d "log" ] && [ "$(ls -A log)" ]; then \
+	@if [[ `ls -a ./log` ]]; then \
 		echo "Cleaning log..."; \
 		rm -f log/*; \
-		echo "Cleaned up."; \
+		rm -f log/.DS_Store; \
 	fi
+	@echo "Cleaned up."; 
 else
 	@del /Q data\state\*.png
 	@rd /Q log\*.log
