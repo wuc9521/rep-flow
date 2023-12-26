@@ -41,12 +41,17 @@ endif
 
 clean: stop
 ifeq ($(OS),Linux)
-	@if [ -d "data/state" ] && [ "$(ls -A data/state)" ]; then
-  		rm -rf data/state/*
+	@if [[ `ls -A data/state` ]]; then \
+		echo "Cleaning data/state..."; \
+		rm -rf data/state/*; \
+		rm -rf data/state/.DS_Store; \
 	fi
-	@if [ -d "log" ] && [ "$(ls -A log)" ]; then 
-		rm -f log/*.log; 
+	@if [[ `ls -a ./log` ]]; then \
+		echo "Cleaning log..."; \
+		rm -f log/*; \
+		rm -f log/.DS_Store; \
 	fi
+	@echo "Cleaned up."; 
 else
 ifeq ($(OS),Darwin)
 	@if [[ `ls -A data/state` ]]; then \
