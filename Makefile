@@ -4,27 +4,25 @@ NPM = npm
 
 OS := $(shell uname)
 
-all:
-	@echo "Running on $(OS)"
-	@echo "Please use 'make <target>' where <target> is one of:"
-	@echo "  install: install dependencies."
-	@echo "  run    : run the app."
-	@echo "  clean  : clean up the logs and figures."
-	@echo "  stop   : stop the app."
-	@echo "  boot   : boot the emulator \033[0;31m!!! modify the emulator name in Makefile.\033[0m"
-	@echo "  reload': reload the appium server."
-	@echo ""
-	@echo ""
-	@echo "Normally, run \033[0;32mmake install\033[0m first, then run \033[0;32mmake run\033[0m to start the app."
-	@echo ""
-	@echo ""
+
+# Function to print colored message
+define print_message
+	@echo "$(1)$(2)$(COLOR_RESET)"
+endef
+
+.PHONY: all install run clean stop boot reload
+
+all: help
+
+help:
+	@$(PYTHON) utils/help.py
 
 install:
 	$(NPM) install
 	$(PIP) install -r requirements.txt
 
 run: clean
-	@$(PYTHON) script/detect.py
+	@$(PYTHON) utils/detect.py
 	@nohup $(PYTHON) app.py >/dev/null 2>&1 &
 	@echo "App is running..."
 	@nohup $(PYTHON) script/main.py >/dev/null 2>&1 &
