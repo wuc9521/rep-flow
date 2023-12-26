@@ -47,8 +47,6 @@ handler = RotatingFileHandler(log_file_path, maxBytes=10000, backupCount=1)
 handler.setFormatter(formatter)
 app.logger.addHandler(handler)
 app.logger.setLevel(logging.INFO)
-sys.stdout = handler.stream
-sys.stderr = handler.stream
 
 
 @app.route('/')
