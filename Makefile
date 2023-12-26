@@ -62,6 +62,7 @@ ifeq ($(OS),Darwin)
 		rm -f log/*; \
 		rm -f log/.DS_Store; \
 	fi
+	@rm -rf utils/__pycache__
 	@echo "Cleaned up."; 
 else
 	@del /Q data\state\*.png

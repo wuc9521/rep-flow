@@ -13,12 +13,14 @@
             document.getElementById('loading-indicator').style.display = 'none';
         }
         function updateConversation(query, answer, type, img) {
-            conversationHistory.push({
+            conversation = {
                 query: query,
                 answer: answer,
                 type: type,
                 img: img
-            });
+            };
+            console.log(conversation);
+            conversationHistory.push(conversation);
             updateDisplay();
         }
         function updateDisplay() {
@@ -53,6 +55,7 @@
                 }
                 resultsContainer.appendChild(resultItem);
             });
+            resultsContainer.scrollTop = resultsContainer.scrollHeight;
         }
 
         function submitForm(event) {

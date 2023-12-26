@@ -3,7 +3,6 @@ import time
 import json
 import subprocess as sp
 from appium import webdriver
-from datetime import datetime
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
 
