@@ -1,8 +1,0 @@
-"ID","TYPE","A",
-"0","ERROR","I'm sorry, I can't understand you."
-"1","GREETING","Hello, what can I help you?"
-"2","GREETING","I am ChatRMB, I can help you reproduce an mobile app bug, please tell me the bug name."
-"3","NEXT-STEP","The next step is to tap the following part on the screen."
-"4","CURRENT-STATE","Your current step is as follows."
-"-1","HINT","Yes, it is correct."
-

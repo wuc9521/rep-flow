@@ -13,7 +13,14 @@
             document.getElementById('loading-indicator').style.display = 'none';
         }
         function updateConversation(query, answer, type, img) {
-            conversationHistory.push({ query: query, answer: answer, type: type, img});
+            conversation = {
+                query: query,
+                answer: answer,
+                type: type,
+                img: img
+            };
+            console.log(conversation);
+            conversationHistory.push(conversation);
             updateDisplay();
         }
         function updateDisplay() {
@@ -32,8 +39,6 @@
                 answerText.textContent = item.answer;
                 answerText.className = 'answer';
 
-                
-
                 if (queryText.textContent !== "") {
                     resultItem.appendChild(queryText);
                 }
@@ -47,9 +52,10 @@
                     imageElement.className = 'state-image';
                     imageElementBox.appendChild(imageElement);
                     resultItem.appendChild(imageElementBox);
-                } 
+                }
                 resultsContainer.appendChild(resultItem);
             });
+            resultsContainer.scrollTop = resultsContainer.scrollHeight;
         }
 
         function submitForm(event) {
@@ -64,15 +70,15 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ query: query })
-            })
-                .then(response => response.json())
-                .then(data => {
-                    hideLoadingIndicator();
-                    updateConversation(query, data.answer, data.type, data.img);
-                }).catch(error => {
-                    console.error('Error:', error);
-                    hideLoadingIndicator();
-                });
+            }).then(
+                response => response.json()
+            ).then(data => {
+                hideLoadingIndicator();
+                updateConversation(query, data.answer, data.type, data.img);
+            }).catch(error => {
+                console.error('Error:', error);
+                hideLoadingIndicator();
+            });
             queryInput.value = ''; // Clear the input field
 
         }

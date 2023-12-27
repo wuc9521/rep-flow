@@ -7,3 +7,4 @@ This part is for fetching user state in time.
 ## Reference
 
 1. [Appium Python Client Docs](https://appium.github.io/python-client-sphinx/)
+
