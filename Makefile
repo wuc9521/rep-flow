@@ -89,14 +89,14 @@ endif
 
 stop:
 ifeq ($(PLATFORM),Linux)
-	-@if pgrep -f 'app.py' > /dev/null; then \
+	-@if pgrep app.py > /dev/null; then \
 		echo "Stop running app..."; \
-		pkill -f 'app.py'; \
+		pkill app.py; \
 		echo "Stopped."; \
 	fi
-	-@if pgrep -f 'main.py' > /dev/null; then \
+	-@if pgrep main.py > /dev/null; then \
 		echo "Stop running script..."; \
-		pkill -f 'main.py'; \
+		pkill main.py; \
 		echo "Stopped."; \
 	fi
 else
