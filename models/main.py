@@ -34,6 +34,7 @@ def classify_hist_with_split(image1, image2, size=(1000, 2000)):
 
 
 # 获得一个用户的实时图片，找出最相似图片返回
+# 6张图24s
 def image_process(image_target):
     gray_user =cv2.cvtColor(image_target, cv2.COLOR_BGR2GRAY)
     scores = []
@@ -86,7 +87,7 @@ def test_ssim():
 
 image_list =[]
 for i in range(1, 11):
-    image_list.append(cv2.imread('../data/image_test/test'+str(i)+'.jpg'))
+    image_list.append(cv2.imread('../data/test/test'+str(i)+'.jpg'))
 
 # 使用色彩空间转化函数 cv2.cvtColor( )进行色彩空间的转换
 gray_list = []
@@ -96,7 +97,7 @@ for i in range(0,10):
 # test_ssim()
 
 for i in range(1, 7):
-    image_user = cv2.imread('../data/image_test/user'+str(i)+'.jpg')
+    image_user = cv2.imread('../data/test/user'+str(i)+'.jpg')
     result = image_process(image_user)
     if result == 'missing':
         print(result)
