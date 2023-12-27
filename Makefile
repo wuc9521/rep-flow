@@ -33,6 +33,16 @@ install:
 	$(PIP) install -r requirements.txt
 
 run: clean
+ifeq ($(PLATFORM),Windows)
+	@$(PYTHON) .\utils\detect.py
+	@$(PYTHON) app.py >/dev/null 2>&1 &
+	@echo "App is running..."
+	@$(PYTHON) script\main.py >/dev/null 2>&1 &
+	@echo "Script is running..."
+	@echo "Please open http://localhost:5000"
+	@sleep 1.2
+	@start http://localhost:5000
+else
 	@$(PYTHON) utils/detect.py
 	@nohup $(PYTHON) app.py >/dev/null 2>&1 &
 	@echo "App is running..."
@@ -45,6 +55,7 @@ ifeq ($(PLATFORM),Linux)
 else
 ifeq ($(PLATFORM),Darwin)
 	@open http://localhost:5000
+endif
 endif
 endif
 
