@@ -1,8 +1,19 @@
-PYTHON = python3
 PIP = pip3
 NPM = npm
 
-OS := $(shell uname)
+ifeq ($(OS),Windows_NT)
+	PLATFORM := Windows
+	PYTHON := python
+else
+	PYTHON := python3
+	ifeq ($(shell uname),Linux)
+		PLATFORM := Linux
+	endif
+	ifeq ($(shell uname),Darwin)
+		PLATFORM := Darwin
+	endif
+endif
+
 
 
 # Function to print colored message
@@ -22,6 +33,16 @@ install:
 	$(PIP) install -r requirements.txt
 
 run: clean
+ifeq ($(PLATFORM),Windows)
+	@$(PYTHON) .\utils\detect.py
+	@$(PYTHON) app.py >/dev/null 2>&1 &
+	@echo "App is running..."
+	@$(PYTHON) script\main.py >/dev/null 2>&1 &
+	@echo "Script is running..."
+	@echo "Please open http://localhost:5000"
+	@sleep 1.2
+	@start http://localhost:5000
+else
 	@$(PYTHON) utils/detect.py
 	@nohup $(PYTHON) app.py >/dev/null 2>&1 &
 	@echo "App is running..."
@@ -29,16 +50,17 @@ run: clean
 	@echo "Script is running..."
 	@echo "Please open http://localhost:5000"
 	@sleep 1.2
-ifeq ($(OS),Linux)
+ifeq ($(PLATFORM),Linux)
 	@xdg-open http://localhost:5000 
 else
-ifeq ($(OS),Darwin)
+ifeq ($(PLATFORM),Darwin)
 	@open http://localhost:5000
+endif
 endif
 endif
 
 clean: stop
-ifeq ($(OS),Linux)
+ifeq ($(PLATFORM),Linux)
 	@if [[ `ls -A data/state` ]]; then \
 		echo "Cleaning data/state..."; \
 		rm -rf data/state/*; \
@@ -51,7 +73,7 @@ ifeq ($(OS),Linux)
 	fi
 	@echo "Cleaned up."; 
 else
-ifeq ($(OS),Darwin)
+ifeq ($(PLATFORM),Darwin)
 	@if [[ `ls -A data/state` ]]; then \
 		echo "Cleaning data/state..."; \
 		rm -rf data/state/*; \
@@ -65,25 +87,31 @@ ifeq ($(OS),Darwin)
 	@rm -rf utils/__pycache__
 	@echo "Cleaned up."; 
 else
-	@del /Q data\state\*.png
-	@rd /Q log\*.log
+	@if not exist data\state\NUL; then \
+		echo "Cleaning data/state..."; \
+		rd /S /Q data\state; \
+	fi
+	@if not exist log\NUL; then \
+		echo "Cleaning log..."; \
+		rd /S /Q log; \
+	fi
 endif
 endif
 
 stop:
-ifeq ($(OS),Linux)
-	-@if pgrep -f 'app.py' > /dev/null; then \
+ifeq ($(PLATFORM),Linux)
+	-@if pgrep app.py > /dev/null; then \
 		echo "Stop running app..."; \
-		pkill -f 'app.py'; \
+		pkill app.py; \
 		echo "Stopped."; \
 	fi
-	-@if pgrep -f 'main.py' > /dev/null; then \
+	-@if pgrep main.py > /dev/null; then \
 		echo "Stop running script..."; \
-		pkill -f 'main.py'; \
+		pkill main.py; \
 		echo "Stopped."; \
 	fi
 else
-ifeq ($(OS),Darwin)
+ifeq ($(PLATFORM),Darwin)
 	-@if pgrep -f 'app.py' > /dev/null; then \
 		echo "Stop running app..."; \
 		pkill -f 'app.py'; \

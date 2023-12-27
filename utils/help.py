@@ -1,7 +1,8 @@
 import os
 import subprocess
 
-OS = subprocess.check_output("uname", shell=True).decode("utf-8").strip()
+
+OS = "Windows" if os.name == "nt" else subprocess.check_output("uname", shell=True).decode("utf-8").strip()
 GREEN = "0;32"
 RED = "0;31"
 
