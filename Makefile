@@ -76,8 +76,14 @@ ifeq ($(PLATFORM),Darwin)
 	@rm -rf utils/__pycache__
 	@echo "Cleaned up."; 
 else
-	@del /Q data\state\*.png
-	@rd /Q log\*.log
+	@if not exist data\state\NUL; then \
+		echo "Cleaning data/state..."; \
+		rd /S /Q data\state; \
+	fi
+	@if not exist log\NUL; then \
+		echo "Cleaning log..."; \
+		rd /S /Q log; \
+	fi
 endif
 endif
 
