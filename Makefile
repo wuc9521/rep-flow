@@ -1,8 +1,19 @@
-PYTHON = python3
 PIP = pip3
 NPM = npm
 
-OS := $(shell uname)
+ifeq ($(OS),Windows_NT)
+	PLATFORM := Windows
+	PYTHON := python
+else
+	PYTHON := python3
+	ifeq ($(shell uname),Linux)
+		PLATFORM := Linux
+	endif
+	ifeq ($(shell uname),Darwin)
+		PLATFORM := Darwin
+	endif
+endif
+
 
 
 # Function to print colored message
@@ -29,16 +40,16 @@ run: clean
 	@echo "Script is running..."
 	@echo "Please open http://localhost:5000"
 	@sleep 1.2
-ifeq ($(OS),Linux)
+ifeq ($(PLATFORM),Linux)
 	@xdg-open http://localhost:5000 
 else
-ifeq ($(OS),Darwin)
+ifeq ($(PLATFORM),Darwin)
 	@open http://localhost:5000
 endif
 endif
 
 clean: stop
-ifeq ($(OS),Linux)
+ifeq ($(PLATFORM),Linux)
 	@if [[ `ls -A data/state` ]]; then \
 		echo "Cleaning data/state..."; \
 		rm -rf data/state/*; \
@@ -51,7 +62,7 @@ ifeq ($(OS),Linux)
 	fi
 	@echo "Cleaned up."; 
 else
-ifeq ($(OS),Darwin)
+ifeq ($(PLATFORM),Darwin)
 	@if [[ `ls -A data/state` ]]; then \
 		echo "Cleaning data/state..."; \
 		rm -rf data/state/*; \
@@ -71,7 +82,7 @@ endif
 endif
 
 stop:
-ifeq ($(OS),Linux)
+ifeq ($(PLATFORM),Linux)
 	-@if pgrep -f 'app.py' > /dev/null; then \
 		echo "Stop running app..."; \
 		pkill -f 'app.py'; \
@@ -83,7 +94,7 @@ ifeq ($(OS),Linux)
 		echo "Stopped."; \
 	fi
 else
-ifeq ($(OS),Darwin)
+ifeq ($(PLATFORM),Darwin)
 	-@if pgrep -f 'app.py' > /dev/null; then \
 		echo "Stop running app..."; \
 		pkill -f 'app.py'; \
