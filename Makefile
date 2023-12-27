@@ -1,5 +1,6 @@
 PIP = pip3
 NPM = npm
+APPIUM = appium
 
 ifeq ($(OS),Windows_NT)
 	PLATFORM := Windows
@@ -30,17 +31,20 @@ help:
 
 install:
 	$(NPM) install
+	$(NPM) install -g appium
 	$(PIP) install -r requirements.txt
+	$(APPIUM) driver install uiautomator2
+	$(PYTHON) -m spacy download en_core_web_sm
 
 run: clean
 ifeq ($(PLATFORM),Windows)
 	@$(PYTHON) .\utils\detect.py
-	@$(PYTHON) .\app.py >/dev/null 2>&1 &
+	@start /B $(PYTHON) .\app.py
 	@echo "App is running..."
-	@$(PYTHON) .\script\main.py >/dev/null 2>&1 &
+	@start /B $(PYTHON) .\script\main.py
 	@echo "Script is running..."
 	@echo "Please open http://localhost:5000"
-	@sleep 1.2
+	@timeout /nobreak /t 1 > nul
 	@start http://localhost:5000
 else
 	@$(PYTHON) utils/detect.py
