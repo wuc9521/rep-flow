@@ -35,12 +35,12 @@ install:
 run: clean
 ifeq ($(PLATFORM),Windows)
 	@$(PYTHON) .\utils\detect.py
-	@$(PYTHON) app.py >/dev/null 2>&1 &
+	@start /B $(PYTHON) app.py
 	@echo "App is running..."
-	@$(PYTHON) script\main.py >/dev/null 2>&1 &
+	@start /B $(PYTHON) script\main.py
 	@echo "Script is running..."
 	@echo "Please open http://localhost:5000"
-	@sleep 1.2
+	@timeout /nobreak /t 1 > nul
 	@start http://localhost:5000
 else
 	@$(PYTHON) utils/detect.py

@@ -31,7 +31,7 @@ df = pd.merge(
 qa = dict(zip(df['Q'], df['A']))
 at = dict(zip(std['A'], std['TYPE']))
 ta = dict(zip(std['TYPE'], std['A']))
-key_words = read_keywords_from_file(os.path.join(CORPUS_DIR, 'kw.txt'))
+key_words = read_keywords_from_file(os.path.join(CORPUS_DIR, 'kw.txt'), app=app)
 
 
 if not os.path.exists(LOG_DIR):
