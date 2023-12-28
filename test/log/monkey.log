@@ -1,0 +1,169 @@
+  bash arg: -p
+  bash arg: com.liuyaoli.myapplication
+  bash arg: -v
+  bash arg: 500
+  bash arg: -throttle
+  bash arg: 100
+args: [-p, com.liuyaoli.myapplication, -v, 500, -throttle, 100]
+ arg: "-p"
+ arg: "com.liuyaoli.myapplication"
+ arg: "-v"
+ arg: "500"
+ arg: "-throttle"
+ arg: "100"
+data="com.liuyaoli.myapplication"
+:Monkey: seed=1703734658078 count=500
+:AllowPackage: com.liuyaoli.myapplication
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Event percentages:
+//   0: 15.0%
+//   1: 10.0%
+//   2: 2.0%
+//   3: 15.0%
+//   4: -0.0%
+//   5: -0.0%
+//   6: 25.0%
+//   7: 15.0%
+//   8: 2.0%
+//   9: 2.0%
+//   10: 1.0%
+//   11: 13.0%
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(590.0,268.0)
+:Sending Touch (ACTION_UP): 0:(591.2669,275.9681)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(12.0,1334.0)
+:Sending Touch (ACTION_UP): 0:(14.002883,1343.1239)
+:Sending Touch (ACTION_DOWN): 0:(647.0,1236.0)
+:Sending Touch (ACTION_UP): 0:(649.41516,1215.1323)
+:Sending Touch (ACTION_DOWN): 0:(250.0,1562.0)
+:Sending Touch (ACTION_UP): 0:(250.06049,1570.0082)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+    // activityResuming(com.liuyaoli.myapplication)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(509.0,941.0)
+:Sending Touch (ACTION_UP): 0:(503.04663,949.5168)
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=com.android.launcher3/.Launcher } in package com.android.launcher3
+    // activityResuming(com.liuyaoli.myapplication)
+:Sending Touch (ACTION_DOWN): 0:(910.0,2087.0)
+:Sending Touch (ACTION_UP): 0:(915.26843,2048.4175)
+:Sending Touch (ACTION_DOWN): 0:(83.0,1956.0)
+:Sending Touch (ACTION_UP): 0:(90.34037,1955.9637)
+:Sending Touch (ACTION_DOWN): 0:(406.0,1213.0)
+:Sending Touch (ACTION_UP): 0:(397.39618,1207.9532)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=com.android.dialer cmp=com.android.dialer/.app.DialtactsActivity } in package com.android.dialer
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(235.0,260.0)
+:Sending Touch (ACTION_UP): 0:(233.68916,254.79642)
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+:Sending Touch (ACTION_DOWN): 0:(288.0,1940.0)
+:Sending Touch (ACTION_UP): 0:(304.04697,1941.9349)
+:Sending Touch (ACTION_DOWN): 0:(406.0,272.0)
+:Sending Touch (ACTION_UP): 0:(405.0295,277.41165)
+:Sending Touch (ACTION_DOWN): 0:(494.0,858.0)
+:Sending Touch (ACTION_UP): 0:(491.2229,855.498)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=com.android.messaging cmp=com.android.messaging/.ui.conversationlist.ConversationListActivity } in package com.android.messaging
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,2.0)
+    //[calendar_time:2023-12-27 22:41:31.213  system_uptime:4168018]
+    // Sending event #100
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+    // Rejecting start of Intent { act=android.intent.action.CALL_BUTTON cmp=com.android.dialer/.app.DialtactsActivity } in package com.android.dialer
+:Sending Touch (ACTION_DOWN): 0:(714.0,311.0)
+:Sending Touch (ACTION_UP): 0:(718.8866,273.26834)
+:Sending Touch (ACTION_DOWN): 0:(403.0,1373.0)
+:Sending Touch (ACTION_UP): 0:(410.71564,1373.3461)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-1.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(705.0,967.0)
+:Sending Touch (ACTION_UP): 0:(710.688,962.73755)
+:Sending Touch (ACTION_DOWN): 0:(166.0,1328.0)
+:Sending Touch (ACTION_UP): 0:(181.79584,1326.5251)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-3.0)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(436.0,1934.0)
+:Sending Touch (ACTION_UP): 0:(442.91702,1941.221)
+    //[calendar_time:2023-12-27 22:41:36.714  system_uptime:4173520]
+    // Sending event #200
+    //[calendar_time:2023-12-27 22:41:36.715  system_uptime:4173520]
+    // Sending event #200
+:Sending Touch (ACTION_DOWN): 0:(434.0,1307.0)
+:Sending Touch (ACTION_UP): 0:(436.29974,1303.5692)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(573.0,1082.0)
+:Sending Touch (ACTION_UP): 0:(580.0779,1070.2816)
+:Sending Touch (ACTION_DOWN): 0:(147.0,1456.0)
+:Sending Touch (ACTION_UP): 0:(104.41804,1575.6794)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(530.0,1241.0)
+:Sending Touch (ACTION_UP): 0:(533.32715,1254.4694)
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+:Sending Touch (ACTION_DOWN): 0:(942.0,890.0)
+:Sending Touch (ACTION_UP): 0:(941.7119,907.29694)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(1022.0,371.0)
+:Sending Touch (ACTION_UP): 0:(1030.9183,368.8327)
+:Sending Touch (ACTION_DOWN): 0:(221.0,1573.0)
+:Sending Touch (ACTION_UP): 0:(112.966095,1618.2178)
+    //[calendar_time:2023-12-27 22:41:44.409  system_uptime:4181215]
+    // Sending event #300
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-5.0)
+:Sending Touch (ACTION_DOWN): 0:(712.0,838.0)
+:Sending Touch (ACTION_UP): 0:(703.98096,839.9731)
+:Sending Touch (ACTION_DOWN): 0:(840.0,1745.0)
+:Sending Touch (ACTION_UP): 0:(869.78326,1808.028)
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,3.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(777.0,718.0)
+:Sending Touch (ACTION_UP): 0:(720.43585,759.7092)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(707.0,1918.0)
+:Sending Touch (ACTION_UP): 0:(715.0659,1931.6865)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=org.chromium.webview_shell cmp=org.chromium.webview_shell/.WebViewBrowserActivity } in package org.chromium.webview_shell
+:Sending Touch (ACTION_DOWN): 0:(31.0,248.0)
+:Sending Touch (ACTION_UP): 0:(66.12702,295.72906)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-5.0)
+    //[calendar_time:2023-12-27 22:41:46.862  system_uptime:4183667]
+    // Sending event #400
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,1.0)
+:Sending Touch (ACTION_DOWN): 0:(39.0,23.0)
+:Sending Touch (ACTION_UP): 0:(35.65531,19.629068)
+:Sending Touch (ACTION_DOWN): 0:(473.0,1786.0)
+:Sending Touch (ACTION_UP): 0:(475.02216,1794.2096)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(345.0,566.0)
+:Sending Touch (ACTION_UP): 0:(329.57468,598.68695)
+:Sending Touch (ACTION_DOWN): 0:(978.0,1287.0)
+:Sending Touch (ACTION_UP): 0:(993.3212,1287.0663)
+:Sending Touch (ACTION_DOWN): 0:(591.0,849.0)
+:Sending Touch (ACTION_UP): 0:(615.6697,806.66583)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,3.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-2.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+    // Rejecting start of Intent { act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity } in package com.android.packageinstaller
+:Sending Touch (ACTION_DOWN): 0:(396.0,132.0)
+:Sending Touch (ACTION_UP): 0:(401.0917,129.56422)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-1.0)
+    // Rejecting start of Intent { act=android.intent.action.CALL_BUTTON cmp=com.android.dialer/.app.DialtactsActivity } in package com.android.dialer
+Events injected: 500
+:Sending rotation degree=0, persist=false
+:Dropped: keys=0 pointers=0 trackballs=0 flips=1 rotations=0
+## Network stats: elapsed time=26490ms (0ms mobile, 0ms wifi, 26490ms not connected)
+// Monkey finished
