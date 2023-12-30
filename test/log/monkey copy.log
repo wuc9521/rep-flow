@@ -1,0 +1,168 @@
+  bash arg: -p
+  bash arg: com.liuyaoli.myapplication
+  bash arg: -v
+  bash arg: 500
+  bash arg: -throttle
+  bash arg: 100
+args: [-p, com.liuyaoli.myapplication, -v, 500, -throttle, 100]
+ arg: "-p"
+ arg: "com.liuyaoli.myapplication"
+ arg: "-v"
+ arg: "500"
+ arg: "-throttle"
+ arg: "100"
+data="com.liuyaoli.myapplication"
+:Monkey: seed=1703791636392 count=500
+:AllowPackage: com.liuyaoli.myapplication
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Event percentages:
+//   0: 15.0%
+//   1: 10.0%
+//   2: 2.0%
+//   3: 15.0%
+//   4: -0.0%
+//   5: -0.0%
+//   6: 25.0%
+//   7: 15.0%
+//   8: 2.0%
+//   9: 2.0%
+//   10: 1.0%
+//   11: 13.0%
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(68.0,1541.0)
+:Sending Touch (ACTION_UP): 0:(62.504234,1534.4111)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(509.0,1318.0)
+:Sending Touch (ACTION_UP): 0:(497.74597,1320.0015)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+    // activityResuming(com.liuyaoli.myapplication)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.android.email/.activity.Welcome } in package com.android.email
+:Sending Touch (ACTION_DOWN): 0:(137.0,745.0)
+:Sending Touch (ACTION_UP): 0:(123.046875,746.18146)
+:Sending Touch (ACTION_DOWN): 0:(606.0,218.0)
+:Sending Touch (ACTION_UP): 0:(618.7069,202.28082)
+:Sending Touch (ACTION_DOWN): 0:(716.0,1817.0)
+:Sending Touch (ACTION_UP): 0:(704.5129,1814.3512)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+    // activityResuming(com.liuyaoli.myapplication)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,4.0)
+    //[calendar_time:2023-12-27 21:41:51.408  system_uptime:588213]
+    // Sending event #100
+:Sending Touch (ACTION_DOWN): 0:(672.0,1361.0)
+:Sending Touch (ACTION_UP): 0:(648.7397,1381.3578)
+:Sending Touch (ACTION_DOWN): 0:(650.0,2045.0)
+:Sending Touch (ACTION_UP): 0:(628.8614,2056.0803)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(175.0,1029.0)
+:Sending Touch (ACTION_UP): 0:(174.58978,1018.4295)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,2.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(899.0,715.0)
+:Sending Touch (ACTION_UP): 0:(871.59064,709.8561)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(197.0,988.0)
+:Sending Touch (ACTION_UP): 0:(254.39107,970.2983)
+:Sending Touch (ACTION_DOWN): 0:(830.0,1524.0)
+:Sending Touch (ACTION_UP): 0:(833.04785,1525.6523)
+:Sending Touch (ACTION_DOWN): 0:(966.0,659.0)
+:Sending Touch (ACTION_UP): 0:(950.863,645.01917)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(909.0,1832.0)
+:Sending Touch (ACTION_UP): 0:(925.00165,1831.3109)
+:Sending Touch (ACTION_DOWN): 0:(333.0,322.0)
+:Sending Touch (ACTION_UP): 0:(338.4495,341.50778)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+    //[calendar_time:2023-12-27 21:41:53.299  system_uptime:590104]
+    // Sending event #200
+    //[calendar_time:2023-12-27 21:41:53.300  system_uptime:590105]
+    // Sending event #200
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(242.0,1885.0)
+:Sending Touch (ACTION_UP): 0:(224.82253,1861.6917)
+:Sending Touch (ACTION_DOWN): 0:(849.0,720.0)
+:Sending Touch (ACTION_UP): 0:(796.2229,736.34186)
+:Sending Touch (ACTION_DOWN): 0:(763.0,158.0)
+:Sending Touch (ACTION_UP): 0:(727.40173,141.82936)
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=com.android.launcher3/.Launcher } in package com.android.launcher3
+:Sending Touch (ACTION_DOWN): 0:(48.0,919.0)
+:Sending Touch (ACTION_UP): 0:(7.6814623,933.28094)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(552.0,1274.0)
+:Sending Touch (ACTION_UP): 0:(550.76447,1279.8258)
+:Sending Touch (ACTION_DOWN): 0:(283.0,2059.0)
+:Sending Touch (ACTION_UP): 0:(280.90894,2052.9324)
+:Sending Touch (ACTION_DOWN): 0:(562.0,1323.0)
+:Sending Touch (ACTION_UP): 0:(573.53564,1296.1874)
+:Sending Touch (ACTION_DOWN): 0:(762.0,1196.0)
+    //[calendar_time:2023-12-27 21:41:53.923  system_uptime:590728]
+    // Sending event #300
+:Sending Touch (ACTION_UP): 0:(691.4235,1300.2026)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(476.0,1058.0)
+:Sending Touch (ACTION_UP): 0:(501.29852,1151.9144)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(274.0,824.0)
+:Sending Touch (ACTION_UP): 0:(155.08107,806.39557)
+:Sending Touch (ACTION_DOWN): 0:(826.0,2006.0)
+:Sending Touch (ACTION_UP): 0:(819.99774,2001.1813)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-2.0)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(248.0,1095.0)
+:Sending Touch (ACTION_UP): 0:(247.13753,1094.3932)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
+    //[calendar_time:2023-12-27 21:41:54.990  system_uptime:591795]
+    // Sending event #400
+:Sending Touch (ACTION_DOWN): 0:(405.0,2072.0)
+:Sending Touch (ACTION_UP): 0:(425.81787,2075.466)
+:Sending Touch (ACTION_DOWN): 0:(779.0,1210.0)
+:Sending Touch (ACTION_UP): 0:(754.5448,1246.9043)
+:Sending Touch (ACTION_DOWN): 0:(204.0,615.0)
+:Sending Touch (ACTION_UP): 0:(168.00407,612.8018)
+:Sending Touch (ACTION_DOWN): 0:(929.0,174.0)
+:Sending Touch (ACTION_UP): 0:(924.553,166.70595)
+:Sending Touch (ACTION_DOWN): 0:(249.0,1605.0)
+:Sending Touch (ACTION_UP): 0:(294.37595,1687.7928)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(725.0,1204.0)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.VideoStreamActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_UP): 0:(734.09204,1211.7092)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.VideoStreamActivity } in package com.liuyaoli.myapplication
+:Sending Trackball (ACTION_MOVE): 0:(3.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(826.0,2034.0)
+:Sending Touch (ACTION_UP): 0:(835.0491,2039.6703)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(1070.0,594.0)
+:Sending Touch (ACTION_UP): 0:(1080.0,689.8738)
+:Sending Touch (ACTION_DOWN): 0:(24.0,323.0)
+:Sending Touch (ACTION_UP): 0:(21.974728,324.1594)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(180.0,1589.0)
+:Sending Touch (ACTION_UP): 0:(179.9906,1589.838)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,2.0)
+Events injected: 500
+:Sending rotation degree=0, persist=false
+:Dropped: keys=1 pointers=0 trackballs=0 flips=5 rotations=0
+## Network stats: elapsed time=6613ms (0ms mobile, 0ms wifi, 6613ms not connected)
+// Monkey finished
