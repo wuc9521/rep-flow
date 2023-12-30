@@ -3,16 +3,16 @@
   bash arg: -v
   bash arg: 500
   bash arg: -throttle
-  bash arg: 100
-args: [-p, com.liuyaoli.myapplication, -v, 500, -throttle, 100]
+  bash arg: 10000
+args: [-p, com.liuyaoli.myapplication, -v, 500, -throttle, 10000]
  arg: "-p"
  arg: "com.liuyaoli.myapplication"
  arg: "-v"
  arg: "500"
  arg: "-throttle"
- arg: "100"
+ arg: "10000"
 data="com.liuyaoli.myapplication"
-:Monkey: seed=1703734658078 count=500
+:Monkey: seed=1704122395022 count=500
 :AllowPackage: com.liuyaoli.myapplication
 :IncludeCategory: android.intent.category.LAUNCHER
 :IncludeCategory: android.intent.category.MONKEY
@@ -31,139 +31,169 @@ data="com.liuyaoli.myapplication"
 //   11: 13.0%
 :Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
     // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
-:Sending Touch (ACTION_DOWN): 0:(590.0,268.0)
-:Sending Touch (ACTION_UP): 0:(591.2669,275.9681)
-:Sending Trackball (ACTION_MOVE): 0:(3.0,-3.0)
-:Sending Touch (ACTION_DOWN): 0:(12.0,1334.0)
-:Sending Touch (ACTION_UP): 0:(14.002883,1343.1239)
-:Sending Touch (ACTION_DOWN): 0:(647.0,1236.0)
-:Sending Touch (ACTION_UP): 0:(649.41516,1215.1323)
-:Sending Touch (ACTION_DOWN): 0:(250.0,1562.0)
-:Sending Touch (ACTION_UP): 0:(250.06049,1570.0082)
-:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,-2.0)
     // activityResuming(com.liuyaoli.myapplication)
-:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
-:Sending Touch (ACTION_DOWN): 0:(509.0,941.0)
-:Sending Touch (ACTION_UP): 0:(503.04663,949.5168)
-    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=com.android.launcher3/.Launcher } in package com.android.launcher3
-    // activityResuming(com.liuyaoli.myapplication)
-:Sending Touch (ACTION_DOWN): 0:(910.0,2087.0)
-:Sending Touch (ACTION_UP): 0:(915.26843,2048.4175)
-:Sending Touch (ACTION_DOWN): 0:(83.0,1956.0)
-:Sending Touch (ACTION_UP): 0:(90.34037,1955.9637)
-:Sending Touch (ACTION_DOWN): 0:(406.0,1213.0)
-:Sending Touch (ACTION_UP): 0:(397.39618,1207.9532)
-    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=com.android.dialer cmp=com.android.dialer/.app.DialtactsActivity } in package com.android.dialer
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-:Sending Trackball (ACTION_MOVE): 0:(3.0,-4.0)
-:Sending Touch (ACTION_DOWN): 0:(235.0,260.0)
-:Sending Touch (ACTION_UP): 0:(233.68916,254.79642)
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-:Sending Touch (ACTION_DOWN): 0:(288.0,1940.0)
-:Sending Touch (ACTION_UP): 0:(304.04697,1941.9349)
-:Sending Touch (ACTION_DOWN): 0:(406.0,272.0)
-:Sending Touch (ACTION_UP): 0:(405.0295,277.41165)
-:Sending Touch (ACTION_DOWN): 0:(494.0,858.0)
-:Sending Touch (ACTION_UP): 0:(491.2229,855.498)
-    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=com.android.messaging cmp=com.android.messaging/.ui.conversationlist.ConversationListActivity } in package com.android.messaging
-:Sending Trackball (ACTION_MOVE): 0:(-2.0,-5.0)
-:Sending Trackball (ACTION_MOVE): 0:(2.0,2.0)
-    //[calendar_time:2023-12-27 22:41:31.213  system_uptime:4168018]
-    // Sending event #100
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-:Sending Flip keyboardOpen=false
-Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity } in package com.google.android.apps.nexuslauncher
     // Injection Failed
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-    // Rejecting start of Intent { act=android.intent.action.CALL_BUTTON cmp=com.android.dialer/.app.DialtactsActivity } in package com.android.dialer
-:Sending Touch (ACTION_DOWN): 0:(714.0,311.0)
-:Sending Touch (ACTION_UP): 0:(718.8866,273.26834)
-:Sending Touch (ACTION_DOWN): 0:(403.0,1373.0)
-:Sending Touch (ACTION_UP): 0:(410.71564,1373.3461)
-:Sending Trackball (ACTION_MOVE): 0:(3.0,1.0)
-:Sending Trackball (ACTION_MOVE): 0:(-2.0,-2.0)
-:Sending Trackball (ACTION_MOVE): 0:(-4.0,1.0)
-:Sending Trackball (ACTION_MOVE): 0:(-4.0,-1.0)
 :Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
     // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
-:Sending Touch (ACTION_DOWN): 0:(705.0,967.0)
-:Sending Touch (ACTION_UP): 0:(710.688,962.73755)
-:Sending Touch (ACTION_DOWN): 0:(166.0,1328.0)
-:Sending Touch (ACTION_UP): 0:(181.79584,1326.5251)
-:Sending Trackball (ACTION_MOVE): 0:(-2.0,-3.0)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(105.0,583.0)
+:Sending Touch (ACTION_UP): 0:(92.77178,596.848)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(1160.0,1960.0)
+:Sending Touch (ACTION_UP): 0:(1149.0216,1961.664)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,4.0)
     // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
-:Sending Touch (ACTION_DOWN): 0:(436.0,1934.0)
-:Sending Touch (ACTION_UP): 0:(442.91702,1941.221)
-    //[calendar_time:2023-12-27 22:41:36.714  system_uptime:4173520]
-    // Sending event #200
-    //[calendar_time:2023-12-27 22:41:36.715  system_uptime:4173520]
-    // Sending event #200
-:Sending Touch (ACTION_DOWN): 0:(434.0,1307.0)
-:Sending Touch (ACTION_UP): 0:(436.29974,1303.5692)
-:Sending Trackball (ACTION_MOVE): 0:(2.0,1.0)
-:Sending Touch (ACTION_DOWN): 0:(573.0,1082.0)
-:Sending Touch (ACTION_UP): 0:(580.0779,1070.2816)
-:Sending Touch (ACTION_DOWN): 0:(147.0,1456.0)
-:Sending Touch (ACTION_UP): 0:(104.41804,1575.6794)
-:Sending Trackball (ACTION_MOVE): 0:(3.0,-1.0)
-:Sending Touch (ACTION_DOWN): 0:(530.0,1241.0)
-:Sending Touch (ACTION_UP): 0:(533.32715,1254.4694)
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-:Sending Touch (ACTION_DOWN): 0:(942.0,890.0)
-:Sending Touch (ACTION_UP): 0:(941.7119,907.29694)
-:Sending Trackball (ACTION_MOVE): 0:(-4.0,-2.0)
-:Sending Touch (ACTION_DOWN): 0:(1022.0,371.0)
-:Sending Touch (ACTION_UP): 0:(1030.9183,368.8327)
-:Sending Touch (ACTION_DOWN): 0:(221.0,1573.0)
-:Sending Touch (ACTION_UP): 0:(112.966095,1618.2178)
-    //[calendar_time:2023-12-27 22:41:44.409  system_uptime:4181215]
-    // Sending event #300
-:Sending Trackball (ACTION_MOVE): 0:(-5.0,-5.0)
-:Sending Touch (ACTION_DOWN): 0:(712.0,838.0)
-:Sending Touch (ACTION_UP): 0:(703.98096,839.9731)
-:Sending Touch (ACTION_DOWN): 0:(840.0,1745.0)
-:Sending Touch (ACTION_UP): 0:(869.78326,1808.028)
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-:Sending Trackball (ACTION_MOVE): 0:(-5.0,3.0)
-:Sending Trackball (ACTION_MOVE): 0:(-4.0,-2.0)
-:Sending Touch (ACTION_DOWN): 0:(777.0,718.0)
-:Sending Touch (ACTION_UP): 0:(720.43585,759.7092)
-:Sending Trackball (ACTION_MOVE): 0:(-1.0,-3.0)
-:Sending Touch (ACTION_DOWN): 0:(707.0,1918.0)
-:Sending Touch (ACTION_UP): 0:(715.0659,1931.6865)
-    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=org.chromium.webview_shell cmp=org.chromium.webview_shell/.WebViewBrowserActivity } in package org.chromium.webview_shell
-:Sending Touch (ACTION_DOWN): 0:(31.0,248.0)
-:Sending Touch (ACTION_UP): 0:(66.12702,295.72906)
-:Sending Trackball (ACTION_MOVE): 0:(1.0,-5.0)
-    //[calendar_time:2023-12-27 22:41:46.862  system_uptime:4183667]
-    // Sending event #400
 :Sending Trackball (ACTION_UP): 0:(0.0,0.0)
-    // Rejecting start of Intent { act=android.search.action.GLOBAL_SEARCH pkg=com.android.quicksearchbox cmp=com.android.quicksearchbox/.SearchActivity } in package com.android.quicksearchbox
-:Sending Trackball (ACTION_MOVE): 0:(-4.0,1.0)
-:Sending Touch (ACTION_DOWN): 0:(39.0,23.0)
-:Sending Touch (ACTION_UP): 0:(35.65531,19.629068)
-:Sending Touch (ACTION_DOWN): 0:(473.0,1786.0)
-:Sending Touch (ACTION_UP): 0:(475.02216,1794.2096)
-:Sending Trackball (ACTION_MOVE): 0:(-5.0,2.0)
-:Sending Touch (ACTION_DOWN): 0:(345.0,566.0)
-:Sending Touch (ACTION_UP): 0:(329.57468,598.68695)
-:Sending Touch (ACTION_DOWN): 0:(978.0,1287.0)
-:Sending Touch (ACTION_UP): 0:(993.3212,1287.0663)
-:Sending Touch (ACTION_DOWN): 0:(591.0,849.0)
-:Sending Touch (ACTION_UP): 0:(615.6697,806.66583)
-:Sending Trackball (ACTION_MOVE): 0:(-3.0,3.0)
-:Sending Trackball (ACTION_MOVE): 0:(0.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(1144.0,2846.0)
+:Sending Touch (ACTION_UP): 0:(1139.6912,2839.5435)
+:Sending Touch (ACTION_DOWN): 0:(1156.0,50.0)
+:Sending Touch (ACTION_UP): 0:(1156.24,53.124332)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+    //[calendar_time:2023-12-30 23:44:57.735  system_uptime:250566]
+    // Sending event #100
+    //[calendar_time:2023-12-30 23:44:57.769  system_uptime:250569]
+    // Sending event #100
+:Sending Trackball (ACTION_MOVE): 0:(1.0,4.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+    // activityResuming(com.liuyaoli.myapplication)
+:Sending Touch (ACTION_DOWN): 0:(1281.0,2792.0)
+:Sending Touch (ACTION_UP): 0:(1275.987,2805.7646)
+:Sending Touch (ACTION_DOWN): 0:(698.0,2006.0)
+:Sending Touch (ACTION_UP): 0:(691.36755,2015.9095)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(281.0,1506.0)
+:Sending Touch (ACTION_UP): 0:(392.23276,1382.771)
+:Sending Touch (ACTION_DOWN): 0:(814.0,346.0)
+:Sending Touch (ACTION_UP): 0:(814.57825,329.95844)
+:Sending Trackball (ACTION_MOVE): 0:(-5.0,1.0)
+    // activityResuming(com.liuyaoli.myapplication)
+    // activityResuming(com.liuyaoli.myapplication)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(1385.0,1303.0)
+:Sending Touch (ACTION_UP): 0:(1385.6663,1290.442)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
+    // activityResuming(com.liuyaoli.myapplication)
+:Sending Touch (ACTION_DOWN): 0:(359.0,2294.0)
+:Sending Touch (ACTION_UP): 0:(325.03958,2206.4998)
+    //[calendar_time:2023-12-30 23:45:06.214  system_uptime:259013]
+    // Sending event #200
+    //[calendar_time:2023-12-30 23:45:06.216  system_uptime:259014]
+    // Sending event #200
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity } in package com.google.android.apps.nexuslauncher
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(458.0,1831.0)
+:Sending Touch (ACTION_UP): 0:(442.12292,1827.6772)
+:Sending Touch (ACTION_DOWN): 0:(32.0,671.0)
+:Sending Touch (ACTION_UP): 0:(39.2012,681.31226)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(532.0,1996.0)
+:Sending Touch (ACTION_UP): 0:(537.9914,1996.6807)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.google.android.gm/.ConversationListActivityGmail } in package com.google.android.gm
+:Sending Touch (ACTION_DOWN): 0:(372.0,1108.0)
+:Sending Touch (ACTION_UP): 0:(370.2916,1103.1226)
+:Sending Touch (ACTION_DOWN): 0:(1255.0,1692.0)
+:Sending Touch (ACTION_UP): 0:(1245.1907,1709.9685)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(1015.0,1786.0)
+:Sending Touch (ACTION_UP): 0:(998.3473,1786.3815)
+:Sending Touch (ACTION_DOWN): 0:(641.0,338.0)
+:Sending Touch (ACTION_UP): 0:(641.25116,327.48892)
+    // Rejecting start of Intent { act=android.intent.action.VIEW dat=content://com.android.calendar/... cmp=com.google.android.calendar/com.android.calendar.AllInOneActivity } in package com.google.android.calendar
+:Sending Touch (ACTION_DOWN): 0:(1080.0,1647.0)
+:Sending Touch (ACTION_UP): 0:(1144.1865,1658.973)
+:Sending Touch (ACTION_DOWN): 0:(566.0,253.0)
+:Sending Touch (ACTION_UP): 0:(556.27936,239.60997)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,4.0)
+:Sending Touch (ACTION_DOWN): 0:(621.0,2612.0)
+:Sending Touch (ACTION_UP): 0:(634.9652,2604.2583)
+:Sending Touch (ACTION_DOWN): 0:(1307.0,435.0)
+:Sending Touch (ACTION_UP): 0:(1313.724,436.55066)
+    //[calendar_time:2023-12-30 23:45:12.833  system_uptime:265632]
+    // Sending event #300
+    //[calendar_time:2023-12-30 23:45:12.834  system_uptime:265633]
+    // Sending event #300
+:Sending Touch (ACTION_DOWN): 0:(901.0,2117.0)
+:Sending Touch (ACTION_UP): 0:(969.8493,2054.5735)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,4.0)
+:Sending Touch (ACTION_DOWN): 0:(1288.0,1382.0)
+:Sending Touch (ACTION_UP): 0:(1285.5437,1380.8125)
+:Sending Touch (ACTION_DOWN): 0:(373.0,1417.0)
+:Sending Touch (ACTION_UP): 0:(365.43677,1409.1097)
+:Sending Touch (ACTION_DOWN): 0:(786.0,397.0)
+:Sending Touch (ACTION_UP): 0:(785.9234,399.87558)
+:Sending Touch (ACTION_DOWN): 0:(534.0,621.0)
+:Sending Touch (ACTION_UP): 0:(533.36847,599.1473)
+    // Rejecting start of Intent { act=android.intent.action.APPLICATION_PREFERENCES pkg=com.google.android.apps.nexuslauncher cmp=com.google.android.apps.nexuslauncher/com.android.launcher3.settings.SettingsActivity } in package com.google.android.apps.nexuslauncher
+:Sending Touch (ACTION_DOWN): 0:(799.0,1700.0)
+:Sending Touch (ACTION_UP): 0:(804.61835,1714.2893)
+:Sending Touch (ACTION_DOWN): 0:(354.0,566.0)
+:Sending Touch (ACTION_UP): 0:(335.55423,582.7809)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,3.0)
 :Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.liuyaoli.myapplication/.MainActivity;end
     // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.liuyaoli.myapplication/.MainActivity } in package com.liuyaoli.myapplication
-    // Rejecting start of Intent { act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity } in package com.android.packageinstaller
-:Sending Touch (ACTION_DOWN): 0:(396.0,132.0)
-:Sending Touch (ACTION_UP): 0:(401.0917,129.56422)
-:Sending Trackball (ACTION_MOVE): 0:(3.0,-1.0)
-    // Rejecting start of Intent { act=android.intent.action.CALL_BUTTON cmp=com.android.dialer/.app.DialtactsActivity } in package com.android.dialer
+:Sending Touch (ACTION_DOWN): 0:(23.0,2887.0)
+:Sending Touch (ACTION_UP): 0:(16.227585,2881.7854)
+:Sending Touch (ACTION_DOWN): 0:(383.0,393.0)
+:Sending Touch (ACTION_UP): 0:(408.53583,360.8901)
+    //[calendar_time:2023-12-30 23:45:17.360  system_uptime:270159]
+    // Sending event #400
+    //[calendar_time:2023-12-30 23:45:17.362  system_uptime:270161]
+    // Sending event #400
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(284.0,2212.0)
+:Sending Touch (ACTION_UP): 0:(291.34515,2211.918)
+:Sending Touch (ACTION_DOWN): 0:(142.0,2284.0)
+:Sending Touch (ACTION_UP): 0:(139.184,2289.5972)
+:Sending Touch (ACTION_DOWN): 0:(181.0,39.0)
+:Sending Touch (ACTION_UP): 0:(180.53412,41.53679)
+:Sending Touch (ACTION_DOWN): 0:(134.0,1912.0)
+:Sending Touch (ACTION_UP): 0:(138.48996,1912.5782)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(1427.0,1298.0)
+:Sending Touch (ACTION_UP): 0:(1427.0851,1304.7936)
+    // Allowing start of Intent { cmp=com.liuyaoli.myapplication/.NewsContentActivity } in package com.liuyaoli.myapplication
+:Sending Touch (ACTION_DOWN): 0:(444.0,2173.0)
+:Sending Touch (ACTION_UP): 0:(444.10196,2179.2634)
+:Sending Touch (ACTION_DOWN): 0:(1000.0,1697.0)
+:Sending Touch (ACTION_UP): 0:(940.43024,1635.1978)
+:Sending Touch (ACTION_DOWN): 0:(543.0,888.0)
+:Sending Touch (ACTION_UP): 0:(502.97482,933.88)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-3.0)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(1401.0,747.0)
+:Sending Touch (ACTION_UP): 0:(1404.5618,759.96216)
+:Sending Touch (ACTION_DOWN): 0:(130.0,553.0)
+:Sending Touch (ACTION_UP): 0:(172.29924,553.5643)
+:Sending Touch (ACTION_DOWN): 0:(1354.0,1811.0)
+:Sending Touch (ACTION_UP): 0:(1333.216,1863.9305)
+:Sending Touch (ACTION_DOWN): 0:(1439.0,443.0)
+:Sending Touch (ACTION_UP): 0:(1428.9075,448.35248)
+:Sending Touch (ACTION_DOWN): 0:(776.0,2076.0)
+:Sending Touch (ACTION_UP): 0:(760.9943,2083.1216)
+:Sending Touch (ACTION_DOWN): 0:(230.0,1375.0)
+:Sending Touch (ACTION_UP): 0:(229.7397,1358.2057)
+:Sending Touch (ACTION_DOWN): 0:(882.0,1236.0)
 Events injected: 500
 :Sending rotation degree=0, persist=false
-:Dropped: keys=0 pointers=0 trackballs=0 flips=1 rotations=0
-## Network stats: elapsed time=26490ms (0ms mobile, 0ms wifi, 26490ms not connected)
+:Dropped: keys=2 pointers=0 trackballs=0 flips=6 rotations=0
+## Network stats: elapsed time=30412ms (0ms mobile, 0ms wifi, 30412ms not connected)
 // Monkey finished
