@@ -27,7 +27,7 @@ def classify_hist_with_split(image1, image2, size=(1000, 2000)):
     sub_data = sub_data / 3
     return sub_data
 
-def test_hist():
+def t_hist():
     for i in range(len(imgs)):
         for j in range(len(imgs)):
             print(classify_hist_with_split(imgs[i], imgs[j]), end='')
