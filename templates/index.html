@@ -64,6 +64,15 @@
             var query = queryInput.value;
 
             showLoadingIndicator();
+
+            // Regular expression to match digits
+            var digitRegex = /\d+/;
+            if (digitRegex.test(query)) {
+                var matchedDigit = digitRegex.exec(query);
+                if (matchedDigit) {
+                    handleInputWithDigits(matchedDigit[0]);
+                }
+            }
             fetch('/ask', {
                 method: 'POST',
                 headers: {
@@ -74,6 +83,7 @@
                 response => response.json()
             ).then(data => {
                 hideLoadingIndicator();
+
                 updateConversation(query, data.answer, data.type, data.img);
             }).catch(error => {
                 console.error('Error:', error);
@@ -83,15 +93,14 @@
 
         }
 
-        // Function to send an initial query when the page loads
-        function sendInitialQuery() {
-            updateConversation(
-                "",
-                "Hello, I am ChatRMB. I can help you reproduce your mobile application bug. Feel free to ask me anything.",
-                "HINT"
-            );
+        function handleNumberInput(query) {
+            console.log('Numeric input detected:', query);
         }
 
+        // Function to send an initial query when the page loads
+        function handleInputWithDigits(query) {
+            console.log('Numeric input detected:', query);
+        }
         window.onload = sendInitialQuery;
     </script>
 </head>

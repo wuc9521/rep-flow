@@ -147,5 +147,8 @@ boot:
 	@sleep 5
 	@echo "Booted."
 
+shutdown:
+	@pkill qemu
+
 reload:
 	adb uninstall io.appium.uiautomator2.server.test
