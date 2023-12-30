@@ -1,8 +1,5 @@
 from common import *
 
-gray_list = [
-    cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) for img in imgs
-]
 
 from skimage.metrics import structural_similarity as sk_cpt_ssim
 def t_ssim(image_user_path):

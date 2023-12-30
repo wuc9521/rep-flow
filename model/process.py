@@ -42,13 +42,13 @@ def image_process_withtwo(image_user_path, image_list,gray_list):
 
 # image_process 返回result[0]为位置 result[1]为得分
 def t_image_process(image_user_path):
-    result = image_process(image_user_path, imgs)
+    result = image_process(image_user_path, imgs[0])
     print("position:", result[0], "score:", result[1])
 
 def t_image_process_withtwo(image_user_path):
-    result = image_process_withtwo(image_user_path, imgs, grays)
+    result = image_process_withtwo(image_user_path, imgs[0], grays[0])
     print("position:", result[0], "score:", result[1])
 
 
-t_image_process(join(TEST_DIR, 'screenshot_3.png'))
-t_image_process_withtwo(join(TEST_DIR, 'screenshot_3.png'))
+t_image_process(join(TEST_DIR[0], 'screenshot_3.png'))
+t_image_process_withtwo(join(TEST_DIR[0], 'screenshot_3.png'))
