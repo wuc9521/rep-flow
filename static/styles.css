@@ -107,10 +107,28 @@ input[type="submit"] {
 
 .state-image-box {
     text-align: left;
-    width: 30%;
+    width: 20%;
     border-radius: 8px;
     padding: 10px;
     border: solid 1px #18437e;
+}
+
+.hint {
+    text-align: left;
+}
+
+.hint-font{
+    font-family: monospace;
+}
+
+.hint-font li span{
+    color: #aaaaaa;
+}
+
+.hint-font li u {
+    font-weight: bold;
+    color: #2196F3;
+    cursor: pointer;
 }
 
 .state-image {

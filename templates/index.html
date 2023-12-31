@@ -12,14 +12,14 @@
         function hideLoadingIndicator() {
             document.getElementById('loading-indicator').style.display = 'none';
         }
-        function updateConversation(query, answer, type, img) {
+        function updateConversation(query, answer, type, img, hint) {
             conversation = {
                 query: query,
                 answer: answer,
                 type: type,
-                img: img
+                img: img,
+                hint: hint
             };
-            console.log(conversation);
             conversationHistory.push(conversation);
             updateDisplay();
         }
@@ -28,6 +28,7 @@
             resultsContainer.innerHTML = '';
 
             conversationHistory.forEach(function (item) {
+                const lineBreak = document.createElement('br');
                 var resultItem = document.createElement('div');
                 resultItem.className = 'result-item';
 
@@ -42,31 +43,44 @@
                 if (queryText.textContent !== "") {
                     resultItem.appendChild(queryText);
                 }
-                resultItem.appendChild(document.createElement('br'));
+                resultItem.appendChild(lineBreak);
                 resultItem.appendChild(answerText);
-                if (item.type === "CURRENT-STATE") {
-                    var imageElementBox = document.createElement('div');
-                    imageElementBox.className = 'state-image-box';
-                    var imageElement = document.createElement('img');
-                    imageElement.src = "images/" + item.img; // Set the source of the image
-                    imageElement.className = 'state-image';
-                    imageElementBox.appendChild(imageElement);
-                    resultItem.appendChild(imageElementBox);
+                switch (item.type) {
+                    case "HINT":
+                        var hintElement = document.createElement('span');
+                        hintElement.innerHTML = item.hint;
+                        hintElement.className = 'hint';
+                        resultItem.appendChild(hintElement);
+                        break
+                    case "CURRENT-STATE":
+                        var imageElementBox = document.createElement('div');
+                        imageElementBox.className = 'state-image-box';
+                        var imageElement = document.createElement('img');
+                        imageElement.src = "images/" + item.img; // Set the source of the image
+                        imageElement.className = 'state-image';
+                        imageElementBox.appendChild(imageElement);
+                        resultItem.appendChild(imageElementBox);
+                        break
+                    default:
+                        break
                 }
                 resultsContainer.appendChild(resultItem);
             });
             resultsContainer.scrollTop = resultsContainer.scrollHeight;
         }
 
-        function submitForm(event) {
-            event.preventDefault();
+        // 处理用户输入和预处理的部分
+        function handleUserInput() {
             var queryInput = document.querySelector('#queryForm input[name="query"]');
             var query = queryInput.value;
+            queryInput.value = ''; // 清空输入字段
+            return query;
+        }
 
+        // 处理前后端交互的部分
+        function performBackendInteraction(query) {
             showLoadingIndicator();
-
-            // Regular expression to match digits
-            var digitRegex = /\d+/;
+            var digitRegex = /\d+/; // 正则表达式匹配数字
             if (digitRegex.test(query)) {
                 var matchedDigit = digitRegex.exec(query);
                 if (matchedDigit) {
@@ -83,24 +97,58 @@
                 response => response.json()
             ).then(data => {
                 hideLoadingIndicator();
-
                 updateConversation(query, data.answer, data.type, data.img);
             }).catch(error => {
                 console.error('Error:', error);
                 hideLoadingIndicator();
             });
-            queryInput.value = ''; // Clear the input field
-
         }
 
-        function handleNumberInput(query) {
-            console.log('Numeric input detected:', query);
+        function submitForm(event) {
+            event.preventDefault();
+            var query = handleUserInput();
+            performBackendInteraction(query);
         }
 
         // Function to send an initial query when the page loads
         function handleInputWithDigits(query) {
             console.log('Numeric input detected:', query);
         }
+
+        // 处理点击事件的函数
+        function handleHintClick(event) {
+            var target = event.target;
+            if (target.tagName === 'U') {
+                performBackendInteraction(target.textContent)
+                switch (target.textContent) {
+                    case '/help':
+                        break
+                    case '/test $BUG':
+                        break
+                    case '/state':
+                        break
+                    default:
+                        break
+                }
+            }
+        }
+
+        // Function to send an initial query when the page loads
+        function sendInitialQuery() {
+            updateConversation(
+                query = "",
+                answer = "Hello, I am ChatRMB. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
+                type = "HINT",
+                img = "",
+                hint = "<ul class='hint-font' onclick='handleHintClick(event)'> \
+                            <li><span>show help:</span><u>/help</u> </li> \
+                            <li><span>test bug:</span> <u>/test $BUG</u></li> \
+                            <li><span>show current state:</span> <u>/state</u></li> \
+                        </ul> \
+                    ",
+            );
+        }
+
         window.onload = sendInitialQuery;
     </script>
 </head>
