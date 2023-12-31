@@ -25,6 +25,7 @@
                 img: img,
                 hint: hint
             };
+            console.log(hint)
             conversationHistory.push(conversation);
             updateDisplay();
         }
@@ -52,6 +53,12 @@
                 resultItem.appendChild(answerText);
                 switch (item.type) {
                     case "HINT":
+                        var hintElement = document.createElement('span');
+                        hintElement.innerHTML = item.hint;
+                        hintElement.className = 'hint';
+                        resultItem.appendChild(hintElement);
+                        break
+                    case "HELP":
                         var hintElement = document.createElement('span');
                         hintElement.innerHTML = item.hint;
                         hintElement.className = 'hint';
@@ -147,7 +154,7 @@
         // Function to send an initial query when the page loads
         function sendInitialQuery() {
             updateConversation(
-                query = "",
+                query = '',
                 answer = "Hello, I am Rep-Flow. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
                 type = "HINT",
                 img = "",

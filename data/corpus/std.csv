@@ -4,7 +4,7 @@
 "2","GREETING","I am Rep-Flow, I can help you reproduce an mobile app bug, please tell me the bug name."
 "3","NEXT-STEP","The next step is to tap the following part on the screen."
 "4","CURRENT-STATE","Your current step is as follows."
-"5","HELP","@override"
+"5","HELP","I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:"
 "6","DEVIATION","Sorry, it seems that you have deviated from the guidance path. I can't find any matching step to reproduce the bug."
 "7","MISSING","Sorry, it seems that you have accessed an unrecorded page and are probably off the planned path. The last recorded step is as follows, please go back to the last recorded step and try again."
 "8","SORRY","I'm sorry, I'm a simple chatbot, which means that I can only help you reproduce the bug according to the recorded steps. If you want to reproduce the bug in other ways, please try again."
