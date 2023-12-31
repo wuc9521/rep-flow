@@ -1,6 +1,6 @@
-from common import *
-from hist import *
-from ssim import *
+from .common import *
+from .hist import *
+from .ssim import *
 
 # 输入用户图片的路径，和比对图片列表
 # image_process 只使用了一个模型，返回result[0]为位置 result[1]为得分
@@ -17,7 +17,6 @@ def image_process(image_user_path, image_list):
         scores.append(score)
     if max_score < 0.7:
         return "missing"
-
     return max_similar, max_score
 
 # image_process_withtwo 是结合了两种模型的处理 返回result[0]为位置 result[1]为得分

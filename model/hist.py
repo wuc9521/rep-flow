@@ -1,4 +1,4 @@
-from common import *
+from .common import *
 
 def calculate(image1, image2):
     hist1 = cv2.calcHist([image1], [0], None, [256], [0.0, 255.0])

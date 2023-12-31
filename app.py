@@ -8,6 +8,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from flask_cors import cross_origin
 from utils.loader import read_keywords_from_file
 from utils.hints import HELP
+from model.process import image_process
 
 DEFAULT_RESPONSE_FLAG = "*"
 
@@ -21,6 +22,7 @@ LOG_DIR = os.path.join(app.root_path, 'log')
 DATA_DIR = os.path.join(app.root_path, 'data')
 MODEL_DIR = os.path.join(app.root_path, 'model')
 CORPUS_DIR = os.path.join(DATA_DIR, 'corpus')
+GUIDANCE_DIR = os.path.join(DATA_DIR, 'guidance')
 
 std = pd.read_csv(os.path.join(CORPUS_DIR, 'std.csv'))
 df = pd.merge(
@@ -89,13 +91,27 @@ def ask():
                 }), 200
         app.logger.info(f"User query: \"{query_text}\" - Answer: {response}")
         app.logger.info("Current State: {}".format(monitor_current_state()))
-        app.logger.info(HELP)
-        return jsonify({
-            "type": at.get(response),
-            "answer": response,
-            "img": str(monitor_current_state()) if monitor_current_state() != "Loading" else None,
-            "hint": HELP if at.get(response) == "HELP" else None
-        }), 200
+        if at.get(response) == "HELP":
+            return jsonify({
+                "type": at.get(response),
+                "answer": response,
+                "img": monitor_current_state(),
+                "hint": HELP
+            }), 200
+        elif at.get(response) == "NEXT":
+            return jsonify({
+                "type": at.get(response),
+                "answer": response,
+                "img": get_similarist_state(1),
+                "hint": None
+            }), 200
+        else:
+            return jsonify({
+                "type": at.get(response),
+                "answer": response,
+                "img": monitor_current_state(),
+                "hint": None
+            }), 200
     except Exception as e:
         app.logger.error(f"{str(e)}")
         return jsonify({"error": "An error occurred"}), 500
@@ -109,7 +125,7 @@ def teardown_appcontext(error=None):
         app.logger.info("Flask application has ended.")
 
 
-def monitor_current_state():
+def monitor_current_state()->str:
     IMG_DIR = os.path.join(DATA_DIR, 'state')
     imgs = [
         f for f in os.listdir(IMG_DIR) if os.path.isfile(os.path.join(IMG_DIR, f))
@@ -121,11 +137,14 @@ def monitor_current_state():
         key=lambda f: os.path.getctime(os.path.join(IMG_DIR, f))
     )
     if max_file.startswith("."):
-        return "Loading"
-    return max_file
+        return None
+    return str(max_file)
 
-def get_similarist_state():
-    pass
+def get_similarist_state(id: str)->str:
+    IMG_LIST_DIR = os.path.join(GUIDANCE_DIR, id)
+    IMG_CURRENT_STATE = os.path.join(DATA_DIR, 'state').join(get_similarist_state())
+    max_file, max_score = image_process(monitor_current_state(), IMG_CURRENT_STATE)
+    return str(max_file)
 
 if __name__ == '__main__':
     app.run(debug=True)

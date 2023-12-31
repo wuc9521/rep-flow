@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>REP-FLOW</title>
     <link rel="stylesheet" type="text/css" href="static/styles.css">
@@ -53,11 +52,6 @@
                 resultItem.appendChild(answerText);
                 switch (item.type) {
                     case "HINT":
-                        var hintElement = document.createElement('span');
-                        hintElement.innerHTML = item.hint;
-                        hintElement.className = 'hint';
-                        resultItem.appendChild(hintElement);
-                        break
                     case "HELP":
                         var hintElement = document.createElement('span');
                         hintElement.innerHTML = item.hint;
@@ -140,11 +134,8 @@
                 performBackendInteraction(target.textContent)
                 switch (target.textContent) {
                     case '/help':
-                        break
                     case '/test $BUG':
-                        break
                     case '/state':
-                        break
                     default:
                         break
                 }
@@ -155,13 +146,14 @@
         function sendInitialQuery() {
             updateConversation(
                 query = '',
-                answer = "Hello, I am Rep-Flow. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
+                answer = "Hello, I am REP-FLOW. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
                 type = "HINT",
                 img = "",
                 hint = "<ul class='hint-font' onclick='handleHintClick(event)'> \
                             <li><span>show help:</span><u>/help</u> </li> \
                             <li><span>test bug:</span> <u>/test $BUG</u></li> \
                             <li><span>show current state:</span> <u>/state</u></li> \
+                            <li><span>show next state:</span> <u>/next</u></li> \
                         </ul> \
                     ",
             );

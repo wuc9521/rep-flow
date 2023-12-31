@@ -1,0 +1,37 @@
+[2023-12-31 22:57:56,150] [INFO] [app] - User query: "/next" - Answer: The next step is to tap the following part on the screen.
+[2023-12-31 22:57:56,151] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 22:57:56,151] [ERROR] [app] - get_similarist_state() missing 1 required positional argument: 'id'
+[2023-12-31 22:57:56,151] [INFO] [app] - Flask application has ended.
+[2023-12-31 22:58:02,191] [INFO] [app] - Flask application has ended.
+[2023-12-31 22:58:08,247] [INFO] [app] - User query: "/help" - Answer: I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:
+[2023-12-31 22:58:08,247] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 22:58:08,248] [INFO] [app] - Flask application has ended.
+[2023-12-31 22:58:10,276] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
+[2023-12-31 22:58:10,276] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 22:58:10,277] [INFO] [app] - Flask application has ended.
+[2023-12-31 22:58:10,289] [INFO] [app] - Flask application has ended.
+[2023-12-31 22:58:13,229] [INFO] [app] - User query: "/test $BUG" - Answer: Please tell me the bug number, e.g. 114514.
+[2023-12-31 22:58:13,230] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 22:58:13,230] [INFO] [app] - Flask application has ended.
+[2023-12-31 22:59:28,851] [WARNING] [app] - User query: "/test 1" - No answer found
+[2023-12-31 22:59:28,852] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:16,739] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:16,786] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:16,900] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:20,424] [INFO] [app] - User query: "/next" - Answer: The next step is to tap the following part on the screen.
+[2023-12-31 23:00:20,425] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 23:00:20,425] [ERROR] [app] - join() argument must be str, bytes, or os.PathLike object, not 'int'
+[2023-12-31 23:00:20,425] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:30,433] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
+[2023-12-31 23:00:30,434] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 23:00:30,434] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:30,441] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:36,956] [INFO] [app] - User query: "/help" - Answer: I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:
+[2023-12-31 23:00:36,956] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 23:00:36,956] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:00:40,971] [INFO] [app] - User query: "/test $BUG" - Answer: Please tell me the bug number, e.g. 114514.
+[2023-12-31 23:00:40,971] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 23:00:40,971] [INFO] [app] - Flask application has ended.
+[2023-12-31 23:02:35,517] [INFO] [app] - User query: "/test $BUG" - Answer: Please tell me the bug number, e.g. 114514.
+[2023-12-31 23:02:35,518] [INFO] [app] - Current State: 1704034609.291438.png
+[2023-12-31 23:02:35,518] [INFO] [app] - Flask application has ended.

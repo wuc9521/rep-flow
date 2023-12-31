@@ -1,4 +1,4 @@
-from common import *
+from .common import *
 
 
 from skimage.metrics import structural_similarity as sk_cpt_ssim
