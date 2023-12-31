@@ -2,8 +2,13 @@
 <html>
 
 <head>
-    <title>ChatRMB</title>
+    <title>REP-FLOW</title>
     <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+    integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script defer src="./static/latex.js"></script>
     <script>
         var conversationHistory = [];
         function showLoadingIndicator() {
@@ -97,7 +102,13 @@
                 response => response.json()
             ).then(data => {
                 hideLoadingIndicator();
-                updateConversation(query, data.answer, data.type, data.img);
+                updateConversation(
+                    query, 
+                    data.answer, 
+                    data.type, 
+                    data.img,
+                    data.hint
+                );
             }).catch(error => {
                 console.error('Error:', error);
                 hideLoadingIndicator();
@@ -137,7 +148,7 @@
         function sendInitialQuery() {
             updateConversation(
                 query = "",
-                answer = "Hello, I am ChatRMB. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
+                answer = "Hello, I am Rep-Flow. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
                 type = "HINT",
                 img = "",
                 hint = "<ul class='hint-font' onclick='handleHintClick(event)'> \
@@ -155,12 +166,8 @@
 
 <body>
     <div class="container">
-        <h1><i>Chat</i> RMB</h1>
-        <h3>
-            <span class="highlight">R</span>eproduce your
-            <span class="highlight">M</span>obile application
-            <span class="highlight">B</span>ug.
-        </h3>
+        <span>\({\rm R{\footnotesize EP}F{\footnotesize LOW}}\)</span><br>
+        <span style="font-size: large; color: #aaaaaa;">A Possible Implementation of</span> <span>${\rm R{\footnotesize EP}A{\footnotesize SSISTOR}}$</span>
         <div style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
             <div class="search-results"></div>
             <div style="margin-top:78vh;">

@@ -27,7 +27,7 @@ endef
 all: help
 
 help:
-	@$(PYTHON) utils/help.py
+	@$(PYTHON) -B utils/help.py
 
 install:
 	$(NPM) install
@@ -47,7 +47,7 @@ ifeq ($(PLATFORM),Windows)
 	@timeout /nobreak /t 1 > nul
 	@start http://localhost:5000
 else
-	@$(PYTHON) utils/detect.py
+	@$(PYTHON) -B utils/detect.py
 	@nohup $(PYTHON) app.py >/dev/null 2>&1 &
 	@echo "App is running..."
 	@nohup $(PYTHON) script/main.py >/dev/null 2>&1 &

@@ -7,13 +7,14 @@ from logging.handlers import RotatingFileHandler
 from flask import Flask, render_template, request, jsonify, send_from_directory, g
 from flask_cors import cross_origin
 from utils.loader import read_keywords_from_file
+from utils.hints import HELP
 
 DEFAULT_RESPONSE_FLAG = "*"
 
 
 # Load spaCy English model
 nlp = spacy.load("en_core_web_sm")
-app = Flask(__name__)
+app = Flask(__name__, template_folder='')
 
 # Configure
 LOG_DIR = os.path.join(app.root_path, 'log')
@@ -88,10 +89,12 @@ def ask():
                 }), 200
         app.logger.info(f"User query: \"{query_text}\" - Answer: {response}")
         app.logger.info("Current State: {}".format(monitor_current_state()))
+        app.logger.info(HELP)
         return jsonify({
             "type": at.get(response),
             "answer": response,
-            "img": str(monitor_current_state()) if monitor_current_state() != "Loading" else None
+            "img": str(monitor_current_state()) if monitor_current_state() != "Loading" else None,
+            "hint": HELP if at.get(response) == "HELP" else None
         }), 200
     except Exception as e:
         app.logger.error(f"{str(e)}")
