@@ -5,6 +5,11 @@ from .ssim import *
 # 输入用户图片的路径，和比对图片列表
 # image_process 只使用了一个模型，返回result[0]为位置 result[1]为得分
 def image_process(image_user_path, image_list):
+    """
+    img_user_path: absolute path of user image
+    img_list: list of guidance img
+    """
+    print(TEST_DIR)
     image_user = io.imread(image_user_path)
     scores = []
     max_score = 0
@@ -49,5 +54,5 @@ def t_image_process_withtwo(image_user_path):
     print("position:", result[0], "score:", result[1])
 
 
-t_image_process(join(TEST_DIR[0], 'screenshot_3.png'))
-t_image_process_withtwo(join(TEST_DIR[0], 'screenshot_3.png'))
+# t_image_process(join(TEST_DIR[0], 'screenshot_3.png'))
+# t_image_process_withtwo(join(TEST_DIR[0], 'screenshot_3.png'))

@@ -3,6 +3,7 @@
 <head>
     <title>REP-FLOW</title>
     <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
     integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
@@ -24,7 +25,6 @@
                 img: img,
                 hint: hint
             };
-            console.log(hint)
             conversationHistory.push(conversation);
             updateDisplay();
         }
@@ -52,6 +52,7 @@
                 resultItem.appendChild(answerText);
                 switch (item.type) {
                     case "HINT":
+                    case "TEST":
                     case "HELP":
                         var hintElement = document.createElement('span');
                         hintElement.innerHTML = item.hint;
@@ -131,11 +132,12 @@
         function handleHintClick(event) {
             var target = event.target;
             if (target.tagName === 'U') {
-                performBackendInteraction(target.textContent)
                 switch (target.textContent) {
                     case '/help':
                     case '/test $BUG':
                     case '/state':
+                    case '/next':
+                        performBackendInteraction(target.textContent)
                     default:
                         break
                 }

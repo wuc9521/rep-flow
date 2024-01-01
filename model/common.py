@@ -10,7 +10,7 @@ imgs = []
 TEST_DIR = []
 
 for i in range(1, 2):
-    TEST_DIR.append(join(os.path.dirname(__file__), f'../data/guidance/'+str(i)))
+    TEST_DIR.append(join(os.path.dirname(__file__), f'../data/guidance/' + str(i)))
     imgs.append([
         io.imread(join(TEST_DIR[i-1], f)) for f in os.listdir(TEST_DIR[i-1]) if isfile(join(TEST_DIR[i-1], f))
     ])

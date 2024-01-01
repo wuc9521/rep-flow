@@ -32,8 +32,3 @@ def t_hist():
         for j in range(len(imgs)):
             print(classify_hist_with_split(imgs[i], imgs[j]), end='')
         print()
-
-
-
-
-

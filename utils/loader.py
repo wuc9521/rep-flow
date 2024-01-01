@@ -1,7 +1,6 @@
 import re
 from flask import Flask
 
-
 def read_keywords_from_file(file_path, app: Flask = None):
     try:
         with open(file_path, 'r') as file:

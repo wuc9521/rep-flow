@@ -1,0 +1,32 @@
+[2024-01-01 16:01:59,840] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:01:59,866] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:01:59,976] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:00,205] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:07,341] [INFO] [test] - query_text: hello
+[2024-01-01 16:02:07,550] [INFO] [app] - User query: "hello" - Answer: Hello, what can I help you?
+[2024-01-01 16:02:07,551] [INFO] [app] - Current State: 1704096111.704726.png
+[2024-01-01 16:02:07,551] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:10,112] [INFO] [test] - query_text: who are you
+[2024-01-01 16:02:10,267] [INFO] [app] - User query: "who are you" - Answer: I am REP-FLOW, I can help you reproduce an mobile app bug, please tell me the bug name.
+[2024-01-01 16:02:10,267] [INFO] [app] - Current State: 1704096111.704726.png
+[2024-01-01 16:02:10,268] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:12,305] [INFO] [test] - query_text: /help
+[2024-01-01 16:02:12,453] [INFO] [app] - User query: "/help" - Answer: I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:
+[2024-01-01 16:02:12,454] [INFO] [app] - Current State: 1704096111.704726.png
+[2024-01-01 16:02:12,454] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:14,124] [INFO] [test] - query_text: /state
+[2024-01-01 16:02:14,273] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
+[2024-01-01 16:02:14,274] [INFO] [app] - Current State: 1704096111.704726.png
+[2024-01-01 16:02:14,274] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:14,283] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:22,462] [INFO] [test] - query_text: /help
+[2024-01-01 16:02:22,622] [INFO] [app] - User query: "/help" - Answer: I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:
+[2024-01-01 16:02:22,622] [INFO] [app] - Current State: 1704096139.8727381.png
+[2024-01-01 16:02:22,623] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:24,320] [INFO] [test] - query_text: /state
+[2024-01-01 16:02:24,479] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
+[2024-01-01 16:02:24,479] [INFO] [app] - Current State: 1704096139.8727381.png
+[2024-01-01 16:02:24,479] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:24,488] [INFO] [app] - Flask application has ended.
+[2024-01-01 16:02:37,229] [INFO] [test] - query_text: /test 1
+[2024-01-01 16:02:37,231] [INFO] [app] - Flask application has ended.

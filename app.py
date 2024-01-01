@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import spacy
 import logging
@@ -8,6 +9,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from flask_cors import cross_origin
 from utils.loader import read_keywords_from_file
 from utils.hints import HELP
+from utils.test import extract_and_validate_test_number
 from model.process import image_process
 
 DEFAULT_RESPONSE_FLAG = "*"
@@ -34,7 +36,8 @@ df = pd.merge(
 qa = dict(zip(df['Q'], df['A']))
 at = dict(zip(std['A'], std['TYPE']))
 ta = dict(zip(std['TYPE'], std['A']))
-key_words = read_keywords_from_file(os.path.join(CORPUS_DIR, 'kw.txt'), app=app)
+key_words = read_keywords_from_file(
+    os.path.join(CORPUS_DIR, 'kw.txt'), app=app)
 
 
 if not os.path.exists(LOG_DIR):
@@ -47,9 +50,6 @@ handler = RotatingFileHandler(log_file_path, maxBytes=10000, backupCount=1)
 handler.setFormatter(formatter)
 app.logger.addHandler(handler)
 app.logger.setLevel(logging.INFO)
-
-
-
 
 
 @app.route('/')
@@ -68,7 +68,21 @@ def ask():
     try:
         data = request.get_json()
         query_text = data['query']
-
+        rgx_num = extract_and_validate_test_number(query_text, app)
+        NUMBER_EMBD_HINT = f"""
+        <ul class="hint-font" onclick='handleHintClick(event)'>
+            <li><span>Monitoring Screen</span></li>
+            <li><span>Test:</span><span class='u-like'> [{rgx_num}] </span><span>launching...</span></li> 
+            <li><span>Test:</span><span class='u-like'> [{rgx_num}] </span><span>launched...</span></li> 
+        </ul>
+        """ if rgx_num is not None else None
+        if NUMBER_EMBD_HINT is not None:
+            return jsonify({
+                "type": "TEST",
+                "answer": ta.get("TEST"),
+                "img": None,
+                "hint": NUMBER_EMBD_HINT
+            }), 200
         response = qa.get(DEFAULT_RESPONSE_FLAG)
         doc = nlp(query_text)
         nouns = [token.text for token in doc if token.pos_ == "NOUN"]
@@ -78,7 +92,8 @@ def ask():
                 response = answer
                 question = question_
         if response == qa.get(DEFAULT_RESPONSE_FLAG) or doc.similarity(nlp(question)) < 0.7:
-            app.logger.warning(f"User query: \"{query_text}\" - No answer found")
+            app.logger.warning(
+                f"User query: \"{query_text}\" - No answer found")
             if set(key_words).intersection(set(nouns)):
                 return jsonify({
                     "type": "SORRY",
@@ -116,6 +131,7 @@ def ask():
         app.logger.error(f"{str(e)}")
         return jsonify({"error": "An error occurred"}), 500
 
+
 @app.teardown_appcontext
 def teardown_appcontext(error=None):
     # 这个函数将在应用上下文销毁时调用
@@ -125,7 +141,7 @@ def teardown_appcontext(error=None):
         app.logger.info("Flask application has ended.")
 
 
-def monitor_current_state()->str:
+def monitor_current_state() -> str:
     IMG_DIR = os.path.join(DATA_DIR, 'state')
     imgs = [
         f for f in os.listdir(IMG_DIR) if os.path.isfile(os.path.join(IMG_DIR, f))
@@ -140,10 +156,12 @@ def monitor_current_state()->str:
         return None
     return str(max_file)
 
-def get_similarist_state(id: str)->str:
-    IMG_LIST_DIR = os.path.join(GUIDANCE_DIR, id)
-    IMG_CURRENT_STATE = os.path.join(DATA_DIR, 'state').join(get_similarist_state())
-    max_file, max_score = image_process(monitor_current_state(), IMG_CURRENT_STATE)
+
+def get_similarist_state(id: str) -> str:
+    IMG_CURRENT_STATE = os.path.join(
+        DATA_DIR, 'state').join(monitor_current_state())
+    max_file, max_score = image_process(
+        monitor_current_state(), IMG_CURRENT_STATE)
     return str(max_file)
 
 if __name__ == '__main__':

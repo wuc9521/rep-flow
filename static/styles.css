@@ -107,7 +107,7 @@ input[type="submit"] {
 
 .state-image-box {
     text-align: left;
-    width: 20%;
+    width: 25%;
     border-radius: 8px;
     padding: 10px;
     border: solid 1px #18437e;
@@ -126,6 +126,12 @@ input[type="submit"] {
 }
 
 .hint-font li u {
+    font-weight: bold;
+    color: #2196F3;
+    cursor: pointer;
+}
+
+.hint-font li .u-like{
     font-weight: bold;
     color: #2196F3;
     cursor: pointer;
