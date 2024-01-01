@@ -9,6 +9,18 @@ body {
     background-color: #f1f1f1;
 }
 
+.main-box{
+    width: 100%; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.subtitle{
+    font-size: large; 
+    color: #aaaaaa;
+}
+
 .container {
     text-align: center;
     width: 100%;
@@ -107,7 +119,7 @@ input[type="submit"] {
 
 .state-image-box {
     text-align: left;
-    width: 25%;
+    width: 40%;
     border-radius: 8px;
     padding: 10px;
     border: solid 1px #18437e;

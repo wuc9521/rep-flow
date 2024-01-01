@@ -60,6 +60,10 @@
                         resultItem.appendChild(hintElement);
                         break
                     case "CURRENT-STATE":
+                        var hintElement = document.createElement('span');
+                        hintElement.innerHTML = item.hint;
+                        hintElement.className = 'hint';
+                        resultItem.appendChild(hintElement);
                         var imageElementBox = document.createElement('div');
                         imageElementBox.className = 'state-image-box';
                         var imageElement = document.createElement('img');
@@ -151,13 +155,13 @@
                 answer = "Hello, I am REP-FLOW. I can help you reproduce your mobile application bug. Feel free to ask me anything, e.g.",
                 type = "HINT",
                 img = "",
-                hint = "<ul class='hint-font' onclick='handleHintClick(event)'> \
-                            <li><span>show help:</span><u>/help</u> </li> \
-                            <li><span>test bug:</span> <u>/test $BUG</u></li> \
-                            <li><span>show current state:</span> <u>/state</u></li> \
-                            <li><span>show next state:</span> <u>/next</u></li> \
-                        </ul> \
-                    ",
+                hint = 
+                "<ul class='hint-font' onclick='handleHintClick(event)'>\
+                    <li><span>show help:</span><u>/help</u> </li>\
+                    <li><span>test bug:</span> <u>/test $BUG</u></li>\
+                    <li><span>show current state:</span> <u>/state</u></li>\
+                    <li><span>show next state:</span> <u>/next</u></li>\
+                </ul>",
             );
         }
 
@@ -168,8 +172,8 @@
 <body>
     <div class="container">
         <span>\({\rm R{\footnotesize EP}F{\footnotesize LOW}}\)</span><br>
-        <span style="font-size: large; color: #aaaaaa;">A Possible Implementation of</span> <span>${\rm R{\footnotesize EP}A{\footnotesize SSISTOR}}$</span>
-        <div style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
+        <span class="subtitle"">A Possible Implementation of</span> <span>${\rm R{\footnotesize EP}A{\footnotesize SSISTOR}}$</span>
+        <div class="main-box">
             <div class="search-results"></div>
             <div style="margin-top:78vh;">
                 <div id="loading-indicator">
@@ -178,8 +182,7 @@
                 <br><br>
                 <div class="search-artifacts">
                     <form id="queryForm" onsubmit="submitForm(event)">
-                        <input type="text" name="query"
-                            placeholder="Simply input whatever you'd like to query in English" style="width: 600px;">
+                        <input type="text" name="query" placeholder="Simply input whatever you'd like to query in English" style="width: 600px;">
                         <input type="submit" value="Send">
                     </form>
                 </div>

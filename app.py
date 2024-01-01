@@ -8,11 +8,13 @@ from logging.handlers import RotatingFileHandler
 from flask import Flask, render_template, request, jsonify, send_from_directory, g
 from flask_cors import cross_origin
 from utils.loader import read_keywords_from_file
-from utils.hints import HELP
+from utils.hints import HELP, get_NUMBER_EMBD_HINT, get_CURRENT_STATE
 from utils.test import extract_and_validate_test_number
 from model.process import image_process
 
 DEFAULT_RESPONSE_FLAG = "*"
+NUMBER_EMBD_HINT = None
+CURRENT_BUG_ID = -1
 
 
 # Load spaCy English model
@@ -69,14 +71,11 @@ def ask():
         data = request.get_json()
         query_text = data['query']
         rgx_num = extract_and_validate_test_number(query_text, app)
-        NUMBER_EMBD_HINT = f"""
-        <ul class="hint-font" onclick='handleHintClick(event)'>
-            <li><span>Monitoring Screen</span></li>
-            <li><span>Test:</span><span class='u-like'> [{rgx_num}] </span><span>launching...</span></li> 
-            <li><span>Test:</span><span class='u-like'> [{rgx_num}] </span><span>launched...</span></li> 
-        </ul>
-        """ if rgx_num is not None else None
-        if NUMBER_EMBD_HINT is not None:
+        if rgx_num is not None and rgx_num != "": # "/test $BUG"
+            global NUMBER_EMBD_HINT
+            NUMBER_EMBD_HINT = get_NUMBER_EMBD_HINT(rgx_num)
+            global CURRENT_BUG_ID
+            CURRENT_BUG_ID = rgx_num
             return jsonify({
                 "type": "TEST",
                 "answer": ta.get("TEST"),
@@ -117,8 +116,15 @@ def ask():
             return jsonify({
                 "type": at.get(response),
                 "answer": response,
-                "img": get_similarist_state(1),
+                "img": get_similarist_state(CURRENT_BUG_ID),
                 "hint": None
+            }), 200
+        elif at.get(response) == "CURRENT-STATE":
+            return jsonify({
+                "type": at.get(response),
+                "answer": response,
+                "img": monitor_current_state(),
+                "hint": get_CURRENT_STATE(CURRENT_BUG_ID)
             }), 200
         else:
             return jsonify({
@@ -158,10 +164,11 @@ def monitor_current_state() -> str:
 
 
 def get_similarist_state(id: str) -> str:
-    IMG_CURRENT_STATE = os.path.join(
-        DATA_DIR, 'state').join(monitor_current_state())
+    IMG_CURRENT_STATE = os.path.join(DATA_DIR, 'state').join(monitor_current_state())
     max_file, max_score = image_process(
-        monitor_current_state(), IMG_CURRENT_STATE)
+        monitor_current_state(), 
+        IMG_CURRENT_STATE
+    )
     return str(max_file)
 
 if __name__ == '__main__':

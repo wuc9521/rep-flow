@@ -25,7 +25,7 @@ def image_process(image_user_path, image_list):
     return max_similar, max_score
 
 # image_process_withtwo 是结合了两种模型的处理 返回result[0]为位置 result[1]为得分
-def image_process_withtwo(image_user_path, image_list,gray_list):
+def image_process_withtwo(image_user_path, image_list, gray_list):
     image_user = io.imread(image_user_path)
     gray_user = cv2.cvtColor(image_user, cv2.COLOR_BGR2GRAY)
     scores = []
