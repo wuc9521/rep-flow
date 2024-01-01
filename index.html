@@ -59,6 +59,19 @@
                         hintElement.className = 'hint';
                         resultItem.appendChild(hintElement);
                         break
+                    case "NEXT":
+                        var hintElement = document.createElement('span');
+                        hintElement.innerHTML = item.hint;
+                        hintElement.className = 'hint';
+                        var imageElementBox = document.createElement('div');
+                        imageElementBox.className = 'state-image-box';
+                        var imageElement = document.createElement('img');
+                        imageElement.src = "guidance/" + item.img; // Set the source of the image
+                        imageElement.className = 'state-image';
+                        imageElementBox.appendChild(imageElement);
+                        resultItem.appendChild(imageElementBox);
+                        resultItem.appendChild(hintElement);
+                        break
                     case "CURRENT-STATE":
                         var hintElement = document.createElement('span');
                         hintElement.innerHTML = item.hint;
@@ -67,7 +80,7 @@
                         var imageElementBox = document.createElement('div');
                         imageElementBox.className = 'state-image-box';
                         var imageElement = document.createElement('img');
-                        imageElement.src = "images/" + item.img; // Set the source of the image
+                        imageElement.src = "states/" + item.img; // Set the source of the image
                         imageElement.className = 'state-image';
                         imageElementBox.appendChild(imageElement);
                         resultItem.appendChild(imageElementBox);

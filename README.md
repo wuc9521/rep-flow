@@ -29,7 +29,7 @@ This project is based on a simple [Dialog System](https://en.wikipedia.org/wiki/
 
 # DEMO
 
-Here is a demo video [link](https://box.nju.edu.cn/f/a79b60bfa4344b179367/)
+Here is a demo video [link](https://box.nju.edu.cn/f/36b020a59f2042e9a76b/)
 
 
 # Quick Start

@@ -1,15 +1,16 @@
 import os
-import re
-import sys
 import spacy
 import logging
 import pandas as pd
 from logging.handlers import RotatingFileHandler
-from flask import Flask, render_template, request, jsonify, send_from_directory, g
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_cors import cross_origin
 from utils.loader import read_keywords_from_file
-from utils.hints import HELP, get_NUMBER_EMBD_HINT, get_CURRENT_STATE
+from utils.hints import HELP, get_NUMBER_EMBD_HINT, get_CURRENT_STATE_HINT, get_NEXT_STEP_HINT 
 from utils.test import extract_and_validate_test_number
+from utils.log import log_
+from utils.file import get_i
+from model.common import imgs
 from model.process import image_process
 
 DEFAULT_RESPONSE_FLAG = "*"
@@ -27,6 +28,7 @@ DATA_DIR = os.path.join(app.root_path, 'data')
 MODEL_DIR = os.path.join(app.root_path, 'model')
 CORPUS_DIR = os.path.join(DATA_DIR, 'corpus')
 GUIDANCE_DIR = os.path.join(DATA_DIR, 'guidance')
+STATE_DIR = os.path.join(DATA_DIR, 'state')
 
 std = pd.read_csv(os.path.join(CORPUS_DIR, 'std.csv'))
 df = pd.merge(
@@ -59,10 +61,13 @@ def home():
     return render_template('index.html'), 200
 
 
-@app.route('/images/<filename>')
+@app.route('/states/<filename>')
 def serve_image(filename):
-    return send_from_directory(os.path.join(DATA_DIR, 'state'), filename), 200
+    return send_from_directory(STATE_DIR, filename), 200
 
+@app.route('/guidance/<filename>')
+def serve_guidance(filename):
+    return send_from_directory(os.path.join(GUIDANCE_DIR, CURRENT_BUG_ID), filename), 200
 
 @app.route('/ask', methods=['POST'])
 @cross_origin(supports_credentials=True)
@@ -113,18 +118,23 @@ def ask():
                 "hint": HELP
             }), 200
         elif at.get(response) == "NEXT":
+            if CURRENT_BUG_ID == -1:
+                return jsonify({
+                    "type": "ID-MISSING",
+                    "answer": ta.get("ID-MISSING")
+                }), 200
             return jsonify({
                 "type": at.get(response),
                 "answer": response,
                 "img": get_similarist_state(CURRENT_BUG_ID),
-                "hint": None
+                "hint": get_NEXT_STEP_HINT(CURRENT_BUG_ID)
             }), 200
         elif at.get(response) == "CURRENT-STATE":
             return jsonify({
                 "type": at.get(response),
                 "answer": response,
                 "img": monitor_current_state(),
-                "hint": get_CURRENT_STATE(CURRENT_BUG_ID)
+                "hint": get_CURRENT_STATE_HINT(CURRENT_BUG_ID)
             }), 200
         else:
             return jsonify({
@@ -143,8 +153,6 @@ def teardown_appcontext(error=None):
     # 这个函数将在应用上下文销毁时调用
     if error is not None:
         app.logger.error(f"An error occurred: {str(error)}")
-    else:
-        app.logger.info("Flask application has ended.")
 
 
 def monitor_current_state() -> str:
@@ -163,13 +171,16 @@ def monitor_current_state() -> str:
     return str(max_file)
 
 
-def get_similarist_state(id: str) -> str:
-    IMG_CURRENT_STATE = os.path.join(DATA_DIR, 'state').join(monitor_current_state())
-    max_file, max_score = image_process(
-        monitor_current_state(), 
-        IMG_CURRENT_STATE
+def get_similarist_state(id):
+    CURRENT_BUG_DIR = os.path.join(GUIDANCE_DIR, str(id))
+    IMG_CURRENT_STATE = os.path.join(DATA_DIR, 'state', monitor_current_state())
+    max_file_idx, _ = image_process(
+        image_user_path=IMG_CURRENT_STATE,
+        image_list=imgs[int(id)-1],
+        app=app
     )
-    return str(max_file)
+    app.logger.info("max_file_idx:", max_file_idx)
+    return str(get_i(CURRENT_BUG_DIR, max_file_idx))
 
 if __name__ == '__main__':
     app.run(debug=True)

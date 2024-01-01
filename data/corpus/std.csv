@@ -2,7 +2,7 @@
 "0","ERROR","I'm sorry, I can't understand you."
 "1","GREETING","Hello, what can I help you?"
 "2","GREETING","I am REP-FLOW, I can help you reproduce an mobile app bug, please tell me the bug name."
-"3","NEXT","The next step is to tap the following part on the screen."
+"3","NEXT","You are supposed to reach this step as shown in the following screenshot."
 "4","CURRENT-STATE","Your current step is as follows."
 "5","HELP","I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:"
 "6","DEVIATION","Sorry, it seems that you have deviated from the guidance path. I can't find any matching step to reproduce the bug."
@@ -10,5 +10,6 @@
 "8","SORRY","I'm sorry, I'm a simple chatbot, which means that I can only help you reproduce the bug according to the recorded steps. If you want to reproduce the bug in other ways, please try again."
 "9","CONT","Please tell me the bug number, e.g. /test 114514."
 "10","TEST","Sure thing! You can try reproducing the bug yourself, and I would monitor your actions and record the steps. If you are not sure what the next step is at a certain point, you can ask me. e.g. 'What's the next Step?'"
+"11","ID-MISSING","Please tell me the bug number first, e.g. /test 114514."
 "-1","HINT","Yes, it is correct."
 
