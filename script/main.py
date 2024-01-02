@@ -82,7 +82,7 @@ def main(config):
     try:
         while True:
             current_page_source = get_current_page_source(driver)
-            if current_page_source != previous_page_source:
+            if current_page_source != previous_page_source or is_button_pressed(driver):
                 screenshot_path = os.path.join(STATE_DIR, f"{time.time()}.png")
                 capture_screenshot(driver, screenshot_path)
                 previous_page_source = current_page_source
