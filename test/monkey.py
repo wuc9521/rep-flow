@@ -1,5 +1,4 @@
 from appium import webdriver
-# from appium.options.android import UiAutomator2Options # andriod 2
 import subprocess
 import time
 import os
@@ -22,15 +21,6 @@ desired_caps = {
 
 # Appium Server URL
 appium_server_url = 'http://localhost:4723'
-
-# if andriod 2 ->
-# options = UiAutomator2Options()
-# cloud_options = {}
-# cloud_options['build'] = "build_1"
-# cloud_options['name'] = "test_abc"
-# options.set_capability('test:options', desired_caps)
-# driver = webdriver.Remote(appium_server_url, options=options)
-# print("appium connected to the device")
 
 # Start Appium session
 driver = webdriver.Remote(command_executor=appium_server_url, desired_capabilities=desired_caps)
