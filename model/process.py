@@ -52,3 +52,4 @@ def t_image_process_withtwo(image_user_path):
 
 t_image_process(join(TEST_DIR[0], 'screenshot_3.png'))
 t_image_process_withtwo(join(TEST_DIR[0], 'screenshot_3.png'))
+
