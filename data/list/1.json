@@ -1,21 +1,25 @@
 [
   {
     "screenshot": "screenshot_1",
+    "guidance": "screenshot_1_1",
     "type": "Touch",
     "action": "ACTION_DOWN"
   },
   {
     "screenshot": "screenshot_2",
+    "guidance": "screenshot_2_2",
     "type": "Touch",
     "action": "ACTION_DOWN"
   },
   {
     "screenshot": "screenshot_3",
+    "guidance": "screenshot_3_3",
     "type": "Touch",
     "action": "ACTION_DOWN"
   },
   {
     "screenshot": "screenshot_4",
+    "guidance": "screenshot_4_4",
     "type": "Touch",
     "action": "ACTION_DOWN"
   }
