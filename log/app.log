@@ -1,0 +1,9 @@
+[2024-01-03 13:56:13,122] [INFO] [test] - query_text: who are you
+[2024-01-03 13:56:13,296] [INFO] [app] - User query: "who are you" - Answer: I am REP-FLOW, I can help you reproduce an mobile app bug, please tell me the bug name.
+[2024-01-03 13:56:13,296] [INFO] [app] - Current State: 1704261364.840048.png
+[2024-01-03 13:56:24,669] [INFO] [test] - query_text: which step am I at now?
+[2024-01-03 13:56:24,825] [INFO] [app] - User query: "which step am I at now?" - Answer: Your current step is as follows.
+[2024-01-03 13:56:24,825] [INFO] [app] - Current State: 1704261364.840048.png
+[2024-01-03 13:56:29,948] [INFO] [test] - query_text: /state
+[2024-01-03 13:56:30,096] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
+[2024-01-03 13:56:30,097] [INFO] [app] - Current State: 1704261364.840048.png

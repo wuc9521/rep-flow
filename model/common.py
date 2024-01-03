@@ -9,10 +9,11 @@ from os.path import isfile, join
 grays = []
 imgs = []
 TEST_DIR = []
-
+DATA_DIR = os.path.join(os.path.dirname(__file__), '../data')
+LIST_DIR = os.path.join(DATA_DIR, 'list')
 for i in range(1, 2):
     TEST_DIR.append(join(os.path.dirname(__file__), f'../data/guidance/' + str(i)))
-    with open('../data/list/'+str(i)+'.json','r') as f:
+    with open(os.path.join(LIST_DIR, str(i)+'.json'),'r') as f:
         data = json.load(f)
     imgs.append([])
     for item in data:
