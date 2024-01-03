@@ -12,7 +12,6 @@ def image_process(image_user_path, image_list, app=None):
     """
     print(TEST_DIR)
     image_user = io.imread(image_user_path)
-    scores = []
     max_score = 0
     max_similar = 0
     for i in range(len(image_list)):
@@ -21,16 +20,15 @@ def image_process(image_user_path, image_list, app=None):
         if score > max_score:
             max_score = score
             max_similar = i
-        scores.append(score)
     if max_score < 0.7:
-        return MISSING
+        return None
+
     return max_similar, max_score
 
 # image_process_withtwo 是结合了两种模型的处理 返回result[0]为位置 result[1]为得分
 def image_process_withtwo(image_user_path, image_list, gray_list):
     image_user = io.imread(image_user_path)
     gray_user = cv2.cvtColor(image_user, cv2.COLOR_BGR2GRAY)
-    scores = []
     max_score = 0
     max_similar = 0
     for i in range(len(image_list)):
@@ -43,7 +41,7 @@ def image_process_withtwo(image_user_path, image_list, gray_list):
             max_similar = i
     # print()
     if max_score < 0.65:
-         return "missing"
+         return None
     return max_similar, max_score
 
 # image_process 返回result[0]为位置 result[1]为得分

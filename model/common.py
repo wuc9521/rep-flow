@@ -1,5 +1,6 @@
 import os
 import cv2
+import json
 from skimage import io
 from os.path import isfile, join
 
@@ -11,9 +12,11 @@ TEST_DIR = []
 
 for i in range(1, 2):
     TEST_DIR.append(join(os.path.dirname(__file__), f'../data/guidance/' + str(i)))
-    imgs.append([
-        io.imread(join(TEST_DIR[i-1], f)) for f in os.listdir(TEST_DIR[i-1]) if isfile(join(TEST_DIR[i-1], f))
-    ])
+    with open('../data/list/'+str(i)+'.json','r') as f:
+        data = json.load(f)
+    imgs.append([])
+    for item in data:
+        imgs[i-1].append(io.imread(join(TEST_DIR[i-1], item['screenshot']+'.png')))
     grays.append([])
     for j in range(0, len(imgs[i-1])):
         grays[i-1].append(cv2.cvtColor(imgs[i-1][j], cv2.COLOR_BGR2GRAY))
