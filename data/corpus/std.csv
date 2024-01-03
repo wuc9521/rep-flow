@@ -11,5 +11,6 @@
 "9","CONT","Please tell me the bug number, e.g. /test 114514."
 "10","TEST","Sure thing! You can try reproducing the bug yourself, and I would monitor your actions and record the steps. If you are not sure what the next step is at a certain point, you can ask me. e.g. 'What's the next Step?'"
 "11","ID-MISSING","Please tell me the bug number first, e.g. /test 114514."
+"12","END","Congratulations! You have successfully reproduced the bug. Please check the bug number and submit it to the bug tracking system."
 "-1","HINT","Yes, it is correct."
 

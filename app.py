@@ -123,11 +123,19 @@ def ask():
                     "type": "ID-MISSING",
                     "answer": ta.get("ID-MISSING")
                 }), 200
+            similarist_state, is_last = get_similarist_state(CURRENT_BUG_ID)
+            if not is_last:
+                return jsonify({
+                    "type": at.get(response),
+                    "answer": response,
+                    "img": similarist_state,
+                    "hint": get_NEXT_STEP_HINT(CURRENT_BUG_ID)
+                }), 200
             return jsonify({
-                "type": at.get(response),
-                "answer": response,
-                "img": get_similarist_state(CURRENT_BUG_ID),
-                "hint": get_NEXT_STEP_HINT(CURRENT_BUG_ID)
+                "type": "END",
+                "answer": ta.get("END"),
+                "img": None,
+                "hint": None
             }), 200
         elif at.get(response) == "CURRENT-STATE":
             return jsonify({
@@ -179,8 +187,10 @@ def get_similarist_state(id):
         image_list=imgs[int(id)-1],
         app=app
     )
-    app.logger.info("max_file_idx:", max_file_idx)
-    return str(get_i(CURRENT_BUG_DIR, max_file_idx))
+    print("max_file_idx:", max_file_idx)
+    app.logger.info(f"max file idx: {max_file_idx}")
+    filename, is_last = get_i(id, max_file_idx)
+    return str(filename), is_last
 
 if __name__ == '__main__':
     app.run(debug=True)

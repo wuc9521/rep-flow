@@ -1,9 +1,93 @@
-[2024-01-03 13:56:13,122] [INFO] [test] - query_text: who are you
-[2024-01-03 13:56:13,296] [INFO] [app] - User query: "who are you" - Answer: I am REP-FLOW, I can help you reproduce an mobile app bug, please tell me the bug name.
-[2024-01-03 13:56:13,296] [INFO] [app] - Current State: 1704261364.840048.png
-[2024-01-03 13:56:24,669] [INFO] [test] - query_text: which step am I at now?
-[2024-01-03 13:56:24,825] [INFO] [app] - User query: "which step am I at now?" - Answer: Your current step is as follows.
-[2024-01-03 13:56:24,825] [INFO] [app] - Current State: 1704261364.840048.png
-[2024-01-03 13:56:29,948] [INFO] [test] - query_text: /state
-[2024-01-03 13:56:30,096] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
-[2024-01-03 13:56:30,097] [INFO] [app] - Current State: 1704261364.840048.png
+[2024-01-03 20:06:29,460] [INFO] [test] - query_text: hello
+[2024-01-03 20:06:29,677] [INFO] [app] - User query: "hello" - Answer: Hello, what can I help you?
+[2024-01-03 20:06:29,677] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:06:38,410] [INFO] [test] - query_text: /help
+[2024-01-03 20:06:38,561] [INFO] [app] - User query: "/help" - Answer: I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:
+[2024-01-03 20:06:38,562] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:06:44,977] [INFO] [test] - query_text: what is software testing
+[2024-01-03 20:06:45,140] [WARNING] [app] - User query: "what is software testing" - No answer found
+[2024-01-03 20:06:48,912] [INFO] [test] - query_text: /help
+[2024-01-03 20:06:49,067] [INFO] [app] - User query: "/help" - Answer: I am REP-FLOW, and I have a certain level of conversational ability. You can ask me the following questions:
+[2024-01-03 20:06:49,067] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:06:53,001] [INFO] [test] - query_text: /test $BUG
+[2024-01-03 20:06:53,160] [INFO] [app] - User query: "/test $BUG" - Answer: Please tell me the bug number, e.g. /test 114514.
+[2024-01-03 20:06:53,160] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:06:56,711] [INFO] [test] - query_text: /test 1
+[2024-01-03 20:07:05,047] [INFO] [test] - query_text: /state
+[2024-01-03 20:07:05,200] [INFO] [app] - User query: "/state" - Answer: Your current step is as follows.
+[2024-01-03 20:07:05,200] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:07:14,328] [INFO] [test] - query_text: which step am I at now
+[2024-01-03 20:07:14,493] [INFO] [app] - User query: "which step am I at now" - Answer: Your current step is as follows.
+[2024-01-03 20:07:14,493] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:07:18,734] [INFO] [test] - query_text: /next
+[2024-01-03 20:07:18,890] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:07:18,890] [INFO] [app] - Current State: 1704283584.043778.png
+[2024-01-03 20:07:18,995] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:07:19,040] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:07:19,087] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:07:19,135] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:07:19,182] [INFO] [app] - max file idx: 0
+[2024-01-03 20:07:29,837] [INFO] [test] - query_text: /next
+[2024-01-03 20:07:29,994] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:07:29,995] [INFO] [app] - Current State: 1704283644.6190012.png
+[2024-01-03 20:07:30,073] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:07:30,120] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:07:30,166] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:07:30,211] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:07:30,257] [INFO] [app] - max file idx: 1
+[2024-01-03 20:07:42,291] [INFO] [test] - query_text: /next
+[2024-01-03 20:07:42,451] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:07:42,451] [INFO] [app] - Current State: 1704283661.210638.png
+[2024-01-03 20:07:42,530] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:07:42,574] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:07:42,619] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:07:42,665] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:07:42,712] [INFO] [app] - max file idx: 2
+[2024-01-03 20:07:56,586] [INFO] [test] - query_text: /next
+[2024-01-03 20:07:56,744] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:07:56,744] [INFO] [app] - Current State: 1704283672.356229.png
+[2024-01-03 20:07:56,823] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:07:56,868] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:07:56,913] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:07:56,959] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:07:57,005] [INFO] [app] - max file idx: 2
+[2024-01-03 20:08:01,752] [INFO] [test] - query_text: /next
+[2024-01-03 20:08:01,906] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:08:01,907] [INFO] [app] - Current State: 1704283672.356229.png
+[2024-01-03 20:08:01,985] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:08:02,030] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:08:02,075] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:08:02,121] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:08:02,167] [INFO] [app] - max file idx: 2
+[2024-01-03 20:08:09,357] [INFO] [test] - query_text: /next
+[2024-01-03 20:08:09,524] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:08:09,524] [INFO] [app] - Current State: 1704283672.356229.png
+[2024-01-03 20:08:09,606] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:08:09,652] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:08:09,699] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:08:09,748] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:08:09,797] [INFO] [app] - max file idx: 2
+[2024-01-03 20:08:19,199] [INFO] [test] - query_text: /next
+[2024-01-03 20:08:19,355] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:08:19,356] [INFO] [app] - Current State: 1704283696.586844.png
+[2024-01-03 20:08:19,453] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:08:19,498] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:08:19,542] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:08:19,588] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:08:19,635] [INFO] [app] - max file idx: 0
+[2024-01-03 20:08:24,788] [INFO] [test] - query_text: /next
+[2024-01-03 20:08:24,946] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:08:24,947] [INFO] [app] - Current State: 1704283704.024009.png
+[2024-01-03 20:08:25,027] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:08:25,071] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:08:25,116] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:08:25,162] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:08:25,208] [INFO] [app] - max file idx: 2
+[2024-01-03 20:08:39,717] [INFO] [test] - query_text: /next
+[2024-01-03 20:08:39,868] [INFO] [app] - User query: "/next" - Answer: You are supposed to reach this step as shown in the following screenshot.
+[2024-01-03 20:08:39,868] [INFO] [app] - Current State: 1704283704.024009.png
+[2024-01-03 20:08:39,947] [INFO] [process] - Calculating Similarity: image 0
+[2024-01-03 20:08:39,992] [INFO] [process] - Calculating Similarity: image 1
+[2024-01-03 20:08:40,038] [INFO] [process] - Calculating Similarity: image 2
+[2024-01-03 20:08:40,086] [INFO] [process] - Calculating Similarity: image 3
+[2024-01-03 20:08:40,132] [INFO] [app] - max file idx: 2
