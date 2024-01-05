@@ -1,4 +1,5 @@
 from appium import webdriver
+# from appium.options.android import UiAutomator2Options # andriod 2
 import subprocess
 import time
 import os
@@ -40,7 +41,7 @@ try:
         print(f"Loop: {loop}")
         # Execute ADB command using subprocess for the new app
         # monkey_command = f'adb shell monkey -p {new_app_package} -v {event_count} -throttle 100'
-        monkey_command = 'adb shell monkey -p {} -v 500 -throttle 10000 2>&1 | tee {} | (while read -r line; do adb exec-out screencap -p > {}/screenshot_${{line// /_}}.png; done)'.format(new_app_package, log_file_path, screenshot_path)
+        monkey_command = 'adb shell monkey -p {} -v 500 -throttle 100 2>&1 | tee {} | (while read -r line; do adb exec-out screencap -p > {}/screenshot_${{line// /_}}.png; done)'.format(new_app_package, log_file_path, screenshot_path)
         with open(log_file_path, 'w') as log_file:
             subprocess.run(monkey_command, shell=True, stderr=subprocess.STDOUT)
 except subprocess.CalledProcessError:

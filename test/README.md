@@ -2,11 +2,14 @@
 
 perform random test(monkey) on android app, collect screenshots and logs
 
-Appium-Python-Client-3.1.1 selenium-4.16.0
+downgrade python client if unable to connect to appium server
+```
+pip install Appium-Python-Client==1.2.0
+```
 
 the base path of the screenshot is /test/screenshot
 
-# run
+# reproduce bugs and catch screenshots
 cd to /script
 python random_test.py
 
