@@ -1,0 +1,23 @@
+\documentclass[10pt, a4paper]{article}
+\input{preamable/usepackage.txt}
+\setmainfont{Times New Roman}
+\addbibresource{main.bib}
+
+
+\begin{document}
+    \input{preamable/titlepage.tex}
+
+    \newpage\tableofcontents
+
+    % ===== 正文部分在这里 ======
+    \input{sections/introduction.tex}
+    \input{sections/design.tex}
+    \input{sections/manual.tex}
+    % ========================
+
+
+    \pagebreak
+    \nocite{*}
+    \printbibliography[title={参考文献}]
+
+\end{document}

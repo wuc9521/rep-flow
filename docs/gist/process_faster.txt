@@ -1,0 +1,11 @@
+image_user = io.imread(image_user_path)
+max_score = 0
+max_similar = 0
+for i in range(len(image_list)):
+    score = classify_hist_with_split(image_user, image_list[i])
+    if score > max_score:
+        max_score = score
+        max_similar = i
+if max_score < 0.7:
+    return None
+return max_similar, max_score

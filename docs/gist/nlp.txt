@@ -1,0 +1,8 @@
+question = DEFAULT_RESPONSE_FLAG
+for question_, answer in qa.items():
+    if doc.similarity(nlp(question_)) > doc.similarity(nlp(question)):
+        response = answer
+        question = question_
+if response == doc.similarity(nlp(question)) < 0.7:
+    app.logger.warning(f"User query: \"{query_text}\" - No answer found")
+    ......

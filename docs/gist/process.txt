@@ -1,0 +1,14 @@
+image_user = io.imread(image_user_path)
+gray_user = cv2.cvtColor(image_user, cv2.COLOR_BGR2GRAY)
+max_score = 0
+max_similar = 0
+for i in range(len(image_list)):
+    score_hist = classify_hist_with_split(image_user, image_list[i])
+    (score_ssim, diff) = sk_cpt_ssim(gray_user, gray_list[i], full=True)
+    average_score = (3*score_hist+2*score_ssim)/5
+    if average_score > max_score:
+        max_score = average_score
+        max_similar = i
+if max_score < 0.65:
+     return None
+return max_similar, max_score

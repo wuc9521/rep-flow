@@ -1,0 +1,151 @@
+\ProvidesPackage{setup}
+\usepackage[UTF8]{ctex}
+\usepackage{standalone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlelabel{\thetitle.\quad}
+\hypersetup{
+    colorlinks=true,  
+    linkcolor=black,  
+    filecolor=magenta, 
+    urlcolor=blue,  
+} % hyperref包调整样式
+\urlstyle{same} % 设置url的字体样式
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Environment setup
+\mdfsetup{skipabove=\topskip,  skipbelow=\topskip}
+\mdfdefinestyle{theoremstyle}{%
+    linecolor=black,  linewidth=1pt,  %
+    frametitlerule=true,  %
+    frametitlebackgroundcolor=gray!20,  
+    innertopmargin=\topskip,  
+}
+\mdtheorem[style=theoremstyle]{Problem}{Problem}
+\newenvironment{Solution}{\textbf{Solution.}}
+
+\definecolor{codegreen}{rgb}{0, 0.6, 0}
+\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
+
+\newfontfamily\monospace{VeraMono}[
+    Path = templates/font/Bitstream-Vera-Sans-Mono/,
+    Extension = .ttf,  % 字体文件的扩展名
+    UprightFont = *,  % 正常字体
+    BoldFont = *-Bold,  % 粗体字体
+    ItalicFont = *-Italic,  % 斜体字体
+    BoldItalicFont = *-Bold-Italic  % 粗斜体字体
+]
+
+\lstdefinestyle{mystyle}{  
+    commentstyle=\color{codegreen},  
+    keywordstyle=\color{magenta},  
+    numberstyle=\tiny\color{codegray},  
+    stringstyle=\color{codepurple},  
+    basicstyle=\monospace\small,  % 使用等宽字体
+    breakatwhitespace=false,  
+    breaklines=true,  
+    captionpos=b, 
+    keepspaces=true,  
+    showspaces=false,  % 将showspaces设置为false
+    showstringspaces=false,  % 将showstringspaces设置为false
+    showtabs=false,  % 将showtabs设置为false
+    tabsize=4  % 适当调整tabsize以实现你需要的缩进
+}
+
+
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Page setup
+\pagestyle{fancy}
+\headheight 35pt
+\lhead{\today}
+\rhead{\includegraphics[width=2.5cm]{templates/img/logo-nju2.png}}
+\lfoot{}
+\pagenumbering{arabic}
+\cfoot{\small\thepage}
+\rfoot{}
+\headsep 1.2em
+\renewcommand{\baselinestretch}{1.25}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Add new commands here
+\renewcommand{\refname}{参考网站}
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+\newtheorem{case}{Case}
+\newcommand{\tmmathbf}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextbf}[1]{\text{{\bfseries{#1}}}}
+\newcommand{\tmtextit}[1]{\text{{\itshape{#1}}}}
+\newenvironment{itemizedot}{\begin{itemize} \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}}{\end{itemize}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+\catcode`\>=\active \def>{
+\fontencoding{T1}\selectfont\symbol{62}\fontencoding{\encodingdefault}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+
+%Begin now!
+\renewcommand{\cftsecaftersnum}{.}%
+
+
+
+\newcommand{\circled}[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle, draw=red, inner sep=1.3pt, line width=1.5pt] (char) {#1};}}
+
+
+% ====================================
+% =========================
+\makeatletter
+%---------------------------------------------------------------
+% Essentially verbatim from Joseph Wright (except for refinements to \ifciteseen test)
+% http://www.texdev.net/2010/03/08/biblatex-numbered-citations-as-footnotes/
+
+\DeclareCiteCommand{\superfootcite}[\cbx@superscript]
+  {\usebibmacro{cite:init}%
+   \let\multicitedelim=\supercitedelim
+   \iffieldundef{prenote}
+     {}
+     {\BibliographyWarning{Ignoring prenote argument}}%
+   \iffieldundef{postnote}
+     {}
+     {\BibliographyWarning{Ignoring postnote argument}}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite:superfoot}%
+   \usebibmacro{cite:comp}}
+  {}
+  {\usebibmacro{cite:dump}}
+
+\AtEveryCitekey{%
+  \ifcsundef{cbx@instcount@curr@\the\c@refsection @\thefield{entrykey}}
+    {\csnumgdef{cbx@instcount@curr@\the\c@refsection @\thefield{entrykey}}{0}}
+    {}%
+  \csnumgdef{cbx@instcount@last@\the\c@refsection @\thefield{entrykey}}{%
+    \csuse{cbx@instcount@curr@\the\c@refsection @\thefield{entrykey}}}%
+  \csnumgdef{cbx@instcount@curr@\the\c@refsection @\thefield{entrykey}}{\value{instcount}}}
+
+\def\iflastciteonsamepage{%
+  \ifsamepage
+    {\number\csuse{cbx@instcount@curr@\the\c@refsection @\thefield{entrykey}}}
+    {\number\csuse{cbx@instcount@last@\the\c@refsection @\thefield{entrykey}}}}
+
+\newbibmacro*{cite:superfoot}{% 
+  \iflastciteonsamepage   
+    {}
+    {\xappto\cbx@citehook{%
+       \noexpand\footnotetext[\thefield{labelnumber}]{%
+         \fullcite{\thefield{entrykey}}\addperiod}}}}
+
+\newrobustcmd{\cbx@superscript}[1]{%
+  \mkbibsuperscript{#1}%
+  \cbx@citehook
+  \global\let\cbx@citehook=\empty}
+\let\cbx@citehook=\empty
+%---------------------------------------------------------------
+\makeatother
+
+\newcommand*{\comma}{,}

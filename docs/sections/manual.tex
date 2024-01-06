@@ -1,0 +1,47 @@
+\section{运行、交互说明}
+
+\subsection{工具基本信息说明}
+\noindent 安卓版本: Android 13, Pixel 4 XL
+
+\noindent 从运行和交互的角度, 主要分为自动测试和复现引导两个模块, 其中两个模块统一版本, 但相互独立, 可以分别运行, 分别对应测试人员和复现人员的需求。
+
+\subsection{测试模块}
+\noindent 测试人员首先需要保持Appium server启动
+\begin{lstlisting}[language=sh, showtabs=true]
+    appium
+\end{lstlisting}
+然后运行虚拟机或者连接手机，再新建终端运行/test路径下的monkey.py
+\begin{lstlisting}[language=sh, showtabs=true]
+    python monkey.py
+\end{lstlisting}
+如果遇到运行问题，参考README中的指引，可能需要更改python client的版本。如果要更改随机测试的目标或参数需要更改monkey.py中的相应参数
+
+\subsection{复现引导模块}
+
+我们为项目配置了完整的 \lstinline{Makefile}. 为了运行项目, 只需要在项目根目录下运行 \lstinline{make} 就可以看到详细的指示.
+
+\scalebox{0.9}{
+    \lstinputlisting[language=sh]{gist/make.txt}
+}
+
+\noindent 一般来说, 用户需要先接上手机或者运行虚拟机, 然后在项目根目录下运行
+
+\begin{lstlisting}[language=sh]
+    make install
+\end{lstlisting}
+来安装需要的Python和Node.js依赖. 然后运行
+\begin{lstlisting}[language=sh, showtabs=true]
+    make run
+\end{lstlisting}
+来启动对话系统, 模型和检测脚本. 
+
+\scalebox{0.9}{
+\lstinputlisting[language=sh]{gist/make-run.txt}
+}
+
+
+\noindent 目前我们只支持 Android 平台, 并且我们默认使用的是 Pixel 4 XL 的模拟器. 如果你想要使用其他的设备, 请修改 \lstinline{script/config.json} 中的相应变量.
+
+
+% \lstinline{//TODO:} 如果ml部分还有需要配置的, 写在这个模块下就可@yc
+% \subsubsection{e.g.: 图片比对功能配置}

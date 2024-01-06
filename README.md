@@ -56,6 +56,8 @@ make stop
 ```
 
 # Project Structure
+`docs/` contains a single latex project to build the docs
+
 `data/` contains all the xml and png data fetched from the mobile application and all the prompt dialogues.
 
 `model` contains all model files used to locate which state the tester is in.

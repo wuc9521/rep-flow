@@ -1,0 +1,14 @@
+[~/rep-flow]$ make
+Running on Darwin
+
+Usage: make [target]
+
+Available targets:
+  install : install dependencies.
+  run     : run the app.
+  clean   : clean up the logs and figures.
+  stop    : stop the app.
+  boot    : boot the emulator.!!! modify the emulator name in Makefile.
+  reload  : reload the appium server.
+
+Normally, run make install first, then run make run to start the app.

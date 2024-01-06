@@ -1,0 +1,4 @@
+image_user = io.imread(image_user_path)
+gray_user = cv2.cvtColor(image_user, cv2.COLOR_BGR2GRAY)
+for i in range(len(image_list)):
+    (score_ssim, diff) = sk_cpt_ssim(gray_user, gray_list[i], full=True)

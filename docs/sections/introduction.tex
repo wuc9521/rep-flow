@@ -1,0 +1,43 @@
+\newpage
+\section{项目简介}
+项目地址: \href{https://github.com/wuc9521/rep-flow}{https://github.com/wuc9521/rep-flow} 
+
+\subsection{项目背景}
+本项目设计了一种基于对话系统引导的自动化测试结果复现技术，通过对自动化测试结果的有效分析与相关测试知识库的指导，对话系统可根据测试人员当前复现情况进行有效的引导，使其更高效地完成自动化测试结果复现的工作。
+
+\subsection{项目结构}
+\dirtree{%
+    .1 \lstinline{rep-flow/}.
+        .2 \lstinline{README.md}.
+        .2 \lstinline{Makefile}: 项目的主要配置文件..
+        .2 \lstinline{data/}.
+            .3 \lstinline{README.md}.
+            .3 \lstinline{apk}: 用于复现bug的apk文件.
+            .3 \lstinline{corpus/}: 用于对话系统的语料库..
+            .3 \lstinline{guidance/}: 存放复现需要的图片, 以bug编号分类..
+            .3 \lstinline{list/}: 存放复现bug的动作列表, 以bug编号命名..
+            .3 \lstinline{state/}: 存放用户当前状态的截图, 以时间戳命名..
+        .2 \lstinline{log/}: 存放项目运行过程中生成的后端日志和脚本日志..
+        .2 \lstinline{script/}.
+            .3 \lstinline{README.md}.
+            .3 \lstinline{__init__.py}.
+            .3 \lstinline{config.json}: 设备的配置文件..
+            .3 \lstinline{main.py}: 用于获取用户当前状态的脚本..
+        .2 \lstinline{model/}..
+            .3 \lstinline{__init__.py}.
+            .3 \lstinline{common.py}:用于预处理图片..
+            .3 \lstinline{hist.py}:三直方图算法模型实现与测试..
+            .3 \lstinline{ssim.py}:结构相似性算法模型实现与测试..
+            .3 \lstinline{process.py}:分析图片相似度的主程序..
+        .2 \lstinline{static/}: 前端的静态文件..
+        .2 \lstinline{index.html}: 前端的主页..
+        .2 \lstinline{app.py}: 后端的主要逻辑..
+        .2 \lstinline{test/}.
+            .3 \lstinline{README.md}.
+            .3 \lstinline{monkey.py}:使用monkey工具对目标应用执行随机测试.
+            .3 \lstinline{script/}:随机测试复现和过程截图获取.
+            .3 \lstinline{linkedlist.py}:负责数据格式转换，测试结果以链表形式存储备用. 
+        .2 \lstinline{requirements.txt}: 涉及到的Python依赖.
+        .2 \lstinline{package.json}: 涉及到的Node依赖.
+        .2 \lstinline{utils/}: 涉及到的工具文件.
+}
